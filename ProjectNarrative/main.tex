@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{hyperref}
+%\usepackage{slashbox}
+\usepackage{subfigure}
+\usepackage{cite}
+%\usepackage{AMSsymb}
+\usepackage{charter}
+
+%%% Need input files here %%%
+%\input{epsf}
+%\input{physics_defs.tex}
+%\input{boxedeps.tex}
+%\input d0_style.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\SetRokickiEPSFSpecial      % Set up BoxedEPS to work with DVIPS driver
+%\ShowDisplacementBoxes      % Turn on displacement boxes
+%%\nofiles
+%%\HideDisplacementBoxes      % Turn off displacement boxes
+\setcounter{secnumdepth}{3}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+%%%%%%%%%%%%%%%%%%%%%% MACRO DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Set the margins
+\oddsidemargin 0in
+\evensidemargin 0in
+\topmargin=-10mm
+\textheight 9in
+\textwidth 6.5in
+\columnsep 0.5in
+\columnseprule 0pt
+\sloppy \raggedbottom
+%\baselineskip=10pt
+\parindent=10mm
+\parsep=0pt
+
+\def\onehead#1{\part{#1}}
+\def\twohead#1{\section{#1}}
+\def\threehead#1{\subsection{#1}}
+\def\fourhead#1{\subsubsection{#1}}
+\def\fivehead#1{\paragraph*{#1}}
+\def\subsubsubsection#1{\paragraph*{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%% Bibliography  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\thebibliography#1{
+  \fivehead{  {} }\list
+%  \twohead{  {BIBLIOGRAPHY} }\list
+  {\arabic{enumi}.}{\settowidth\labelwidth{#1.}
+   \leftmargin\labelwidth
+  \advance\leftmargin\labelsep\itemsep0pt \frenchspacing
+  \usecounter{enumi}}
+  \def\newblock{\hskip .11em plus .33em minus -.07em}
+  \sloppy
+  \sfcode`\.=1000\relax}
+\let\endthebibliography=\endlist
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%% Main Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\vfill\eject
+%%\pagestyle{plain}
+\pagestyle{empty}
+\baselineskip=23pt
+\normalsize
+%%
+
+\noindent
+
+%%%% Abstract %%%%%
+\input{abstract.tex}
+
+%%% Cover Page %%%
+\newpage
+\input{CoverPage.tex}
+
+
+%%% Cover Page Supplement %%%%
+\newpage
+\input{CoverPageSupplement.tex}
+\newpage
+%%% Start the page counting here %%%
+\pagestyle{plain}
+\setcounter{page}{1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Common Introduction %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\onehead{UTA Group Introduction}
+\input{GroupIntro.tex}
+
+\newpage
+
+
+
+\end{document}
