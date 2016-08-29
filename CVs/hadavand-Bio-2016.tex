@@ -1,0 +1,172 @@
+\documentclass[10pt]{article}
+\usepackage[letterpaper,top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{bbding}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace} 
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage[compact]{titlesec}
+
+%\pagenumbering{arabic}
+%%\usepackage{atlasphysics}
+%\date{}
+\newcommand{\tanb}{$\tan \beta$}
+\newcommand{\too}{$\rightarrow$}
+%\newcommand{\invfb}{$fb^{-1}$}
+\newcommand{\Hp}{$H^{+}$}
+\newcommand{\ttbar}{$t\overline{t}$}
+\newcommand{\Bz}{$B^0$}
+\newcommand{\Bu}{$B^+$}
+\newcommand{\KS}{$K^0_{S}$}
+\newcommand{\FourS}{$\Upsilon(4S)$}
+\newcommand{\jpsi}{$J\mskip -3mu/\mskip -2mu\psi\mskip 2mu$}
+%\title{Multiple Beyond Standard Model Search on the ATLAS Experiment at the Large Hadron Collider}
+%\title{Search for Beyond Standard Model Phenomena using the Higgs} 
+
+%\author{Haleh Hadavand}
+
+%\pagestyle{plain}                     
+
+%\textfloatsep  0in
+
+%\belowcaptionskip 0in
+%\abovecaptionskip 0in
+\begin{document}
+\def\@tablebox#1{\begin{tabular}[t]{@{}l@{}}#1\end{tabular}}
+
+\newenvironment{llist}{\begin{list}{}{\setlength
+ \labelwidth{1in}\setlength\leftmargin{\labelwidth}\addtolength
+ \leftmargin{\labelsep}\itemsep 5pt plus 2pt minus 2pt
+ \parsep 10pt plus 2pt minus 2pt
+ %% Set the depth of the title to 0 in case more than one line.
+ %% If the title takes more lines than the body, you lose.
+ \def\sectiontitle##1{\setbox\@title=\hbox{{\it\@tablebox{##1}}}\dp\@title=0pt
+   \item[\copy\@title]\ifdim\wd\@title>\labelwidth
+   \leavevmode \\* \else \fi}
+ \def\makelabel##1{##1\hfill}}}{\end{list}}
+
+\def\employer{\@ifstar{\@semployer}{\@employer}}
+\def\@employer#1{\par{\sc #1}}
+\def\@semployer#1{{\sc #1}\\}
+
+% The location is always flush right.  It is moved to the next
+% line if there is not room left on this one.··
+% See the TeXbook Chapter 14.
+\def\location#1{{\bf{}\unskip\nobreak\hfill\penalty50\hskip2em
+  \hbox{}\nobreak\hfill \hbox{#1}\finalhyphendemerits=0 \\}}
+\def\dates#1{{\em #1}\\[2pt]}
+
+%\begin{center} {\bf\Large Haleh Hadavand }\end{center}
+%{\begin{tabular}[t] {@{}l @{\hspace{3cm}}l} 
+
+%University of Texas Arlington \\
+%Department of Physics\\
+%P.O. Box 19059\\
+%Arlington, TX, 76019  &{\bf e-mail: hadavand@uta.edu} \\
+%\end{tabular}}
+
+\subsection*{Education and Training}
+
+\par{\sc {\bf Undergraduate: University of Maryland College Park}}
+\location{ College Park, MD}
+\dates{Sep 1995 - Jun 1999}
+Degree: BS in Physics, June 1999.\\ \par{\sc {\bf Graduate:  University of California San Diego}}
+\location{ La Jolla, CA}
+\dates{Aug 1999 - Sept 2005}
+Degree: Ph.D. in High Energy Physics
+Dissertation: ``The Measurement of CP Asymmetries in the Three-body Charmless $B_d$ Meson Decay to $K^0_S K^0_S K^0_S$ at BABAR ''\\
+Thesis adviser: David MacFarlane. \\
+
+\subsection*{Research and Professional Experience} 
+\par{\sc \bf{Assistant Professor}}
+\location{ University of Texas Arlington} 
+\dates{Nov 2014 - Present}
+\par{\sc \bf{Research Faculty}}
+\location{ University of Texas Arlington} 
+\dates{July 2012 - Oct 2014}
+\par{\sc \bf{Postdoctoral Fellow}}
+\location{ Southern Methodist University} 
+\dates{Sept 2005-July 2012}
+\par{\sc \bf{Graduate Research Assistant}}
+\location{ UCSD on BABAR experiment} 
+\dates{Jun 1999 - Sept 2005}
+\subsection*{Relevant Publications}
+\renewcommand\refname{\vskip -1.5cm}
+\begin{thebibliography}{99}
+
+%\bibitem{atl2014} {} The ATLAS Collaboration, "Search for charged Higgs bosons decaying via $H^{\pm} \rightarrow \tau^{\pm}\nu$ in fully hadronic final states using pp collision data at $\sqrt{s}$ = 8 TeV with the ATLAS detector'', ATL-COM-PHYS-2014-372 (2014).
+\bibitem{atl2014} {} The ATLAS Collaboration, "Search for charged Higgs bosons decaying via $H^{\pm} \rightarrow \tau^{\pm}\nu$ in fully hadronic final states using pp collision data at $\sqrt{s}$ = 8 TeV with the ATLAS detector'', JHEP03 (2015) 088.
+\bibitem{atl2013} {} The ATLAS Collaboration, "A Search for Charged Higgs Bosons in the $\tau$ +jets Final State with pp Collision Data Recorded at $\sqrt  s = 8$ TeV with the ATLAS Experiment'', ATLAS-CONF-2013-090 (2013).
+\bibitem{atl1} {} The ATLAS Collaboration, ``Search for extra dimensions using diphoton events in 7 TeV proton-proton collisions with the ATLAS detector", Phys.\ Lett.\ B {\bf 710}, 538-556 (2012).
+\bibitem{atl1-conf} {} The ATLAS Collaboration, ``A Search for High Mass Diphoton Resonances in the Context of the Randall-Sundrum Model in $\sqrt s=7$ TeV pp Collisions", ATLAS-CONF-2011-044 (2011).
+
+\bibitem{atl2} {} The ATLAS Collaboration, ``Search for Diphoton Events with Large Missing Transverse Energy in 7 TeV Proton-Proton Collisions with the ATLAS Detector'', Phys.\ Rev.\ Lett.\  {\bf 106}, 121803 (2011).
+
+%\bibitem{atl6}  {}Peter Renkel, Haleh Hadavand, Robert Kehoe, ``The Gatherer - a mechanism for integration of monitoring data in ATLAS'', {}, J.\ Phys.\ Conf.\ Ser.\  {\bf 219}, 022043 (2010).
+
+\bibitem{atl5a} {} Ilchenko, Y., Cuenca-Almenar, C. , Corso-Radu, A., Hadavand, H.  Kolos, S,  Slagle, K.,  Taffard, A.,``Data Quality Monitoring Display for ATLAS experiment'', J.\ Phys.\ Conf.\ Ser.\  {\bf 219}, 022035 (2010).
+
+\bibitem{atl5}
+  H.~Hadavand [ ATLAS Collaboration ],
+  ``Commissioning of the ATLAS offline software with cosmic rays'',
+  J.\ Phys.\ Conf.\ Ser.\  {\bf 119}, 032021 (2008).
+
+\bibitem{atl5b}
+  S.~Kolos, A.~Corso-Radu, H.~Hadavand, M.~Hauschild, R.~Kehoe,
+  ``A software framework for Data Quality Monitoring in ATLAS'',
+  J.\ Phys.\ Conf.\ Ser.\  {\bf 119}, 022033 (2008).
+
+%\bibitem{atl7}  {}Alina Corso-Radu, Haleh Hadavand, Michael Hauschild, Bob Kehoe, Serguei Kolos, ``Data Quality Monitoring Framework for the ATLAS Experiment at the LHC'', IEEE Trans.\ Nucl. Sci.\ {\bf 55}, 1 (2008).
+
+\bibitem{bab1} {}B.~Aubert {\it et al.}  [BABAR Collaboration],
+``Branching Fraction and CP Asymmetries in \Bz \too \KS \KS \KS'',
+  Phys.\ Rev.\ Lett.\  {\bf 95}, 011801 (2005).
+
+\bibitem{bab0} {}B.~Aubert {\it et al.}  [BABAR Collaboration], ``Measurement of the \Bu/\Bz production ratio from the \FourS meson using \Bu $\rightarrow$ \jpsi K$^+$ and \Bz $\to$ \jpsi \KS decays'', {}Phys.\ Rev.\ D {\bf 69}, 071101 (2004).
+``New Physics results from the BABAR Collaboration'', July 2005.
+\section*{Synergistic Activities}
+\renewcommand\refname{\vskip -1.5cm}
+
+\subsection*{Invited Talks}
+\bibitem{t11}  Lake Louise Winter Institute, Lake Louise, Alberta, Canada, ``Beyond-the-Standard Model Higgs and Invisible Higgs Decays Using the ATLAS Experiment'', February 2014.
+
+\bibitem{t10}  Photon 2011 Conference at Spa, Belgium, ``New Physics Searches with Photons at the ATLAS and CMS Experiments'', May 2011.
+
+%\bibitem{t9}  Seminar at Southern Methodist University, Dallas, ``New Physics Results with Diphotons at the ATLAS Experiment'', April 2011.
+
+%\bibitem{t8} Talk at Southwest US ATLAS Physics Jamboree, ``Search for Graviton and other Exotic Particles'', April 2011.
+
+\bibitem{t7}  Beyond Standard Model Physics Conference,  Boston, MA., ``Beyond the Standard Model Photon Physics at the ATLAS and CMS Experiments at the Large Hadron Collider'', June 2009.
+
+%\bibitem{t6}  Computing in High Energy and Nuclear Physics (CHEP) Victoria, British Columbia, Canada, ``Commissioning of the ATLAS Offline Software with Cosmic Rays'', September 2007.
+
+%\bibitem{t5}  The 13th International Conference on Supersymmetry and Unification of Fundamental Interactions, SUSY 2005, Durham, United Kingdom, 
+\end{thebibliography}
+\subsection*{Leadership Experience}
+\begin{itemize}
+%\item 35 Ton Monitoring Developer and Contact on Long Baseline Neutrino Facility at Fermilab.
+\item Charged Higgs convenor on the ATLAS experiment.
+\item Co-editor of paper and conference note on extra dimension diphotons resonances ~\cite{atl1,atl1-conf}.
+
+%\item Interim co-editor and analysis contact for paper {\it Search for Diphoton Events with Large Missing Transverse Energy in 7 TeV Proton-Proton Collisions with the ATLAS Detector}~\cite{atl2}.
+%\item Jet/$\mathbf{E_T^{miss}}$ and Calorimeter Monitoring Contact Person on the ATLAS experiment.
+%\item Data Quality Acquisitions Manager on the \BABAR\ experiment.
+\end{itemize}
+%\subsection*{Honors/Awards}
+%University of San Diego Fellowship For Graduate Studies, Phi Beta Kappa National Honor Society, University of Maryland Honors Program.
+
+\section*{Collaborators and Co-editors}
+Maria Pilar Casado, Universitat Autònoma de Barcelona, Arnaud Ferrari, Uppsala University, Thomas Junk, Fermilab, Anna Kopf, Freiburg University, Allison McCarn, Univerisity of Michigan, Henrik Ohman, Uppsala University,
+Michael Pitt, Weizmann Institute of Science, John Parsons, Columbia University, Nikolaos Rompotis, University of Wisconsin, Jana Schaarschmidt, Weizmann Institute of Science, Stephen Sekula, Southern Methodist University,
+Camila Rangel Smith, Uppsala University, Michelle Stancari, Fermilab.
+
+\section*{Graduate and Postdoctoral Advisors and Advisees}
+Rozmin Daya-Ishmukhametova, University of Massachusetts - Amherst, Yuriy Ilchenko, UT Austin, Renat Ishmukhametov, Ohio State University,Bob Kehoe, 
+Southern Methodist University, Ryszard Stroynowski, Southern Methodist University.
+
+\end{document}
