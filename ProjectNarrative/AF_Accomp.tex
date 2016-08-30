@@ -3,4 +3,202 @@
 \Large\textbf{PI Summary: Amir Farbin}
 \end{center}
 
+Motivation
+----------
+* Naturalness/Dark Matter/Unification 
+   => Razor/Jigsaw (ICHEP2016) => Jigsaw+DNN
+      => Compressed spectra  
+      => bbll+MET topological searches 
+      => General Searches @ end of Run 2 => Run 3 
+      => HL-LHC Physics
+   => DM searches in Neutrino Beams
+      => miniBooNE/DUNE (Sepideh)
+   => Advanced techniques: MEMs, DNNs (overlap with computing)
+
+* Computing Problems
+   => LArTPC Reco 
+      => LArIAT DNN Classification and Energy Regression.
+   => HL-LHC Computing- Need order magnitude cost saving.
+      => Moore's Law and Parallelism => New Frameworks + New processors + DNNs
+      => Better, Faster, Easier/Cheaper => DNNs
+      => TrackingML Dataset
+   => Computationally Extending Physics Reach 
+      => DNNs encapsulation of MEM (Tancredi Carli + Hussien)
+      => Generative DNN replacing Simulation/Geant4
+      => DNN-based Calorimetry: better classification and energy resolution.
+         => LCD Calorimeter (J.R. Vlimant Maria Spiropulu's and Maurizio Pierini from CERN)
+         => ATLAS Calorimeter (Taylor Childers ? ) 
+
+
+Uniqueness
+----------
+
+* Connected to computing at 2 frontiers, (experience: ATLAS PAT + DUNE Management)
+   => Working relationships with key core-framework developers (art, cmssw, athena) and others (gaudi, Geant V). 
+   => + Community Whitepaper
+      => Frameworks workshop
+   => LHC/DUNE expertise exchange (somewhat on hold
+      => Art Framework mini-workshop
+      => WMS/DDM mini-workshop : First time FIFE/CMS/PANDA together? => Requirements
+
+* Leader in Deep Learning in HEP (lots of big talks + workshop organizer)
+   => Working relationships/collaboration with full DNN in HEP community.
+      => Initiating many and facilitating other projects.
+      => Many collaborative papers in the works (see below).
+   => DNN Services: More than an dozen HEP DNN users of my machine from ~6 experiments. 
+      => provide full list?
+   => Datasets: LArTPC, Calorimetry, Tracking   
+   => Significant number of interesting results and plans... detailed below.
+
+Computing
+---------
+
+* Frameworks
+  * Stuff above => HEP Framework R&D
+     * architecture abstraction
+     * high-level language
+     * DNN integration
+  * Run 3 Framework Core Trigger software (Need to develop)
+     => Great stepping stop to Run 4
+
+* Deep Learning... 
+   * Large number of projects built on numerous collaborations
+      => bringing domain/DNN expertise, data, and hardware together.
+   * Enabled by hardware and software tools.
+      => Once setup, subsequent problems are easy to investigate.
+   => Plan: Datasets + Tutorials + HPC 
+
+Deep Learning Projects
+----------------------
+
+1. DNN Matrix Element (w/ Tancredi + Hussien, Tobias Golling + group). 
+   => Application: 
+      => Encapsulation of LO, NLO, NNLO weights => address NLO generation problem
+      => Encapsulation of MEM => Faster MEM/more sensitive searches
+   => Status: 
+      => DNN setup and running, prelim results.
+      => First studies already done on Titan with help of Sergey Patinkin (sp?)
+         => Regression vs binning/classification
+      => Plot: Residual
+   => Plans: 
+      => Paper with Tancredi (+ Hussien?)
+      => Paper with Toby
+         => Learned Binning
+
+2. LArTPC DNN Reconstruction (2 Collaborations: Sepideth, Grayson, P. Baldi, P. Sawdosky and UCI group. Asaadi's group)
+   => Application:
+      => Convolutional Nets:
+         => Particle ID
+         => Energy Regression
+            => Neutrino Reconstruction (ID+Energy)
+         => Compliment to Reco: e.g. EM/Had Hit ID
+      => Auto-encoders
+         => Noise suppression 
+         => Compression
+   => Status:
+      => Huge dataset Simulated LArIAT DataSet (15M): single particle + neutrino. Just finished!
+      => Many very promising preliminary results.
+         => Best electron versus pi0 separation (compare to MicroBooNE)
+         => Electron and Muon Regression
+      => Optimization going on now
+   => Plans:
+      => Paper with UCI 
+      => With Asaadi+Student
+         => Implement technique within LArIAT
+         => Train/Validate on Data 
+            => MicroBooNE: Some Neutrino x-section measurement (conventional and DNN)
+      => Ultimately, full DNN-based LArTPC reconstruction/physics.
+         => DUNE Detector Optimization
+         => All LArTPC Experiments...
+
+3. NEXT DNN Reconstruction (nu-less double beta-decay) (J. Renner et al, Nygren/Jones group)
+   => Application (mostly CNNs):
+      => Full Reconstruction... ultimate goal? Can we trust it?
+      => Detector Optimization:
+         => Fast design -> simulate => optimized reco cycle (also good idea for DUNE).
+         => Turn on effects in simulation => understand relative impact
+      => Novel searches:
+         => Vertex and trajectory reconstuction 
+            => Ben's Lorentz Invariance Test idea (is it a secret?)
+   => Status:
+      => Paper soon: First studies demonstration many of above with out-of-box CNNs. 
+      => New collaboration with Ben, Austin, and Ben's new student
+   => Plans:
+      => All of above!
+
+4. Calorimetry (w/ J.R. Vlimant, M. Pierini, ...) => ATLAS Combined performance contribution
+   => Motivation: 
+      => 3D Image: Ideally suited... extension of LArTPC work.
+      => Many handles not used
+         => e.g. Accordian shape
+         => e.g. Hadronic Sampling
+      => Potential for Big Impact:
+         => Better PID and Resolution => Bigger peaks
+         => Smaller systematics
+      => Fast Shower: Generative Models 
+   => Status:
+      => Large Dataset generated... more to come.
+         => Already shared with Berkeley vision lab and others...
+      => Start with LCD dataset.
+         => First classification results ready... Regression setup.
+         => Paper draft started
+   => Plans:
+      => AF Focus on Energy Regression (same as LArTPC)
+         => Likelihood-based
+      => Generative Models
+      => ATLAS
+         => Changing Granularity 
+         => Z data fit (w/ collaborator...)
+
+5. New Physics Searches (w/ Chris Rogan, Paul Jackson, Louise, Daniel, next postdoc ...)
+   => bb ll + MET Topological search:
+      => Status: Jigsaw vs 4-vector based DNN study done.
+         => Current: Parameterize Classifier. 
+      => Plan: Establish a topological basis for event classification 
+         => Stepping stone to General Searches for end of Run 2
+   => Compressed Spectra
+      => Status: Training DNN on Rogan data to compare with Rogan paper. 
+   => Papers, papers!
+
+6. Anomally Detection: (with P. Onyisi at UT?)
+   => Application:
+      => Detector Monitoring (from 35t days)
+      => General Purpose
+   => Status:
+      => Auto-encoder based anomally detector built using synthetic data
+   => Plan:
+      => Get some ATLAS monitoring data... give it a try.
+
+
+Physics
+-------
+* History:
+   * 3 Razor searches
+   * squark/gluino sub-convenership: David -> Louise
+
+* Accomplishments:
+   * ICHEP 0 Lepton + Compressed Spectra w/ JigSaw
+   * Louise sub-convenorship
+
+* Plans: 
+   => DNNs 
+      => Draw inspiration: Better Jigsaw-like observables?
+      => Background technique: how do you get a sideband?
+   => Compressed Spectra: Paper with Rogan
+   => ll bb + MET
+   => All Hadronic ???
+
+Other
+-----
+Louise: Tile performance paper editor
+Daniel: Tile MobiDAQ + Phase II
+
+
+Potential Collaborations at UTA
+-------------------------------
+Kaushik: DNN upgrade to their MVA SUSY search. 
+Haleh: DNN/MEM Charged Higgs searches.
+Justin: DNN Tau ID/Reco
+
+
 
