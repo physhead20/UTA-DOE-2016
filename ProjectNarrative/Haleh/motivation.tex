@@ -1,0 +1,110 @@
+%The discovery of the Higgs particle in the LHC run 1 and the mapping of the particles properties show that this 125 GeV particle is indeed SM like~\cite{atlsp,cmspro}.  However it is still possible that this particle
+%is part of a more complex Higgs sector such as ones predicted by Supersymmetric models~\cite{susy1,susy2}.  %The SM does not explain 95$\%$ of the universe which is predicted to be dark matter. 
+
+%The motivation
+%for the LHC energy regime is at the scale to address the hierarchy problem in physics. 
+Although the SM has been extremely successful at explaining electroweak data, so-called problems with the theory, such as the quadratic divergence of radiative corrections to the Higgs mass (a.k.a. the Hierarchy problem), and unanswered questions, such as the nature of dark matter, drive our search for new phenomena at the TeV scale. We have strong arguments (i.e. naturalness and the ``dark-matter miracle'') 
+that solutions to these problems and questions may be found at this energy. 
+The leading theoretical solution is Supersymmetry (SUSY) since it not only addresses the hierarchy problem, but can also provide a dark matter candidate and predicts the unification of gauge couplings at the Grand Unified Theory (GUT) scale.
+We also know that the uncertainty of the current Higgs measurements allow for non-SM decays of the Higgs boson of 26\%~\cite{combin} and that theories with SM+singlets have equivalent level of branching fraction~\cite{exohiggs}.
+
+%The five year research plan outlined in this proposal covers several BSM Higgs searches, starting with a broadened version of my Run 1  charged Higgs search in early Run 2. The BSM searches probeSUSY models, for example Next-to-Minimal Supersymmetric Standard Model (NMSSM) that include an additional scalar singlet.  
+%The five year research plan outlined in this proposal covers a broadened version of my Run 1 and early Run 2 charged Higgs search as well as a Z+X search in the latter part of the funding period. 
+
+%Table ~\ref{tab:anal} lists all the various exotic Higgs decays, and neutral CP-odd channel.
+
+
+%Supersymmetry,which is an extension of the SM introduces Supersymmetric partners to the SM fermions, can address both the hierarchy and dark matter problem of the SM.  
+%Without the bosons the Higgs
+%mass would diverge quadratically and would require fine tuning to keep it consistent with Electroweak measurements.  
+%Supersymmetry has been a favored theory because it is able to accommodate these open questions.
+%The boson terms which come in as opposite signs in the equation cancel these in the Higgs mass making the 
+%fine tuning no longer necessary in most cases.  In R-parity conserving SUSY particles are pair produced and the lightest Supersymmetric particle (LSP) becomes a dark matter candidate. The Minimal Supersymmetric Model and NMSSM where an additional scalar is added to the MSSM both predict 
+%more Higgs particles.  In NSSM exotic decays of Higgs such as h \too aa and h \too Z a are also possible.  The NMSSM predicts 7 Higgs bosons while the MSSM predicts 5.  At least one of these bosons is charged another neutral CP odd Higgs is also 
+%predicted amongst others. So searches for exotics decays of Higgs and other Higgs particles are well motivated.
+  %We therefore know that BSM phenomenon are 
+I will continue the search for charged Higgs in fully hadronic final state of $\tau^+ \nu$ which if discovered would be a clear sign of BSM physics 
+and would imply that the 125 GeV Higgs is part of a more complex Higgs sector. 
+The Charged Higgs is predicted by several models such as ones with Higgs triplets and Two-Higgs-Doublet-Models(2HDM)~\cite{2hdm1,2hdm2,2hdm3}. 
+%The observation of a charged Higgs would be a clear sign of BSM physics and would imply that the 125 GeV Higgs is part of a more complex Higgs sector. 
+In the MSSM, which is a type II 2 Higgs Doublet Model (2HDM), the main decay of charged Higgs at the LHC is t \too b H$^+$ for H$^+$ mass below m$_{top}$. At charged Higgs masses above m$_{top}$
+the main production at the LHC is in association with a top quark.  In the MSSM the Higgs sector can be completely determined by the H$^+$ mass and tan $\beta$, the ratio of vacuum expectation values of the 2HD.
+For masses below the top mass the $\tau \nu$ decay is dominant for $\tan \beta >2 $. In Run 2 we expect that with only a few\invfb of data,
+We will have a much higher chance of seeing this final state due to the larger cross sections (10x in some cases) provided by the higher center of mass energy. The search with 3.2 \invfb of data at $\sqrt s$ = 13 TeV has been recently published ~\cite{taunu}.
+With more luminosity we will be able to probe higher charged Higgs masses so it is important to pursue this analysis up to the entire Run 2 dataset.
+
+Currently the overlap of final states that cross between various physics groups is a point of great discussion within ATLAS management.  The optimization of analysis and the ability to perform 
+cross checks within similar analyses is important for the race to find new physics in Run 2.  With the new ATLAS data model based on xAODs and no longer depending on group specific Derived Physics Data we can start to achieve that goal.
+
+We, however, have to go one step further and think of making an analysis suite that can be simply ported for several analyses with similar final states by simply leaving some selections as variables to 
+be tweaked.  This will save time since people are not duplicating writing selection code, applying combined physics group systematics,  and again allows for simple cross checks across groups.  
+
+With those requirements in mind I propose a single analysis suite where we can perform the Z+X search which is motivated by several channels listed in table ~\ref{tab:anal}.
+The Z+X search will primarily probe SUSY models for example Next-to-Minimal Supersymmetric Standard Model (NMSSM) that include an additional scalar singlet or SM +singlet models.  It can also be used to discover other states not theoretically motivated therefore investigating new mass regions where potential new particles could exist.
+%Additionally I propose searching for final states in the range $12<$ m$<60$ where a``dark'' Z that serves as the mediator from a new U(1) gauge symmetry that can serve as the portal to a hidden sector that constitutes dark matter~\cite{zdark}. 
+Additionally I propose searching for a ``dark'' Z in the mass range $12<$ m$<60$. A ``dark'' Z serves as the mediator of a new U(1) gauge symmetry that can serve as the portal to a hidden sector that constitutes dark matter~\cite{zdark}. 
+Notice that in total there are five different theoretical models that decay into two different final states.  This is a great triumph over analyses that would at most cover a few final states.
+Table ~\ref{tab:anal} summarizes all the channels and final states covered in the Z scan analysis.  Notice that each channel has the 125 GeV Higgs either in the initial or final state. 
+Using the newly discovered Higgs particle in a broad scan will expand the experimental reach of this search.
+%The second analysis suite is an extension of the \Hp to $\tau\nu$ search to include an additional $\tau$ opening the bb$\tau\tau$ final state.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ l |  l    |  l                   | l         || l    }  \hline 
+ Analysis   & Channels        $\rightarrow$  &  $\tau \tau$ ll  & ll $\tau \tau$  &   Theory  \\ \hline \hline
+\multirow{4}{*}{Z Scan} & $h\rightarrow ZZ^*$ &  $\checkmark$ & $\checkmark$                     & SM \\  
+
+  &$A \rightarrow Zh$            &                    & $\checkmark$     &   MSSM, NMSSM \\  
+  &$h \rightarrow$ ZZ(dark)  &    $ \checkmark$          & $\checkmark$  &dark U(1) gauge     \\   
+  &$X(h) \rightarrow  Za$ for a l=$\mu$  &  $\checkmark$      & $\checkmark$ &   NSSM, SM+singlet\\ \hline \hline
+%\multirow{2}{*}{$\mu$ Scan} & $h \rightarrow a a$  $l=\mu$ &    \checkmark            &\multicolumn{2}{c||}{$\checkmark$} & NSSM, SM+singlet\\
+%  &$h \rightarrow$ Z(dark)Z(dark) & \checkmark &\multicolumn{2}{c||}{$\checkmark$}             & dark U(1) gauge\\\hline 
+% & $H(G) \rightarrow hh$  & \multicolumn{3}{c||}{}  &   extra-dimensions , 2HDM\\  \hline
+
+    \hline
+    \end{tabular}
+    \caption{ Table showing channels and accessible final states and theoretical models for several BSM models including the standard model h \too ZZ$^*$ channel~\cite{hexotic}.  The mass of the scalar singlet a and Z(dark) are  $4  <m(a)< 10 $GeV   $15 < m(Z(dark)) < 60 $GeV respectively.}
+\label{tab:anal}
+\end{center}
+\end{table}
+My strategy is to combine several final states and channels to increase statistics and look for a bump using a bump-hunting procedure I developed as a first pass. The approach removes the need for setting limits in a fine granularity in the discriminating variable, thereby greatly speeding up the statistical analysis. This speedup will allow for quicker turn around of searches in the absence of signal.  In the end the full statistical treatment as recommended for ATLAS will be performed to present the final results but this first pass will allow for flexibility in the search. 
+
+%This initial statistical assessment of the data will allow the analyzer to promptly respond to any potential observed excess.  This procedure can be used even for a 'blind' analysis where the signal area is hidden to prevent analyzer bias.  The result will be a quicker and broader search without wasting time on focusing on areas devoid of BSM signal.  This iterative statistical treatment procedure will save time and effort which can be spent on new BSM searches.
+
+While we hope to find BSM at the TeV scale, we have not seen any smoking gun evidence thus far.  It is preferential to search as broadly as possible for BSM.  Thus far the searches for other Higgs particles and exotic Higgs decays have been very model specific and based on analysis optimized for a specific theory.  A broad search with no mass or model assumption is more likely to observe something new, allowing us to efficiently look for several models simultaneously.  If evidence for signal is found in this broad and quick search,  a subsequent targeted and optimized search can be performed, taking into account any potential bias from the first step.
+
+
+%Our current results exclude the existence of a charged Higgs below 150 GeV in the high mass however we are not yet quite sensitive enough 
+%since above the top mass the tb final state is dominant. The intermediate region of 160-200 GeV has not been treated due to the fact of not being to reconcile interference effects. There are however LO calculations and NLO calculations to be made available within the time scale of Run 2.
+%It is however possible to get LO  predictions using MG5\_amc and then scale the total cross section to NLO t$\overline{t}$.  
+
+%The addition of this mass region will close the gap mH vs \tanb mass range and also produce competitive results at low \tanb vs A \too $\tau \tau$ and \Hp \too t$^+$b.  With 13 TeV projection we see that with only a few $fb^{-1}$ of data  we can have evidence of the particle if it exists.   
+%Run II will have a much higher chance of seeing this final state given that cross sections with the higher center of mass energy will increase up to a factor of 10 in some cases.
+%This analysis is one placed on the fast track for Run 2 measurements with a goal to present results at Lepton Photon in August of 2015.  
+%%By using simulated t$\overline{t}$. instead of $\tau$ embedding this should be achieved with early data.  The jet to tau background statistics can also be improved hence reducing one of the main systematics in the current analysis.  
+
+%Extending the charged Higgs analysis suite to include an additional $\tau$ should be a trivial task.  The low mass charged Higgs search already requires a b jet and a $\tau$.  A high mass search requires the addition of b jet coming from the associated top.
+%The addition of  another $\tau$ to the final state is a natural extension of the existing analysis, allowing observing new final states h \too a a, Graviton \too h h , and H \too h h with  h \too bb $\tau \tau$.  This covers both MSSM, NMSSM theories and extra-dimensional theories including Gravitons.  
+
+%My strategy is to combine several final states and channels to increase statistics and look for a bump using a proprietary bump-hunting software which will speed up traditional limit setting procedure.  Of course the standard ATLAS methodology for setting limits
+%should be adopted in the end but this intermediate statistical treatment will allow for quick searches with early Run 2 data.  Again we want to look everywhere but we do not want to take forever doing so, so we need to move on from areas where we know
+%new physics cannot exist and be flexible in our searches. So the analysis will have several passes of analysis one starting to be quite general then and can successively become more detailed.
+
+%The H$^+ \tau^+ \nu$ analysis is well motivated by Supersymmetric models such as  the Minimal Super Symmetric Model (MSSM) for having the largest BR at low mass and the second highest BR after the tb final state in higher
+%\tanb and higher masses.   
+%In the intermediate region of 160-200 GeV the $\tau \nu$ BR dominates.  This fact is important for Run2 measurements where we can start to look into
+%the intermediate region with early data and potentially exclude the low \tanb region and can potentially outperform the H$^+$ \too $\tau \tau$ final state in this parameter space. 
+
+
+%EXTRAS:
+%Our studies also show that with only a few fb$^{-1}$ of data we can supersede the Run 1 results based on 20 fb$^-1$ at a center of
+%mass energy of 8 TeV.  In MSSM \tanb vs mH plane this final state has the potential of outperforming the H$^+$ \too $\tau \tau$ final state by closing the gap at low \tanb. It is for these reasons that the H$^+ \tau \nu$ final state will be one the first results with the LHC run 2 and it is of high priority.
+%
+%The $H^+ $\too $\tau \nu$ final state searches have already restricted the existence of the charged Higgs at masses lower than 150 GeV with the benchmark MSSM mhmax+ model. 
+%I propose to add the intermediate mass region of 160-200 GeV which was previously left out since no theoretical predictions of the top interference in this region was known.   It is however possible to get LO 
+%predictions using MG5\_amc and then scale the total cross section to NLO t$\overlin{t}$.  The addition of this mass region will close the gap mH vs \tanb mass range and also produce competitive results at low \tanb
+%vs A \too $\tau \tau$ and \Hp \too t$^+$b.  With 13 TeV projection we see that with only a few $fb^{-1}$ of data  we can have evidence of the particle if it exists.   
+%Run II will have a much higher change of seeing this final state given that cross sections with the higher center of mass energy will increase up to a factor of 10 in some cases.
+%This analysis is one placed on the fast track for Run 2 measurements with a goal to present results at Lepton Photon in August of 2015.  By using simulated t$\overling{t}$. instead of $\tau$ embedding this should be achievable 
+%with early data.  The jet to tau background statistics can also be improved hence reducing one of the main systematics in the current analysis.  
+
