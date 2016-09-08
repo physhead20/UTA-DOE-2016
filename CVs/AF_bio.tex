@@ -1,0 +1,128 @@
+\documentclass[11pt,]{article}
+%\usepackage{atlasphysics}
+\usepackage[letterpaper,top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{graphicx} 
+%\input{babarsym}
+\def\met{\mbox{\ensuremath{\, \slash\kern-.6emE_{T}}}}
+% \topmargin 0.2 in
+% \leftmargin 0pt
+% \headheight 0pt
+% \headsep 0pt
+% \textheight 9.25 in
+\parindent 0pt
+\parskip  0.07 in %\baselineskip
+% \oddsidemargin 0in
+% \evensidemargin 0in
+% \textwidth 6.5in
+\pagestyle{plain}
+\begin{document}
+
+\small
+\def\@tablebox#1{\begin{tabular}[t]{@{}l@{}}#1\end{tabular}}
+
+\newenvironment{llist}{\begin{list}{}{\setlength
+ \labelwidth{1in}\setlength\leftmargin{\labelwidth}\addtolength
+ \leftmargin{\labelsep}\itemsep 5pt plus 2pt minus 2pt
+ \parsep 10pt plus 2pt minus 2pt
+ %% Set the depth of the title to 0 in case more than one line.
+ %% If the title takes more lines than the body, you lose.
+ \def\sectiontitle##1{\setbox\@title=\hbox{{\it\@tablebox{##1}}}\dp\@title=0pt
+   \item[\copy\@title]\ifdim\wd\@title>\labelwidth
+   \leavevmode \\* \else \fi}
+ \def\makelabel##1{##1\hfill}}}{\end{list}}
+
+\def\employer{\@ifstar{\@semployer}{\@employer}}
+\def\@employer#1{\par{\sc #1}}
+\def\@semployer#1{{\sc #1}\\}
+
+% The location is always flush right.  It is moved to the next
+% line if there is not room left on this one.··
+% See the TeXbook Chapter 14.
+\def\location#1{{\bf{}\unskip\nobreak\hfill\penalty50\hskip2em
+  \hbox{}\nobreak\hfill \hbox{#1}\finalhyphendemerits=0 \\}}
+\def\dates#1{{\em #1}\\[2pt]}
+
+\begin{center} {\bf\Large Amir Farbin} \end{center}
+{\begin{tabular}[t] {@{}l @{\hspace{7cm}}l} 
+
+University of Texas Arlington   \\
+Department of Physics\\
+P.O. Box 19059\\
+Arlington, TX, 76019  &{\bf e-mail: afarbin@uta.edu} \\
+\end{tabular}}
+
+\subsection*{Education and Training}
+\par{\sc \bf{Massachusetts Institute of Technology}}
+\location{ Cambridge, MA}
+\dates{Sep 93 - Jun 1997}
+S.B. in Physics. Thesis advisor: Louis Osborne.
+
+\par{\sc \bf{ University of Maryland}}
+\location{ College Park, MD}
+\dates{Aug 97 - June 03}
+Ph.D. in Physics. Thesis advisor: Hassan Jawahery.\\
+
+\par{\sc \bf{Postdoctoral Research Assistant}} 
+\location{BaBar Group- UMD} 
+\dates{June 03 - April 04}
+
+\par{\sc \bf{Research Associate}} \location{ATLAS- University of
+Chicago} \dates{May 04 - Feb 05} 
+
+\par{\sc \bf{Research Fellow}}
+\location{ ATLAS- CERN} \dates{March 05 - August 07}
+
+
+\subsection*{Research and Professional Experience}
+\par{\sc \bf{Associate Professor (Tenured)}} \location{ University of Texas 
+   Arlington} \dates{September 2012-Present}
+Collaborator on ATLAS, DUNE, MiniBooNE, and LArIAT experiments. DUNE
+Deputy Comuting Coordinator. ATLAS contributions include Supersymmetry searches, physics analysis tool leadership
+ and development, Tile Hadronic Calorimeter operations and leadership,
+ and ATLAS software tutorials and documentation.  
+
+ \par{\sc \bf{Assistant Professor}} \location{ University of Texas
+   Arlington} \dates{August 07 - September 2012}
+2009 DOE Early Career Reseach Program (ECRP) Award for
+``Model-Independent Dark-Matter Searches at the ATLAS Experiment and
+Applications of Many-core Computing to High Energy Physics''. 
+
+
+\section*{Recent Relevant Publications and Presentations }
+\begin{itemize}
+
+\item ATLAS Collaboration, \emph{Further searches for squarks and gluinos in final states with jets and missing transverse momentum at $\sqrt{s}=13$~TeV with the ATLAS detector }, Tech. Rep. ATLAS-CONF-2016-078, CERN, Geneva, August, 2016. http://cds.cern.ch/record/2206252
+
+\item ATLAS Collaboration, \emph{Search for squarks and gluinos in final states with jets and missing transverse momentum at $\sqrt{s}= 13$~TeV with the ATLAS detector}, Eur.Phys.J. C76 (2016) no.7, 392, arXiv:1605.03814.
+
+\item ATLAS Collaboration, \emph{Summary of the searches for squarks and gluinos using $\sqrt{s} = 8$ TeV $pp$ collisions with the ATLAS experiment at the LHC}, JHEP 10 (2015) 054, arXiv:1507.05525.
+
+\item ATLAS Collaboration, \emph{Multi-channel search for squarks and gluinos in $\sqrt{s}$ = 7 TeV proton-proton collisions with the ATLAS Detector}, Eur.Phys.J. C73 (2013) 2362, arXiv:1212.6149.
+
+\item
+ R.Acciarri {\it et al.} [DUNE Collaboration], ``Long-Baseline
+ Neutrino Facility (LBNF) and Deep Underground Neutrino Experiment
+ (DUNE) Conceptual Design Report Volume 2: The Physics Program for
+ DUNE at LBNF''. 
+
+\end{itemize}
+\subsection*{Collaborations}
+\begin{itemize}
+\item Member of the ATLAS Collaboration (2004-present). 
+\item Member of the LBNE and DUNE Collaborations (2013-present). 
+\item Member of the LArIAT Collaboration (2012-present). 
+\item Member of the miniBooNE Collaboration (2012-present). 
+\item Member of the NEXT Collaboration (2016-present). 
+\item Member of the BaBar Collaboration (1998-2005). 
+\end{itemize}
+
+\subsection*{Advisors and Mentorship}
+\begin{itemize}
+\item Undergraduate Advisors: T. Arias (MIT), L. Osborne (MIT).
+\item Ph.D. Advisor: H. Jawahery (University of Maryland).
+\item Postdoctoral Advisors:  H. Jawahery (University of Maryland), F. Merritt (University of Chicago).
+\item Postdoctoral Mentorship:  (all at University of Texas at Arlington): A. R. Stradling, R. Pravahan (AT\&T Foundry, Palo Alto), Louise Heelan (UTA), David Cote (Ciena Telecommunications, Ottawa, Canada).
+\item Graduate Mentorshop (all at University of Texas at Arlington): P. C. Vajhula (current affilication unknown), Heather Brown (Hewlett-Packard),  Daniel Bullock (UTA),  Sepideh Shahsavarani (UTA).
+\end{itemize}
+
+\end{document}
