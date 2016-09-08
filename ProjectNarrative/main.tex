@@ -58,7 +58,7 @@
 %%%%%%%%%%%%%%%%%%%%%% Bibliography  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\thebibliography#1{
   \fivehead{  {} }\list
-%  \twohead{  {BIBLIOGRAPHY} }\list
+  \twohead{  {BIBLIOGRAPHY} }\list
   {\arabic{enumi}.}{\settowidth\labelwidth{#1.}
    \leftmargin\labelwidth
   \advance\leftmargin\labelsep\itemsep0pt \frenchspacing
@@ -68,6 +68,12 @@
   \sfcode`\.=1000\relax}
 \let\endthebibliography=\endlist
 
+
+%\usepackage[
+%  backend=bibtex8,
+%  style=ieee
+%]{biblatex}
+%\bibliography{biblio}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -239,15 +245,26 @@
 \onehead{Research in Detector R$\&$ D}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% PI Summary for Andrew White %%%%%%%%%%%%%
+%%% PI Summary for David Nygren %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{./Nygren/DN_Accomp.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% PI Summary for Kaushik De %%%%%%%%%%%%%
+%%% PI Summary for Ben Jones %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{./Jones/BJ_Accomp.tex}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Light Collection Section %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{DetectorRD_DN_JA_BJ.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Pico-Second Timing Work %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{DetectorRD_DN_JA_BJ.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -286,6 +303,17 @@
 
 %%%%%%%%%%%%%%%%%%%%%%% Current and Pending %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%% Andrew Brandt %%%
+\includepdf[pages=-]{../CurrentAndPendingSupport/CNP-Brandt-DOE-092016.pdf}
+
+%%% Kaushik De %%%
+\includepdf[pages=-]{../CurrentAndPendingSupport/CNP-De-DOE-092016.pdf}
+
+%%% Jae Yu %%%
+\includepdf[pages=-]{../CurrentAndPendingSupport/CNP-Yu-DOE-092016.pdf}
+
+%%% Jonathan Asaadi %%%
+\includepdf[pages=-]{../CurrentAndPendingSupport/CNP-Asaadi-DOE-092016.pdf}
 
 
 
