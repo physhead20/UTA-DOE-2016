@@ -7,23 +7,23 @@ A quick summary of PI Yu's accomplishments is provided in the list below.
 \item{Responsible for the Dual Phase ProtoDUNE Field Cage}
 \item {Supervised numerous undergraduate students to contribute to the LBNF beam line systematics and optimization studies}
 \item {Supervised postdoctoral fellow Dr. Animesh Chatterjee for his contribution to DUNE, LArIAT, and MiniBooNE}
-\item{Contributed to WA105 $3\times 1 \times 1~{\rm m^{3}}$ prototype construction during the sabbatical stay in Sept. 2015 -– May 2016}
+\item{Contributed to WA105 $3\times 1 \times 1~{\rm m^{3}}$ prototype construction during the sabbatical stay in Sept. 2015 -√ê May 2016}
 \end{itemize}
 
-\subsubsection{Magnetic Field Map Simulation Study in LBNF – Brown, Yu}
+\subsubsection{Magnetic Field Map Simulation Study in LBNF √ê Brown, Yu}
 A new graduate student, Garrett Brown has joined the physics department Ph.D. program January 2016 and was assigned in implementing the G4LBNE code for magnetic field mapping and displaying the field overlaid on LBNF beamline components. His first attempt was to sample the volume of the beamline by uniformly stepping point by point in 3D Cartesian coordinates and sampling the field value at each point by checking which volume the point was residing in and measuring the volume's field value at that point, or using 0 if there was no volume at that point. The problem he encountered was transforming the world coordinate of the 3D point to the local coordinate with respect to the geometry of the placement's volume. GEANT4 does not store any hierarchical information regarding the transformations between geometry, so it is up to the user to keep track of objects' transformations. Given the complication due to relying on correctly determining if a point was inside of the volume, he ultimately used geantino moving under the influence of the electromagnetic equation of motion and record the magnetic field value which GEANT4 provides. This method provided a placement independent magnetic field map.  Figure on the left of Fig.~\ref{if-beams} shows the result of this method in the current three horn system.  A further test of the comparisons of magnetic field map is necessary in order to verify the functionality of this software.
 	
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=3in]{Figures/if-beam1.png}
-  \includegraphics[width=3in]{Figures/if-beam2.png}
+  \includegraphics[width=3in]{images/if-beam1.png}
+  %\includegraphics[width=3in]{imagesFigures/if-beam2.png}
  \caption{
  (left) The three polycone horns of the DUNE beamline and their magnetic fields mapped out.
  (right)}
   \label{fig:if-beams}
 \end{figure}
 
-\subsubsection {Charged Pion Total Cross section on Argon in LArIAT – Chatterjee, Yu}
+\subsubsection {Charged Pion Total Cross section on Argon in LArIAT √ê Chatterjee, Yu}
 We have studied the charged pion-nucleus total interaction cross section in liquid argon performed at the Liquid Argon In A Testbeam (LArIAT) experiment. Pion interactions with matter have been a central topic in particle physics for decades. Over the past forty years, an extensive set of pion scattering experiments have been conducted at various meson factories. LArIA[1]T program is consist of full calibration of the argon TPC in a dedicated beam line. The main goal of the LArIAT experiment is to measure pion-argon total and exclusive cross-section, 3D imaging, good particle identification and precise calorimetric reconstruction.
 
 The layout of the LArIAT experiment consists of two main parts: the liquid argon-related components and the beam-related components. The liquid argon-related part consists of the LArTPC detector, the liquid argon scintillation light detector, the LArTPC read-out cold electronics, the liquid argon cryostat, and the cryogenic system connected to the cryostat for liquid argon cooling and purification. The beam-related part consists of a series of beam counters such as the TOF detector, multi-wire proportional chambers (MWPCs), Cherenkov detector, and veto paddles are aligned along the LArIAT beam line for PID tagging and momentum selection. The analysis presented here of LArIAT data from Run-I aims to develop pion identification algorithms based on the information from LArIAT beamline detectors and from the pion topology in liquid argon. The procedure to achieve the measurement is based on the reconstruction and selection of charged pion events, the analysis of the calorimetric information along the track in the TPC, the vertex finding and the evaluation of the total cross section applying a "Sliced TPC" method. The result of the first measurement~\cite{if:lariat-pi-xsec} of Pion-Argon total cross-section has been shown in the plot on the left of Fig.~\ref{fig:if-animesh}.
@@ -32,8 +32,8 @@ LArIAT has completed taking Run 2 data for 6 months from February 2016. Using th
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=3in]{Figures/if-ch-pi-xssec-lariat.png }
-  \includegraphics[width=3in]{Figures/if-beam2.png}
+  %\includegraphics[width=3in]{images/if-ch-pi-xssec-lariat.png }
+  %\includegraphics[width=3in]{images/if-beam2.png}
  \caption{
  (left) First measurement of Pion-Argon Total cross-section at LArIAT
  (right) .
@@ -41,7 +41,7 @@ LArIAT has completed taking Run 2 data for 6 months from February 2016. Using th
   \label{fig:if-animesh}
 \end{figure}
 
-\subsubsection{Proton Beam Alignment Monitor – Chatterjee, Yu}
+\subsubsection{Proton Beam Alignment Monitor √ê Chatterjee, Yu}
 Proton Beam Alignment Monitor (PBAM) will check the alignment of the proton beam in the neutrino beamline(LBNF).  We have done the simulation study of the Monitor at the beamline. Dimension of the Monitor we have consider for the simulation is $1m\times 1m$, gas gap of 1 mm thick which is filled with Ar gas. Monte-carlo simulation has been done with G4LBNE package with the v3r3p7 version. we have taken $5\times 10^{6}$~POT with the Nominal configuration, proton energy 120 GeV and horn current is 230 kA.  
 
 Most of the un-interacted protons are picked at the center of the Monitor, hence it will be important to design the Monitor into pixel like structure to get better position resolution of the proton at the center.  We have done the simulation of the Monitor with different pixel size to get the optimum resolution of the monitor. Optimum resolution of any pixels is considered when sigma of the position distribution is within the pixel size.  We are working with Fermilab accelerator division to finalize the monitor design. Our next step will be implementation of the monitor design.  
@@ -58,8 +58,8 @@ We are working on the design and simulation of Field cage of Dual Phase of LArTP
 \subsubsection{Data analysis with 35 ton LArTPC}
  35-Ton LAr-TPC is a prototype detector for DUNE experiment. 35-Ton detector is placed at PC4 at Fermilab. It is mainly taking cosmic muon data with integrated TPC and photon detectors.  The detector has the success of seeing muon tracks with TPC. We are working to find the tracking efficiency of the detector. We are also working to understand the detector using the cosmic data. Complete the data analysis and include the result on 35-ton detector paper .
 
-\subsubsection{GosSiP and Photon Detector Coupling Studies – R. Musser}
-GosSiP is a simulation package for SiPMs that allows the user to vary multiple characteristic parameters of the detector. These parameters are important to understand because of their correlation to the signal that the SiPM generates. An important aspect of these parameters is their dependency on temperature, given that SiPM’s will be working in LAr. This affects the overvoltage applied to the detector, which in turn determines the characteristic parameters. Originally, GosSiP did not have the ability to determine the effects that various temperatures have on a SiPM.  Musser was able to implement this element into the simulation based on the effect of varying temperatures on the SiPM characteristic parameters reported in Ref.~\cite{if:pd-ron, if:pd-ron2}.   The temperature dependences of each of the characterization parameters were analyzed and fit to the most appropriate functional form that reflects the dependencies. These equations were then implemented into the code that allowed GosSiP to calculate the parameters with respect to the temperature. Comparing the values of a room temperature simulation to a simulation at ${-196^{o}C}$ shows drastic variations. There was a 56\% and 7\% increase in PDE and gain respectively. Conversely, there was a 56\% and a 54\% decrease in DCR and crosstalk respectively. These changes resulted in a 69\% increase in mean charge strictly due to a decrease in temperature. With the ability to account for temperature dependence, GosSiP is now an even more valuable and accurate simulation package.
+\subsubsection{GosSiP and Photon Detector Coupling Studies √ê R. Musser}
+GosSiP is a simulation package for SiPMs that allows the user to vary multiple characteristic parameters of the detector. These parameters are important to understand because of their correlation to the signal that the SiPM generates. An important aspect of these parameters is their dependency on temperature, given that SiPM√ïs will be working in LAr. This affects the overvoltage applied to the detector, which in turn determines the characteristic parameters. Originally, GosSiP did not have the ability to determine the effects that various temperatures have on a SiPM.  Musser was able to implement this element into the simulation based on the effect of varying temperatures on the SiPM characteristic parameters reported in Ref.~\cite{if:pd-ron, if:pd-ron2}.   The temperature dependences of each of the characterization parameters were analyzed and fit to the most appropriate functional form that reflects the dependencies. These equations were then implemented into the code that allowed GosSiP to calculate the parameters with respect to the temperature. Comparing the values of a room temperature simulation to a simulation at ${-196^{o}C}$ shows drastic variations. There was a 56\% and 7\% increase in PDE and gain respectively. Conversely, there was a 56\% and a 54\% decrease in DCR and crosstalk respectively. These changes resulted in a 69\% increase in mean charge strictly due to a decrease in temperature. With the ability to account for temperature dependence, GosSiP is now an even more valuable and accurate simulation package.
 
 While simulations of SiPMs are important, physical tests are needed in order to obtain a more complete picture. A total of 40 SensL SiPMs were collected for characterization tests. PCBs were designed and manufactured for testing of the SiPMs. A GUI in LabVIEW was created in order to collect and analyze the data from the SiPMs. This allows for instant analysis of the characteristic parameters, which will be verified with further analysis in ROOT. Since the boards with the SiPMs attached arrived, we have been soldering SMA connector to the boards for readout and bias voltage purposes. With a few boards completed, we have begun testing some of the SiPMs with a pulsating 420 nm LED. Figure 1 shows the output of a $6\times 6$~mm SensL SiPM to an oscilloscope that confirms the board is working correctly.
 
@@ -71,8 +71,8 @@ My area of focus was the beam-line itself, located at Fermilab. Here is where th
 
 \begin{figure}[htb]
   \centering
-  \includegraphics[width=3in]{Figures/decay-rad.png }
-  \includegraphics[width=3in]{Figures/cpv-sens.png}
+  %\includegraphics[width=3in]{images/decay-rad.png }
+  %\includegraphics[width=3in]{images/cpv-sens.png}
  \caption{
  (left) The ratio of the integrated neutrino flux as a function of decay pipe radius with respect to the design radius of 2m.  
  (right) Impact to the CP violation sensitivity for change of decay pipe for 2m radius vs 1m.
@@ -83,7 +83,7 @@ My area of focus was the beam-line itself, located at Fermilab. Here is where th
 % references
 %\bibitem{if:pd-ron}
 % Ramilli, Marco. "Characterization of SiPM: Temperature Dependencies." Rapsodi. N.p., n.d. Web. 26 Aug. 2016.
-%\bibitem {if:pd-ron2} Lightfoot, P. K., G. J. Barker, K. Mavrokoridis, Y. A. Ramachers, and N. J.C. Spooner. %”Characterization of a Silicon Photomultiplier Device for Applications in Liquid Argon Based Neutrino Physics and %Dark Matter Searches," Arxiv. University of Sheffield, University of Warwick, n.d. Web. 26 Aug. 2016.
+%\bibitem {if:pd-ron2} Lightfoot, P. K., G. J. Barker, K. Mavrokoridis, Y. A. Ramachers, and N. J.C. Spooner. %√ìCharacterization of a Silicon Photomultiplier Device for Applications in Liquid Argon Based Neutrino Physics and %Dark Matter Searches," Arxiv. University of Sheffield, University of Warwick, n.d. Web. 26 Aug. 2016.
 
 %\bibitem{if:lariat-exp}
 %LArIAT Experiment : http://lariat.fnal.gov/;
