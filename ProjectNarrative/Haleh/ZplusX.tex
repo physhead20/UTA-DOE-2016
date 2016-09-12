@@ -1,18 +1,5 @@
-\section{Physics Motivation}
-\label{sec:mot}
-\input {motivation} 
-\section{Research Plan}
-\label{sec:anal}
-The analyses discussed in this proposal are \Hp to $\tau^+ \nu$ and Z scan with Higgs and taus.  The charged Higgs analysis will be the focus of my research plan for the first two years and will continue as we reach 
-higher luminosities.  In the second year I will start a new endeavor in the Z scan analysis.  I will use my experience with taus to look for final states with this particle.  
-%1. and 2. would be part of the same analysis suite since they have very similar final states. By adding and additional
-%tau to the charged Higgs analysis one gets 3.  
-%2. and 3. are part of one analysis suite since they have leptons and taus in the final states.  With slight additional requirements on a basic set of ntuples one can get either the Z or muon scan.
-In the sections to come I will give an overview of each analysis and in the workplan in section~\ref{sec:work} go over specific objectives and tasks for each analysis.
-
-In addition to these two analyses there is an upgrade component for HL-LHC.  The details of the project are included in section ~\ref{sec:lvps}. Table~\ref{tab:lvps} highlights major milestones of the project.
-
-\subsection{Z+X including Higgs and taus}
+\newcommand{\pt}{\mbox{$p_T$}}
+\input {Haleh/motivation} 
 For the Z mass scan I propose to perform two mass scans constraining the given particle combination to the Z mass and scanning in the 'other' particle. 
 For example, Z(ll) other($\tau\tau$) and Z($\tau\tau$)other(ll) would be two separate scans of the 'other' particle after requiring that the event has a Z particle. 
 The mass range of the scan would go from 4 GeV to 2 TeV and each object would be a resonance in that mass spectrum. The ee and $\mu\mu$ channels are added together 
@@ -26,7 +13,7 @@ Of course the 4 lepton final state is one that is extensively tested for the SM 
 the 4 lepton final state but by constraining the on shell Z to decay to $\tau \tau$ one can improve the mass resolution.  These final states can add further sensitivity to this channel specially as the LHC
 gathers more data.  With about 10 \invfb\ of data at the center of mass energy $\sqrt s$ = 13 TeV the 4 lepton analysis observed 3 events per category including a combination of electrons and muons.  The efficiency for tau reconstruction is lower (30-40\% as opposed to around 80\%) than the electron and muon channels and in 
 addition pose a more challenging final state due to the existence of neutrinos.
-However on average $35/80\times4\sim 2$ ($2\tau2e, 2\tau2\mu, 2e2\tau,2\mu2\tau$) events/10\invfb can be added to this channel~\cite{2016:4l} increasing the total statistics by 2/12=17\%. With a final dataset of 250\invfb of data this would be a significant addition to the existing channels.
+However on average $35/80\times4\sim 2$ ($2\tau2e, 2\tau2\mu, 2e2\tau,2\mu2\tau$) events/10\invfb can be added to this channel~\cite{2016:4l} increasing the total statistics by 2/12=17\%. With a final dataset of 150\invfb of data this would be a significant addition to the existing channels.
 
 %In the case that the sensitivity is not improved with this final state, this channel could be important for studying the missing ET in the diboson final states of the Higgs.
 %It is entirely possible however that this final state will not improve the sensitivity in this channel but 
@@ -79,7 +66,7 @@ work for this channel because of the large \pt cut and the fact that it is seede
 algorithm and a low \pt highly collimated algorithm where standard jets of R of 0.4 can be used. A boosted decision tree (BDT) can be developed using the jet substructure information.  
 The variables suggested to be used in the BDT are as follows:
 \begin{itemize}
-\item{core energy fractions, $f_{core}^{sub(lead)}=\frac{\sum_{cells}^{\Delta R=0.1} \pt_{cell}}{\sum_{cells}^{\Delta R=0.2}\pt_{cell}} $}
+\item{core energy fractions, $f_{core}^{sub(lead)}=\frac{\sum_{cells}^{\Delta R=0.1} p_{p,cell}}{\sum_{cells}^{\Delta R=0.2}p_{T,cell}} $}
 \item {The subjet energy fractions $f(sub)lead_{subjet}=\frac{\pt^{subjet}}{\pt^{Jet}}$. }
 \item{leading track momentum fractions $f(sub)lead_{subjet}=\frac{\pt ^{leadTrack}}{\pt^{subjet}}$}
 \item{the maximum track distance Rmax}
@@ -113,7 +100,7 @@ can be used to validated this approach.
 As described in section~\ref{sec:zscanback} the backgrounds to the multiple BSM analysis  will be J/$\psi$, $\upsilon$, \ttbar, Drell-Yan, and Z tails.  One can 
 parameterize these background from the control regions described above then fit for the normalization within the signal region similar to what is done in the
 $\tau\tau \mu \mu$ analysis on ATLAS~\cite{tautaumumu}.  We also have the SM ZZ* as a non-peaking background which may be difficult to model. This background and the SM resonant backgrounds 
-can be parameterized with MC and used in the fits. I have extensive experience with parameterized fits from the \babar\ experiment and can guide my graduate student to model the various SM backgrounds.
+can be parameterized with MC and used in the fits. I have extensive experience with parameterized fits from the BABAR experiment and can guide my graduate student to model the various SM backgrounds.
 
 \paragraph{Perform two separate scans in Z final state ;  Postdoc, Akafzade} %(D - 4 months)
 In the decay of Y \too Z + X we call the mass of X can be reconstructed as X(ee), X($\mu\mu$), and X($\tau\tau$).  
