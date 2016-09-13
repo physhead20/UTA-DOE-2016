@@ -1,11 +1,58 @@
 \newcommand{\pt}{\mbox{$p_T$}}
-\input {Haleh/motivation} 
+%Although the SM has been extremely successful at explaining electroweak data, so-called problems with the theory, such as the quadratic divergence of radiative corrections to the Higgs mass (a.k.a. the Hierarchy problem), and unanswered questions, such as the nature of dark matter, drive our search for new phenomena at the TeV scale. We have strong arguments (i.e. naturalness and the ``dark-matter miracle'') 
+%that solutions to these problems and questions may be found at this energy. 
+%The leading theoretical solution is Supersymmetry (SUSY) since it not only addresses the hierarchy problem, but can also provide a dark matter candidate and predicts the unification of gauge couplings at the Grand Unified Theory (GUT) scale.
+%We also know that the uncertainty of the current Higgs measurements allow for non-SM decays of the Higgs boson of 26\%~\cite{combin} and that theories with SM+singlets have equivalent level of branching fraction~\cite{exohiggs}.
+
+The increased beam energy and intensity in the LHC’s Run 2 and 3 will likely provide the best 
+opportunity to discover BSM physics for at least the next ten years.
+The task of discovering it, however, can be more challenging compared to the SM Higgs, whose mass was well constrained by precision electroweak data and the underlying theory, i.e. the SM, 
+was well understood and extensively tested for over half a century~\cite{eng,higgs1,higgs2,higgs3}. 
+In contrast, the number of theories and models that motivate BSM Higgs searches are significantly larger and more speculative, requiring that a much wider net be cast to cover a broader range of masses and final states. 
+
+The Z+X search proposed by Hadavand will primarily probe SUSY models for example Next-to-Minimal Supersymmetric Standard Model (NMSSM) that include an additional scalar singlet or SM +singlet models.  It can also be used to discover other states not theoretically motivated therefore investigating new mass regions where potential new particles could exist.
+Additionally I propose searching for a ``dark'' Z in the mass range $12<$ m$<60$. A ``dark'' Z serves as the mediator of a new U(1) gauge symmetry that can serve as the portal to a hidden sector that constitutes dark matter~\cite{zdark}. 
+Notice that in total there are five different theoretical models that decay into ll$\tau\tau$ and/or $\tau\tau$ll.  This is a great triumph over analyses that would at most cover a few final states.
+Table ~\ref{tab:anal} summarizes all the channels and final states covered in the Z scan analysis.  Notice that each channel has the 125 GeV Higgs either in the initial or final state. 
+Using the newly discovered Higgs particle in a broad scan will expand the experimental reach of this search.
+The search can be further expanded in a model-independent manner by scanning for Z+X where X can be of masses not theoretically motivated. 
+
+Hadavand proposes to perform searches using the 125 GeV Higgs to bootstrap her way to search for new exotic decays of the Higgs or other BSM states.  
+The Higgs mass constraint will help aid the search for signal in a specific region.  %Or one can use the same final states and do a  more global search with no mass constraints by looking for Z+X final states where X $\rightarrow$ ll, including taus.
+This method is motivated but not limited to the final states listed in table~\ref{tab:anal}.
+This proposal combines a search within five theoretical models each decaying to ll$\tau\tau$ and/or $\tau\tau$ll.  With one analysis we are able to
+cover all of these models thereby increasing the analysis reach.  
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ l |  l    |  l                   | l         || l    }  \hline 
+ Analysis   & Channels        $\rightarrow$  &  $\tau \tau$ ll  & ll $\tau \tau$  &   Theory  \\ \hline \hline
+\multirow{4}{*}{Z Scan} & $h\rightarrow ZZ^*$ &  $\checkmark$ & $\checkmark$                     & SM \\  
+
+  &$A \rightarrow Zh$            &                    & $\checkmark$     &   MSSM, NMSSM \\  
+  &$h \rightarrow$ ZZ(dark)  &    $ \checkmark$          & $\checkmark$  &dark U(1) gauge     \\   
+  &$X(h) \rightarrow  Za$ for a l=$\mu$  &  $\checkmark$      & $\checkmark$ &   NSSM, SM+singlet\\ \hline \hline
+%\multirow{2}{*}{$\mu$ Scan} & $h \rightarrow a a$  $l=\mu$ &    \checkmark            &\multicolumn{2}{c||}{$\checkmark$} & NSSM, SM+singlet\\
+%  &$h \rightarrow$ Z(dark)Z(dark) & \checkmark &\multicolumn{2}{c||}{$\checkmark$}             & dark U(1) gauge\\\hline 
+% & $H(G) \rightarrow hh$  & \multicolumn{3}{c||}{}  &   extra-dimensions , 2HDM\\  \hline
+
+    \hline
+    \end{tabular}
+    \caption{ Table showing channels and accessible final states and theoretical models for several BSM models including the standard model h \too ZZ$^*$ channel~\cite{hexotic}.  The mass of the scalar singlet a and Z(dark) are  $4  <m(a)< 10 $GeV   $15 < m(Z(dark)) < 60 $GeV respectively.}
+\label{tab:anal}
+\end{center}
+\end{table}
+
+My strategy is to combine several final states and channels to increase statistics and look for a bump using a bump-hunting procedure I developed as a first pass. 
+The approach removes the need for setting limits in a fine granularity in the discriminating variable, thereby greatly speeding up the statistical analysis. 
+This speedup will allow for quicker turn around of searches in the absence of signal.  In the end the full statistical treatment as recommended for ATLAS will be performed to present the final 
+results but this first pass will allow for flexibility in the search. 
+
 For the Z mass scan I propose to perform two mass scans constraining the given particle combination to the Z mass and scanning in the 'other' particle. 
 For example, Z(ll) other($\tau\tau$) and Z($\tau\tau$)other(ll) would be two separate scans of the 'other' particle after requiring that the event has a Z particle. 
 The mass range of the scan would go from 4 GeV to 2 TeV and each object would be a resonance in that mass spectrum. The ee and $\mu\mu$ channels are added together 
 in one spectrum since they have similar resolution and hence can increase the statistics for bump-hunting.  
 The two scans, one with taus and the other with l=$\mu$,e  can then be combined together with a statistics framework.  
-
 %leptons, reconstruct the mass and look in a range of 30 GeV to 2 TeV.  Similarly one can see from the channels in columns 3 and 4 (before the double lines) of the table that the same logic of scanning for the 'other particle' can be done over the same 
 %region in mass. It is important to be able to combine the various physics models in one analysis since there are gaps in mass in the searches in the current Run 1 analysis.  These gaps need to be explored in our search for BSM
 %phenomemon in Run 2 to make for a complete search.  
@@ -132,9 +179,9 @@ If the bump-hunter analysis reports no significant signal then a coarser binning
 
 
 
-\paragraph{Perform validation of bump-hunting technique ;  Akafzade} %(D - 2 months) 
-To validate the performance of the bump-hunter in a specific environment one should test by injecting signal over the analytically determined background to see if the fit poses any biases and to test the sensitivity of the method in the presence of
-a specific type of signal as determined by various signal MC.  The iterative method used to hone in on the signal can be tested in to ensure no biases are present.
+%\paragraph{Perform validation of bump-hunting technique ;  Akafzade} %(D - 2 months) 
+%%To validate the performance of the bump-hunter in a specific environment one should test by injecting signal over the analytically determined background to see if the fit poses any biases and to test the sensitivity of the method in the presence of
+%a specific type of signal as determined by various signal MC.  The iterative method used to hone in on the signal can be tested in to ensure no biases are present.
 
 %\paragraph{Use tau handedness to Separate Z and Higgs decays} (now-Feb 2015)
 %When performing the Z mass scan and it is determined that the SM h \too ZZ* is a large background to the A \too Z h final state we can perform a helicity cut to remove the Z* decays leaving in the scan only the resonant 
@@ -147,14 +194,14 @@ a specific type of signal as determined by various signal MC.  The iterative met
 %for the \Hp analysis to ensure the stability of the fit and to achieve the best possible limits in the absence of signal. The binning optimization is done by choosing different values of signal over background and total number of background to ensure the stability of the fits yet
 %allow for the best possible limits.  This work can be done by myself and soon taken over by my graduate student.
 
-\paragraph{Develop Limit setting software for various final states ;  Akafzade, Postdoc} %(D - 2 months)
-%My extensive experience in developing limits setting software within the RooFit and RooStats framework will make this task somewhat simple to have my graduate student perform.  The most tedious part will be dealing systematics which will be in common across all the channels so time is saved in having 
-%originally harmonized analysis.  This is work that I can initiate with the help of Mr. Akafzade.
-Once the background is parameterized and the normalization is determined from the signal region, we can determine limits using a binned maximum likelihood fit using  HistFactory as is usually done on ATLAS. 
-For a search in a large window of mass typically a fine grid of masses are tested.  However with the input from the SPIF program we can only use a fine grid in regions where the p0 value is low indicating some deviation
-from the background.  This will save CPU time in setting the final limits. 
-Since our search includes several final states, these final states must be statically combined for each channel to get the best limits. 
-
-\paragraph{Perform Model Dependent Exclusions ;  Postdoc} %(D - 1 months)
-With the use of the branching fractions for each model exclusions on various model parameters can be made using the cross section limits. For NMMSM or 2HDM the exclusions will be in the \tanb\ vs mA plane and \tanb\ vs $\cos(\beta-\alpha)$ plane.
+%\paragraph{Develop Limit setting software for various final states ;  Akafzade, Postdoc} %(D - 2 months)
+%%My extensive experience in developing limits setting software within the RooFit and RooStats framework will make this task somewhat simple to have my graduate student perform.  The most tedious part will be dealing systematics which will be in common across all the channels so time is saved in having 
+%%originally harmonized analysis.  This is work that I can initiate with the help of Mr. Akafzade.
+%Once the background is parameterized and the normalization is determined from the signal region, we can determine limits using a binned maximum likelihood fit using  HistFactory as is usually done on ATLAS. 
+%For a search in a large window of mass typically a fine grid of masses are tested.  However with the input from the SPIF program we can only use a fine grid in regions where the p0 value is low indicating some deviation
+%from the background.  This will save CPU time in setting the final limits. 
+%Since our search includes several final states, these final states must be statically combined for each channel to get the best limits. 
+%%
+%\paragraph{Perform Model Dependent Exclusions ;  Postdoc} %(D - 1 months)
+%With the use of the branching fractions for each model exclusions on various model parameters can be made using the cross section limits. For NMMSM or 2HDM the exclusions will be in the \tanb\ vs mA plane and \tanb\ vs $\cos(\beta-\alpha)$ plane.
 
