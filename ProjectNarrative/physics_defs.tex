@@ -1,0 +1,224 @@
+%------------------------------------------------------------------------
+% special symbols definitions.
+%
+\let\la=\lesssim
+\def\.{.}
+\def\etal{{\it et al.}}
+\def\eg{{\it e.g.}}
+\def\ie{{\it i.e.}}
+\def\IntL{\ifmmode
+              {\int{\cal L}dt}
+           \else
+              {\mbox{$\int{\cal L}dt$}}
+           \fi}
+\def\ee{\mbox{$e^+e^-$}}
+\def\ppbar{\mbox{$p \bar p$}}
+\def\to{\ifmmode{\rightarrow}\else{$\rightarrow$}\fi}
+\def\dedx{{\mbox{$d{\rm E}/d{\rm x}$}}}
+\def\DG{D\O GEANT }
+\def\etamu{\ifmmode
+                   {\eta^{\mu}}
+               \else
+                    \mbox{$\eta^{\mu}$}
+               \fi}
+\def\etael{\ifmmode
+                   {\eta^{e}}
+               \else
+                    \mbox{$\eta^{e}$}
+               \fi}
+\def\abseta{\ifmmode
+                   {|\eta|}
+               \else
+                    \mbox{$|\eta|$}
+               \fi}
+\def\micron{\ifmmode
+                   {\mu{\rm m}}
+               \else
+                    \mbox{$\mu{\rm m}$}
+               \fi}
+\def\MeV{\ifmmode
+                   {\rm \ MeV}
+               \else
+                    \mbox{${\rm MeV}$}
+               \fi}
+\def\GeV{\ifmmode
+                   {\rm GeV}
+               \else
+                    \mbox{${\rm GeV}$}
+               \fi}
+%\def\GeVc2{\ifmmode
+%                   {\rm \ GeV/c^{2}}
+%               \else
+%                    \mbox{${\rm GeV/c^{2}}$}
+%               \fi}
+\def\TeV{\ifmmode
+                   {\rm \ TeV}
+               \else
+                    \mbox{${\rm TeV}$}
+               \fi}
+\def\invnb{\ifmmode
+                   {{\rm \ nb}^{-1}}
+               \else
+                    \mbox{${\rm nb}^{-1}$}
+               \fi}
+\def\invpb{\ifmmode
+                   {{\rm \ pb}^{-1}}
+               \else
+                    \mbox{${\rm pb}^{-1}$}
+               \fi}
+\def\invfb{\ifmmode
+                   {{\rm \ fb}^{-1}}
+               \else
+                    \mbox{${\rm fb}^{-1}$}
+               \fi}
+%\def\ieta{{\mbox{${\rm i}\eta$}}}
+%\def\iphi{{\mbox{${\rm i}\varphi$}}}
+%gap terms
+\newcommand{\eboth}{\mbox{$\sqrt{s}=630$ and $1800$\,GeV}}
+\newcommand{\rs}{\mbox{$\sqrt{s}$}}
+\newcommand{\ncal}{\mbox{$n_{{\rm CAL}}$}}
+\newcommand{\nl}{\mbox{$n_{{\rm L\O}}$}}
+\newcommand{\pbarp}{\mbox{$\bar{p}p$}}
+\newcommand{\pbar}{\mbox{$\bar{p}$}}
+\newcommand{\XX}{\mbox{$\, \times \,$}}
+\newcommand{\x}{\cdot}
+\newcommand{\gapfr}[3]{$ #1 ^{+#2}_{-#3} $}
+%%\newcommand{\cmehi}{\mbox{$\sqrt{s}=1800$\,GeV}}
+%%\newcommand{\cmelo}{\mbox{$\sqrt{s}=630$\,GeV}}
+%
+% Some of the more important experiments
+%
+%\def\Aleph{{\sc Aleph}}
+\def\D0{D$\emptyset$}
+\def\D0SAR{D$\emptyset$SAR}
+%
+% Momentum components
+%
+\def\pt{\ifmmode{p_T}\else{$p_T$}\fi}
+\def\ptmu{\ifmmode{p_T^\mu}\else{$p_T^\mu$}\fi}
+\def\pl{\ifmmode{p_l}\else{$p_l$}\fi}
+\def\plong{\ifmmode{P_{\parallel}}\else{$P_{\parallel}$}\fi}
+\def\pperp{\ifmmode{P_{\perp}}\else{$P_{\perp}$}\fi}
+\def\ptot{\ifmmode{P_{tot}}\else{$P_{tot}$}\fi}
+\def\ptotal{\ifmmode{{\rm P}_{total}}\else{${\rm P}_{total}$}\fi}
+\def\vptotal{\ifmmode{{\rm\bf P}_{total}}\else{${\rm\bf P}_{total}$}\fi}
+\def\px{\ifmmode{{\rm P}_x}\else{${\rm P}_x$}\fi}
+\def\py{\ifmmode{{\rm P}_y}\else{${\rm P}_y$}\fi}
+\def\pz{\ifmmode{{\rm P}_z}\else{${\rm P}_z$}\fi}
+\def\Et{\ifmmode{E_T}\else{$E_T$}\fi}
+\def\Etel{\ifmmode{E_T^e}\else{$E_T^e$}\fi}
+\def\Etot{\ifmmode{E_T^{tot}}\else{$E_T^{tot}$}\fi}
+%
+\def\met{\ifmmode
+        {\hbox{E\kern-0.6em\lower-.1ex\hbox{/}}_T}
+        \else
+        {${\hbox{$E$\kern-0.6em\lower-.1ex\hbox{/}}}_T$}\fi}
+\def\metx{\ifmmode
+         {\hbox{E\kern-0.6em\lower-.1ex\hbox{/}}_x }
+         \else
+         {${\hbox{$E$\kern-0.6em\lower-.1ex\hbox{/}}}_x$}\fi}
+\def\mety{\ifmmode
+         {\hbox{E\kern-0.6em\lower-.1ex\hbox{/}}_y }
+         \else
+         {${\hbox{$E$\kern-0.6em\lower-.1ex\hbox{/}}}_y$}\fi}
+\def\MEx{\Missing{E}{x}}
+\def\MEy{\Missing{E}{y}}
+\def\MEz{\Missing{E}{z}}
+\def\MExy{\Missing{E}{x,y}}
+\def\trueMEt{\mbox{${\Missing{E}{T}}^{\!\!\!\!\!\!true}$}\ }
+\def\vMEt{\vMissing{E}{T}}
+\def\vtrueMEt{\mbox{${\vMEt}^{\!\!\!\!true}$}}
+%
+% Some of our favorite particles and symbols
+%
+\def\phot{\ifmmode{\gamma}\else{$\gamma$}\fi}
+\def\W{\ifmmode{W^{\pm}}\else{$W^{\pm}$}\fi}
+\def\Z{\ifmmode{Z^\circ}\else{$Z^\circ$}\fi}
+\def\Higgs{\ifmmode{}\else{$\H^\circ$}\fi}
+\def\gluino{\ifmmode{\widetilde{g}}\else{$\widetilde{g}$}\fi}
+\def\squark{\ifmmode{\widetilde{q}}\else{$\widetilde{q}$}\fi}
+\def\slepton{\ifmmode{\widetilde{l}}\else{$\widetilde{l}$}\fi}
+\def\sneutrino{\ifmmode{\widetilde{\nu}}\else{$\widetilde{\nu}$}\fi}
+\def\stop{\ifmmode{\widetilde{t}}\else{$\widetilde{t}$}\fi}
+\def\WZ{\ifmmode{\widetilde{W_1}\widetilde{Z_2}}
+  \else{$\widetilde{W_1}\widetilde{Z_2}$}\fi}
+\def\Zi{\ifmmode{{\widetilde Z}_{i}}\else{${\widetilde Z}_{i}$}\fi}
+\def\Zj{\ifmmode{{\widetilde Z}_{j}}\else{${\widetilde Z}_{j}$}\fi}
+\def\Zone{\ifmmode{{\widetilde Z}_{1}}\else{${\widetilde Z}_{1}$}\fi}
+\def\Ztwo{\ifmmode{{\widetilde Z}_2}\else{${\widetilde Z}_2$}\fi}
+\def\Zthree{\ifmmode{{\widetilde Z}_{3}}\else{${\widetilde Z}_{3}$}\fi}
+\def\Zfour{\ifmmode{{\widetilde Z}_{4}}\else{${\widetilde Z}_{4}$}\fi}
+\def\Wi{\ifmmode{{\widetilde W}_{i}}\else{${\widetilde W}_{i}$}\fi}
+\def\Wone{\ifmmode{{\widetilde W}_1}\else{${\widetilde W}_1$}\fi}
+\def\Wtwo{\ifmmode{{\widetilde W}_{2}}\else{${\widetilde W}_{2}$}\fi}
+%
+\def\ee{\ifmmode{e^+e^-}\else{$e^+e^-$}\fi}
+\def\qq{\ifmmode{q\bar{q}}\else{$q\bar{q}$}\fi}
+\def\QQ{\ifmmode{Q\bar{Q}}\else{$Q\bar{Q}$}\fi}
+%
+\def\chisq{\ifmmode{\chi^{2}}\else{$\chi^{2}$}\fi}
+\def\sthw{\ifmmode{\sin(\theta_W}\else{$\sin(\theta_W)$}\fi}
+\def\s2thw{\ifmmode{\sin^2(\theta_W)}\else{$\sin^2(\theta_W)$}\fi}
+\def\cthw{\ifmmode{\cos(\theta_W)}\else{$\cos(\theta_W)$}\fi}
+\def\c2thw{\ifmmode{\cos^2(\theta_W)}\else{$\cos^2(\theta_W)$}\fi}
+
+% added by Nurcan
+% \citer as abbreviation for 'citerange' replaces the ',' by a '--'
+\catcode`@=11
+% \citer as abbreviation for 'citerange' replaces the ',' by a '--'
+\def\citer{\@ifnextchar [{\@tempswatrue\@citexr}{\@tempswafalse\@citexr[]}}
+\def\@citexr[#1]#2{\if@filesw\immediate\write\@auxout{\string\citation{#2}}\fi
+  \def\@citea{}\@cite{\@for\@citeb:=#2\do
+    {\@citea\def\@citea{--\penalty\@m}\@ifundefined
+       {b@\@citeb}{{\bf ?}\@warning
+       {Citation `\@citeb' on page \thepage \space undefined}}%
+\hbox{\csname b@\@citeb\endcsname}}}{#1}}
+\catcode`@=12
+%-------------------------------------------------------------------------
+
+%% From ATLAS Higgs section:
+
+%%\def\c2thw{\ifmmode{\cos^2(\theta_W)}\else{$\cos^2(\theta_W)$}\fi}
+
+
+\def\heeee{\ifmmode{H \rightarrow 4e}\else{$H \rightarrow 4e$}\fi}
+\def\hllll{H \rightarrow 4l}
+%%\def\hgg{H \rightarrow \gamma\gamma}
+\def\hgg{\ifmmode{H \rightarrow \gamma\gamma}\else{$H \rightarrow \gamma\gamma$}\fi}
+\def\Ggg{$G \rightarrow \gamma\gamma$}
+%%\define \\pt \\pt
+%\def\mh{\rm{$m_{H}$}}
+\def\bbbar{\ifmmode{b\bar{b}}\else{$b\bar{b}$}\fi}
+\def\ppbar{\ifmmode{p\bar{p}}\else{$p\bar{p}}\fi}
+\def\egamma{\ifmmode{e\gamma}\else{$e\gamma$}\fi}
+%%\def \chi2 {$\chi^{2}$}
+\def\hmteng{\rm{HM10$\gamma$}}
+\def\hmtene{\rm{HM10e}}
+
+%-------------------------------------------------------------------------
+
+%% From D0 Higgs section:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Special Symbols
+%\newcommand{\met}       {\mbox{$\not\!\!E_T$}}
+%\newcommand{\MET}       {\ensuremath{\not\hspace*{-0.84ex}E_T\,}}
+%\newcommand{\Dzero}     {D\O}
+%\newcommand{\ppbar}     {\ensuremath{p\bar{p}}}
+%\newcommand{\ttbar}     {\ensuremath{t\bar{t}}}
+%\newcommand{\bbbar}     {\ensuremath{b\bar{b}}}
+%\newcommand{\pT}        {\ensuremath{p_T}}
+%\newcommand{\ET}        {\ensuremath{E_T}}
+\newcommand{\fbarn}     {fb$^{-1}$}
+%\newcommand{\GeV}       {{\rm GeV}}
+%\newcommand{\TeV}       {{\rm TeV}}
+%%\newcommand{\mh}        {\rm {$m_{H}$}}
+%\newcommand{\GeVcsq}    {\rm {$GeV/c^{2}$}}
+\newcommand{\PYTHIA}    {\texttt{PYTHIA}}
+\newcommand{\ALPGEN}    {\texttt{ALPGEN}}
+\newcommand{\CTEQ}      {\texttt{CTEQ6L1}}
+\newcommand{\COMPHEP}   {\texttt{COMPHEP}}
+\newcommand{\rar}       {\rightarrow}
+%\newcommand{\etal}      {{\sl et al.}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
