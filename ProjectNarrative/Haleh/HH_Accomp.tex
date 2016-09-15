@@ -1,6 +1,78 @@
-
+\newcommand{\tanb}{$\tan \beta$}
+\newcommand{\too}{$\rightarrow$}
+\newcommand{\invfb}{$fb^{-1}$}
+\newcommand{\Hp}{$H^{+}$}
+\newcommand{\ttbar}{$t\overline{t}$}
 \begin{center}
 \Large\textbf{PI Summary: Haleh Hadavand}
 \end{center}
+%\paragraph{Graduate School:}I joined UC San Diego's PhD program since they had a very strong analysis team on the BABAR experiment slated for measuring $\sin 2 \beta $.  During my first two years while taking courses I traveled to Stanford Linear Accelerator Center (SLAC) to start
+%learning the basics for performing a high energy physics analysis. My first responsibility as I moved completely over to research was as the Data Acquisitions Manager for the BABAR detector.  I was on call
+%for the DAQ system and managed the software repository for Data Acquisition Releases.  I quickly found that a release structure was non-existent, the production area was vulnerable to modifications
+%and contained untraceable code which would have made it very difficult to recover to the original running state in case of a problem.  I resolved this issue by updating to new production areas once significant code modifications were needed. This greatly improved the reliability and stability of the system.
 
+%I unfortunately missed the $\sin 2 \beta$ measurement by about a year or two and most of the groups talented postdocs vanished to faculty positions. Finding little source of support 
+
+%I took an INFN scholarship in Rome Sapienze and in two months produced the best measurement of $\Upsilon(4s)$ to B$^+$/B$^0$ ~\cite{bab0}, a number needed for all B branching fraction measurements. 
+%I struggled with a thesis topic and convinced my adviser to perform a time-dependent CP measurement analysis for my thesis.  
+%I wanted to perform a time-dependent CP measurement for my thesis topic but during this period it was difficult to find new channels to perform such studies.
+%My thesis topic was the time-dependent CP measurement of the 3K$^0_s$ final state.
+%I utilized the vertex IP constraint method allowing for a time-dependent CP measurement although all particles are long lived and therefore do not have a clear production vertex.  
+%I performed each aspect of the analysis independently from ntuple production to the final limits.  The published paper was the result of my work and another laboratory faculty who performed the branching fraction measurement ~\cite{bab1}.
+
+\paragraph{Postdoc:}I started my postdoc position with Southern Methodist University on the ATLAS experiment.  I joined the online monitoring software effort at CERN and within a few months developed a histogram
+naming system for the online histograms and modified an existing/decommissioned software for histogram collection to work properly within a new release.  
+%This software was intended for test beam but had never worked properly until my modifications.  
+I also started designing and laying down the foundations for the ATLAS data quality monitoring system.  I was one of the main visionaries, designers, and developers for this system
+which is still used both online and offline by ATLAS. My main development contribution was the plug-in algorithms that could be loaded at any point into the system, the online display, and the online time series analysis~\cite{atl5b,atl6}.
+
+During commissioning of cosmics before LHC collisions I setup the entire online monitoring chain from histogram production to final DQ assessments of monitoring data.  This required thorough understanding
+of the offline software, within the High Level trigger, and the online environment, software, and tools.  I was the first to develop software to produce $\eta$ vs $\phi$ plots of clusters within the LAr and Tile calorimeters online, use the gatherer to
+collect histograms from various monitoring nodes, display the histograms, apply DQ, and time series assessment of the data quality information.  This work gives me a very thorough understanding of the monitoring system on ATLAS both online and offline.
+
+%Before collisions I started analysis on Randall Sundrum(RS) Graviton to diphotons and had the first internally reviewed ATLAS MC results for this final state. From our projections it was clear that with early data we could not make significant measurements in this final state so 
+I joined the UED diphoton + Missing Et analysis group for early data taking since the analysis would produce more stringent results with as little as 10 pb$^{-1}$ of data.  With a small analysis team we had one of the first 20 published papers
+out of the ATLAS experiment~\cite{atl2}. I was interim editor of this paper and also presented alternative methods of MET calculations for the experiment in addition to being main contributor to the analysis. 
+
+After publishing the UED results I started analysis on Randall Sundrum Gravitons to diphotons where I implemented both a Frequentist tool for setting limits and setup the Bayesian code with BAT for the final limits.  I was
+also one the of main analysers in the group.  I was a co-editor for the resulting conference note and paper~\cite{atl1,atl1-conf}.
+
+\paragraph{Research Faculty and Assistant Faculty:}Since I joined UTA in July 2012 I have been working on the charged Higgs to $\tau^+\nu$ in fully hadronic final states.  I have been part of two conference results and two publications ~\cite{hptnu,atl2014,taunu,hptnu1}.
+My role on the Run 1 measurement was the high mass background estimation of the $\tau \rightarrow$ jets background and the statistical treatment leading to the final 
+limits for the analysis.  I produced Run 2 projections for this analysis and determined that with only a few \invfb of data evidence of signal can be observed.
+I also produced the first intermediate mass samples for the charged Higgs in the mass range of 160-180 GeV.  This was work done with collaboration with theorists to reconcile interference terms in this region. 
+For the Run 2 analysis I motivated using the MET trigger instead of the tau+MET trigger used in Run 1.  This choice greatly reduced the trigger and background systematics.  
+The background suffered from low statistics when using the tau+MET trigger since the trigger imposed a medium tau selection.  Therefore the matrix method was a comparison
+of medium versus tight tau selections where with an MET trigger one could use loose versus tight tau selection hence increasing the statistics.  I also motivated the control region selection
+for performing the fake factors method and as a cross check performed a template fit to determine the QCD background~\cite{taunu,hptnu1}.
+My work on this charged Higgs final state has resulted in my appointment to the charged Higgs convenership position thereby overseeing all charged Higgs activities on the ATLAS experiment.  
+
+As charged Higgs convener I have motivated new charged Higgs final state searches.  One of these channels is a decay to SUSY final states which would have a signature of three leptons plus missing ET.  Two
+of these leptons would be same flavor and opposite sign.  Several independent evidence of an excess in multi-lepton events have been reported on the ATLAS experiment~\cite{3lep}.  I have recently produced MC samples for this final state
+using Madgraph and will distribute to analysers to see if the data is consistent with a charged Higgs signal. I have also produced samples for H$^+ \rightarrow$ WZ with final stats of qqll, lvqq, and qqqq.  There are existing analyses that have the same final states as the ones mentioned so a search for charged Higgs signal can be performed fairly quickly.
+
+In April 2016 I was appointed to the position of charge account manager (CAM or L3 manager) for the low voltage power supplies (LVPS) for the Tile calorimeter for HL-LHC.  This account will manage about \$1 million 
+of labor, travel, and materials and supplies over a 6 year period.  
+%I will oversee the production and testing of half of the  power supplies going into 
+%the detector for High-Luminosity LHC.  I am also the deliverables manager for both the LVPS and LVPS boxes which will be assembled by Northern Illinois University.
+I have been working closely with Andrew Brandt, the institutional representative for UT Arlington, on this project.
+More details about this project are highlighted in section~\ref{sec:lvps} and the schedule is detailed in table~\ref{tab:lvps}.
+
+
+\begin{itemize}[noitemsep,nolistsep]
+\item{FY16 - Publish results for charged Higgs on 2016 dataset including the tau-lepton channel.}
+\item{FY16-17 - Design of Tile LVPS elevated temperature test stand (burn in station).}
+\item{FY17 - Fabrication of Tile LVPS burn in station.}
+\item{FY17 - Publish charged Higgs results using $\tau$ polarization.}
+\item{FY17 - Take new graduate student for Z+X analysis.}
+\itam{FY17 - Hire new postdoc to work on charged Higgs and Z+X analyses.}
+\itam{FY17-18 - Develop di-tau reconstruction algorithm.}
+\itam{FY18 - Develop analysis suite for Z+X analysis.}
+\itam{FY18 - Publish Z+X results using Higgs mass constraint.}
+\itam{FY18 - Publish charged Higgs results using deep learning techniques for selection and/or tau reconstruction.}
+\itam{FY18-19 - LVPS V8.2 prototype.}
+\itam{FY18-19 - Testing and integration of LVPS into vertical slice test.}
+\item{FY19 - Charged Higgs results with Matrix Element Methods.}
+\item{FY19 - Graduate student Akafazade graduates on charged Higgs analysis.}
+\end{itemize}
 

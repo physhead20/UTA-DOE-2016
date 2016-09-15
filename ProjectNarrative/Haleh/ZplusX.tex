@@ -10,18 +10,18 @@ The task of discovering it, however, can be more challenging compared to the SM 
 was well understood and extensively tested for over half a century~\cite{eng,higgs1,higgs2,higgs3}. 
 In contrast, the number of theories and models that motivate BSM Higgs searches are significantly larger and more speculative, requiring that a much wider net be cast to cover a broader range of masses and final states. 
 
-The Z+X search proposed by Hadavand will primarily probe SUSY models for example Next-to-Minimal Supersymmetric Standard Model (NMSSM) that include an additional scalar singlet or SM +singlet models.  It can also be used to discover other states not theoretically motivated therefore investigating new mass regions where potential new particles could exist.
+Hadavand proposes to perform searches using the 125 GeV Higgs to bootstrap her way to search for new exotic decays of the Higgs or other BSM states.  
+The Higgs mass constraint will help aid the search for signal in a specific region.  %Or one can use the same final states and do a  more global search with no mass constraints by looking for Z+X final states where X $\rightarrow$ ll, including taus.
+This method is motivated but not limited to the final states listed in table~\ref{tab:anal}. The search can be further expanded in a model-independent manner by scanning for Z+X where X can be of masses not theoretically motivated.
+This proposal combines a search within five theoretical models each decaying to ll$\tau\tau$ and/or $\tau\tau$ll, thereby using our extensive experience with $\tau$ leptons.  With one analysis we are able to
+cover all of these models thereby increasing the analysis reach.  
+
+The Z+X search will primarily probe SUSY models for example Next-to-Minimal Supersymmetric Standard Model (NMSSM) that include an additional scalar singlet or SM +singlet models.  It can also be used to discover other states not theoretically motivated therefore investigating new mass regions where potential new particles could exist.
 Additionally I propose searching for a ``dark'' Z in the mass range $12<$ m$<60$. A ``dark'' Z serves as the mediator of a new U(1) gauge symmetry that can serve as the portal to a hidden sector that constitutes dark matter~\cite{zdark}. 
 Notice that in total there are five different theoretical models that decay into ll$\tau\tau$ and/or $\tau\tau$ll.  This is a great triumph over analyses that would at most cover a few final states.
 Table ~\ref{tab:anal} summarizes all the channels and final states covered in the Z scan analysis.  Notice that each channel has the 125 GeV Higgs either in the initial or final state. 
 Using the newly discovered Higgs particle in a broad scan will expand the experimental reach of this search.
-The search can be further expanded in a model-independent manner by scanning for Z+X where X can be of masses not theoretically motivated. 
 
-Hadavand proposes to perform searches using the 125 GeV Higgs to bootstrap her way to search for new exotic decays of the Higgs or other BSM states.  
-The Higgs mass constraint will help aid the search for signal in a specific region.  %Or one can use the same final states and do a  more global search with no mass constraints by looking for Z+X final states where X $\rightarrow$ ll, including taus.
-This method is motivated but not limited to the final states listed in table~\ref{tab:anal}.
-This proposal combines a search within five theoretical models each decaying to ll$\tau\tau$ and/or $\tau\tau$ll.  With one analysis we are able to
-cover all of these models thereby increasing the analysis reach.  
 
 \begin{table}[h]
 \begin{center}
@@ -75,7 +75,7 @@ However on average $35/80\times4\sim 2$ ($2\tau2e, 2\tau2\mu, 2e2\tau,2\mu2\tau$
 %the option of adding an additional $\tau$ object to the final state. In this way one can have the $\tau\tau bb$ final state that can come from h \too aa or G(H)\too hh  within  the same framework. 
 %I am sure there are many more overlaps that I am not covering in this proposal but this idea is presented here to make the point that overall discussions amongst physics groups are important before Run 2. People do no want to repeat the data redundancy and computing inefficiencies that happened during Run1.  Now it the time to take some action to prevent this for Run 2 by better organizing our analysis.  
 
-By scanning for particles after selecting the Z boson one will get clear mass separation of the 'other' particle.  From Table~\ref{tab:anal} we see that many of the signals come from h, the 125 GeV Higgs.  If we were to look for the h mass we would get overlap between the various final states and it would be difficult to know which final
+By scanning for particles after selecting the Z boson one will get clear mass separation of the 'other' particle. The requirement of the Z boson in the event will also reduce backgrounds.  From Table~\ref{tab:anal} we see that many of the signals come from h, the 125 GeV Higgs.  If we were to look for the h mass we would get overlap between the various final states and it would be difficult to know which final
 state actually contributed.  But by looking for the 'other' particle we can see the clear mass separation.  This method is also less restrictive on the analysis since one would not put any explicit selection on the mass
 of the 'other' particle. In addition, another discriminating variable can be added to combine the Z and the 'other' particle and see if indeed one does reconstruct the hypothesized mass of the originating particle.  We can for example restrict the Z($\tau\tau$)other(ll) mass to be within the Higgs mass window to see if it will make the peaks in the other(ll) become clearer.  
 %It is possible to perform a two-dimensional fit to both m(2obj) and m(4obj). 
@@ -111,7 +111,7 @@ tau reconstruction does not treat.  There has been work on ATLAS in this front a
 In other cases the \pt of the di-tau system can be small but they can be highly collimated.  This has been seen in the h \too a($\mu \mu$) a($\tau \tau$) analysis.  In fact the algorithm developed for A \too Z(ll) h($\tau\tau$) would not 
 work for this channel because of the large \pt cut and the fact that it is seeded by a large R (1.0) Jet.  Large R jets only have calibration available for \pt larger than 200 GeV.  So I propose to develop a high \pt di-tau
 algorithm and a low \pt highly collimated algorithm where standard jets of R of 0.4 can be used. A boosted decision tree (BDT) can be developed using the jet substructure information.  
-The variables suggested to be used in the BDT are as follows:
+The variables suggested to be used in the BDT or further studied within a Deep Neural Network are the following:
 \begin{itemize}
 \item{core energy fractions, $f_{core}^{sub(lead)}=\frac{\sum_{cells}^{\Delta R=0.1} p_{p,cell}}{\sum_{cells}^{\Delta R=0.2}p_{T,cell}} $}
 \item {The subjet energy fractions $f(sub)lead_{subjet}=\frac{\pt^{subjet}}{\pt^{Jet}}$. }
@@ -194,13 +194,13 @@ If the bump-hunter analysis reports no significant signal then a coarser binning
 %for the \Hp analysis to ensure the stability of the fit and to achieve the best possible limits in the absence of signal. The binning optimization is done by choosing different values of signal over background and total number of background to ensure the stability of the fits yet
 %allow for the best possible limits.  This work can be done by myself and soon taken over by my graduate student.
 
-%\paragraph{Develop Limit setting software for various final states ;  Akafzade, Postdoc} %(D - 2 months)
-%%My extensive experience in developing limits setting software within the RooFit and RooStats framework will make this task somewhat simple to have my graduate student perform.  The most tedious part will be dealing systematics which will be in common across all the channels so time is saved in having 
+\paragraph{Develop Limit setting software for various final states ;  Akafzade, Postdoc} %(D - 2 months)
+%My extensive experience in developing limits setting software within the RooFit and RooStats framework will make this task somewhat simple to have my graduate student perform.  The most tedious part will be dealing systematics which will be in common across all the channels so time is saved in having 
 %%originally harmonized analysis.  This is work that I can initiate with the help of Mr. Akafzade.
-%Once the background is parameterized and the normalization is determined from the signal region, we can determine limits using a binned maximum likelihood fit using  HistFactory as is usually done on ATLAS. 
-%For a search in a large window of mass typically a fine grid of masses are tested.  However with the input from the SPIF program we can only use a fine grid in regions where the p0 value is low indicating some deviation
-%from the background.  This will save CPU time in setting the final limits. 
-%Since our search includes several final states, these final states must be statically combined for each channel to get the best limits. 
+Once the background is parameterized and the normalization is determined from the signal region, we can determine limits using a binned maximum likelihood fit using  HistFactory as is usually done on ATLAS. 
+For a search in a large window of mass typically a fine grid of masses are tested.  However with the input from the SPIF program we can only use a fine grid in regions where the p0 value is low indicating some deviation
+from the background.  This will save CPU time in setting the final limits. 
+Since our search includes several final states, these final states must be statically combined for each channel to get the best limits. 
 %%
 %\paragraph{Perform Model Dependent Exclusions ;  Postdoc} %(D - 1 months)
 %With the use of the branching fractions for each model exclusions on various model parameters can be made using the cross section limits. For NMMSM or 2HDM the exclusions will be in the \tanb\ vs mA plane and \tanb\ vs $\cos(\beta-\alpha)$ plane.
