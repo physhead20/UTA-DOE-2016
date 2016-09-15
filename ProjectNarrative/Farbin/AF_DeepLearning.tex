@@ -1,0 +1,332 @@
+Space constraints prohibit pedagogical discussion of Deep Learning and
+details of much of the activity described and planned out in this
+section. Surveys of DL activity in HEP and much of these details can
+be found in Farbin's recent talks~\cite{}, for example at HEP Software
+Foundation~\cite{} HSF, ATLAS Machine Learning workshop~\cite{}, or
+the Harvard Big Data Conference~\cite{}. This section is organized
+into DL thrusts that sometimes span multiple experiments: Simple
+Classification, Matrix Element Acceleration, Imaging Detector
+Reconstruction, and Tracking.
+
+\fivehead{Simple Classification with Deep Learning}
+
+The first application of DL in HEP demonstrated that (fully-connected)
+DNNs out-perform shallow networks and derive new ``features'' from
+4-vectors beyond traditional observable. Farbin recently demonstrated
+this simple application of DNNs with help of Chris Rogan (Harvard) and
+Paul Jackson (Adelaide). They showed that 4-vector based DNNs
+out-performed a Jigsaw-based DNNs in correctly distinguishing between
+different SUSY-like decay topologies. This work is in a step in an
+effort to build a DNN that generically classifies events and enables
+unsupervised general searches for new phenomena. They are also now
+applying DNNs to compressed-SUSY scenarios, building on experience of
+the ICHEP 2016 Jig-saw result and following Rogan and Jackson's recent
+paper \cite{}. Section~\ref{} provides additional details on these
+topics in the context of SUSY. [Hadavand and Brandt will apply similar
+  techniques to their work...]
+
+Signal and background classification tasks are the first and simplest
+and can be easily enhanced by replacing traditional classifiers with
+DNNs. Groups in ATLAS are applying this idea to tasks like b-jet or
+boost-object tagging. Farbin has developed a Deep Learning Tutorial
+covering a variety of DNN tasks, such as event or object
+classification with any dataset.  The tutorial introduces a thin
+framework (DLKit) developed by Farbin that simplifies running
+large-scale DL studies using Keras, a powerful python-based DL
+framework which supports both Theano and TensorFlow backends.  Postdoc
+Heelan, who manages the ATLAS software tutorials and workbook, will
+introduce the DL tutorial at the October 3rd session, with subsequent
+iterations adding all of the additional tasks Farbin is currently
+performing in DLKit, such as Matrix Element Regression and 2D and 3D
+Imaging detector classification and Energy regression. Farbin, Brandt,
+Hadavand, Asaadi, and Jones have committed students to applying DNNs
+to various problems, and this DLKit and tutorials are integral to
+these projects.
+
+While the tutorial helps address one obstacle to broad adoption of DL,
+namely familiarity and full end-to-end working examples, access to
+GPUs, which give two orders of magnitude acceleration of DL training
+with respect to CPUs, remain as the next biggest obstacle. For the past
+few years, Farbin has granted access to the GPU system he as built
+with his undergrads to XX HEP scientists from YY experiments (LArIAT,
+DUNE, MicroBooNE, NEXT, CMS, ATLAS). Farbin performed an early study
+of turning regression problems into classification problems on the
+Oakridge's Titan HPC via PANDA WMS with the help of Sergey Panitkin (BNL),
+the first use of Titan's GPUs in HEP. A subsequent iteration of of the
+DLKit tutorial will include submission of Hyperparameter scan DL jobs
+to Oakridge's Titan computer and ideally any other HPC accessible via
+PANDA and with suitable software.
+
+\fivehead{Matrix Element Acceleration with Deep Learning}
+
+The Universality Theorem~\cite{} states that a sufficiently large
+Neural Network can represent an arbitrary function of any input
+dimensions. The theorem implies that fast DNNs can potential
+encapsulate prohibitively expensive computations, for example Matrix
+Elements in context of NLO and NNLO computations, which are becoming
+increasingly important for the LHC, or the application of Matrix
+Element Method (MEM), which is in principle the most powerful search
+technique but is sparsely applied due to technical complexity and
+computational demands. The idea is to perform the computations once
+using significant computing resources, for example an HPC, and train a
+DNN to efficiently (in both memory and speed) accurately reproduce the
+same computation for subsequent event generation, integration for
+cross-sections, or application of MEM.
+
+Farbin has been pursuing both of these problems in collaboration with
+Tancredi Carli (CERN), ATLAS's next Deputy Physics Coordinator and
+Tobias Golling's group (U. Geneva). Carli has produced a one billion
+event sample of NLO $t\bar{t}$ in Sherpa which he has been studying on
+Farbin's GPU system due to memory requirements. He has been attempting
+to encapsulate event weights in a high dimensional (i.e. incoming and
+outgoing 4-vectors) adaptive binning histogram using the foam~\cite{}
+method. Simultaneously Farbin has developed a Matrix Element DNN
+(MEDNN) to achieve the same task. Since Golling's group, who initially
+relied on Farbin's GPU system, is pursuing a similar task for Matrix
+Element Method based analysis, Farbin joins Golling's group meetings
+and shares ideas and code. DNN training for such a regression task is
+essentially a high dimensional fit, which due to the non-linearity of
+NNs, is often biased unless a proper cost function is applied. This
+problem is discussed in the Imaging Detector Energy Regression
+description below. For MEDNN, the state-of-the-art turns the
+regression (i.e. fitting) into a classification problem by binning the
+target with bin learned bin edges.
+
+\fivehead{Imaging Detector Reconstruction with Deep Learning}
+
+Starting in 2014 Deep Convolution Neural Networks (CNNs) have
+exponentially improved performance on ImageNet, a one-million image
+classification challenge\cite{}, to now super-human
+performance\cite{}.  An obvious application of CNNs is the
+classification tasks, such as particle identification, in ``imaging''
+detectors such as Time-Projection Chambers (TPCs), Cherenkov Imaging
+detectors, and high granularity calorimeters. The application in HEP
+of this idea was in the Nova collaboration, where they were able to
+obtain 40\% better electron efficiency for same background rate as
+their best techniques~\cite{}. 
+
+\subsubsubsection{LArTPC}
+
+In fall of 2015, Farbin CNN-based demonstrated particle identification
+in LArTPC with simulation of the LArIAT Experiment ~\cite{}. Despite a
+great deal of multi-experiment (e.g. ArgoNeuT, LArIAT, MicroBooNE,
+DUNE, ...) effort, event reconstruction in LArTPC has proven be
+challenging, with performance still far from expectation and poor
+neutrino reconstruction. Farbin's Inception~\cite{} based CNN treated
+raw data from the TPC as imagines, and was able to achieve
+significantly better performance than traditional reconstruction in
+both particle and neutrino reconstruction~\cite{} (give example
+numbers?)). This effort has now evolved to a collaboration with
+computer scientists Pierre Baldi and Peter Sadowski at UCI. While the
+ultimate goal is demonstrate end-to-end DL-based Neutrino
+reconstruction, the first goal is to design optimized networks for
+particle and neutrino classification and energy regression. The first
+step was to produce large samples of simulated events with flat energy
+spectrum. Using Farbin's local machines Shahsavarani and undergrad
+Hilliard have so far produced 15 million events of every particle
+species, which is a largest LArTPC sample ever produced (?). This
+dataset is public, is intended to facilitate collaborations, and is
+already being used by independently by HEP and DL researchers.
+
+The collaboration with UCI has yielded several particle and neutrino
+classification and regression networks, including Siamese~\cite{}
+Inception and ResNet~\cite{} based networks that seem to require less
+depth for LArTPC tasks than image classification.  Obtaining better
+classification performance than automatic reconstruction has proven to
+be rather easy. Recently MicroBooNE presented some promising first
+studies~\cite{}, based on work that was initiated on Farbin's GPU
+system. Farbin et al we able to obtain better performance, training
+for a week with $O(100k)$ down-sampled raw events, for example
+achieving 2\% fake rate at 80\% for electron versus neutral pion
+discrimination, a critical benchmark for separation of charged
+current from neutral current neutrino interactions.  However
+obtaining the design performance ($1\%$ fake rate) will likely require
+full resolution and deeper networks train for long time on the
+significantly larger training sample Farbin et al have produced.
+
+Obtaining good energy reconstruction has proven to be difficult. In
+order to avoid bias, Farbin et al employ likelihood based cost
+functions that also provide a per-event resolution estimate. First
+studies with small networks on down-sampled data obtain poor electron
+resolution with $~11\%$ sampling term, significantly worse than the
+expected $3\%$. Meanwhile Muon energy reconstruction relies on
+measuring multiple scattering angle, and thereby requires full
+detector resolution. Again, these studies are at the stage of much
+more challenging training requirements and are underway, with the goal
+of paper submission by end of 2016.
+
+Farbin and Asaadi propose to implement the network architectures and
+techniques developed in these studies as DNN-based algorithms in the
+software framework common to nearly all LArTPC experiments,
+LArSoft~\cite{}. This work will be carried out primarily by
+Shahsavarani and undergrad [Asaadi insert name here] in collaboration
+with Robert Sulej (CERN, Fermilab, ...), who has been pursuing
+DNN-based electromagnetic versus hadronic hit identification, also on
+Farbin's GPU system. As these algorithms are implemented, they can be
+tested or trained on LArIAT data. The goal will be to provide full
+end-to-end DNN-based neutrino reconstruction in LArSoft by the end of
+2017. 
+
+%[Noise suppression? 2D to 3D?]
+
+\subsubsubsection{Gas TPC}
+
+The neutrinoless double beta ($0\nu\beta\beta$) experiment NEXT,
+relies on high pressure xenon (HPXe) Gas TPC, read out by SiPMs to
+produce 3-D images of beta decays. NEXT relies on topological
+signatures to separate signal events (two electrons) from background
+events (mainly due to single electrons with kinetic energy comparable
+to the end-point of the $0\nu\beta\beta$ decay). Late 2015, Farbin,
+with the assistance of Josh Renner (?), ... (?), demonstrated that
+CNNs can nearly perfectly separate this signal and background in an
+idealized toy simulation. Since then, they have shown CNNs out perform the
+traditional technique in full simulation. They also used 2D DNNs to
+easy compare different detector granularities and understand the
+relative contribution of physics processes to the fake-rate. This
+activity is detailed in a paper (with Farbin as co-author along with
+the NEXT collaboration) that is nearly ready for submission. Jones is
+committing undergrad XXX and graduate student XXX, to upgrade the
+technique to 3D and attempt to identify the decay point and angle, in
+an effort to test Lorentz invariance [Ben, do I put this in?].
+
+\subsubsubsection{Calorimeters}
+
+The ATLAS Electromagnetic and Hadronic calorimeters produce 3D images
+in of variable granularity in $\eta$, $\phi$ versus depth (i.e. the
+LAr presampler to the Tile D layers) of energy deposits. Particles,
+such as photons, are identified by their characteristic shower
+profiles, with their energies determined via a weighted fit of
+layer-wise deposits calibrated to test beam and $Z$ decays. Any
+improvement, for example in photon identification or energy
+resolution, can dramatically improve searches and measurements, for
+example producing narrower Higgs peaks with less background. This
+calorimeter (as opposed to CMS's crystal EM calorimeter) is ideally
+suited for application of CNN for classification and energy
+regression. Indeed several factors give hope that significant
+improvements can be achieved. For example, energy reconstruction in
+the LAr EM calorimeter currently does not use shower shape information
+and is not correcting for variations in the LAr calorimeter's
+characteristic accordion structure. Similarly the hadronic calibration
+does not use sampling information.
+
+The variable granularity of the ATLAS calorimeter can likely be built
+into the CNN architectures. Since simulation does not faithfully
+reproduce the shower shapes, simulation trained CNNs can be initially
+calibrated on $Z\rightarrow e e$ or testbeam data. While training
+on data is also possible, for example training on data $Z$ decays
+using likelihood-based cost functions that account for $Z$ line-shape
+and calorimeter resolution, an interesting direction is hybrid
+training with adversarial networks. An example of this technique
+simultaneously trains the classification or regression network with
+and an adversarial network learning to distinguish data and
+simulation. The full network is then trained until data and simulation
+cannot be distinguished.
+
+Another potentially high impact of DNNs to calorimetry is fast
+showering. Full Geant4 shower simulation in the ATLAS calorimeter
+takes of order of an hour. Fast shower techniques such as shower
+libraries or high dimensional binning of shower observable generally
+suffer from intractable memory requirements. Zach Marshall et al
+(Berkeley) have more efficiently stored shower observables in shallow
+neural networks. DNNs may provide a much more powerful technique.
+Starting with examples only, Generative DNNs have been demonstrated to
+generate new images of faces or hotel rooms, or text in style of the
+example author (e.g. Shakespeare). Two techniques are likely relevant
+to calorimetry. The first is Generative Adversarial Networks, which
+starting from random input trains a network that simultaneously produces
+the desired output and attempts to distinguish generated from real
+examples. The network is trained when it no longer can make the
+distinction. Variational Autoencoders train a 2 part network: one that
+``encodes'' real examples into a latent lower dimensional
+representation of Gaussian distributed variables, and another that
+``decodes'' to an image trained to reproduce the original. Once
+trained, the decoder can be primed to then generate new examples. 
+
+A significant obstacle to applying CNNs to the ATLAS calorimeter is
+accessibility to data. The energy deposits into the 200k cells require
+significant storage and are only retained in the difficult to access
+Event Summary Data (ESD). With a baseline of $\approx$ 1 in $10^4$ jet
+rejection, CNN training will require large samples of specially
+filtered EM-like jet backgrounds, finely binned to compensate for
+drop in jet-cross section. Finally, due to ATLAS's strict data-sharing
+policies, collaboration with DL experts is difficult. Farbin and
+graduate student Leslie Rogers are working to address these issues and
+assemble appropriate ATLAS training sets,
+
+In meantime, Farbin has been collaborating with CMS colleagues
+Maurizio Pierini (CERN) and Jean-Roch Vlimant (CalTech) to generate
+simpler public datasets where application of DNNs to calorimetry can
+be explored in collaboration with DL experts and without unnecessary
+complications. Starting with the high granularity LCD CLIC calorimeter
+concept, they have so far simulated 2 million photon and neutral pions
+and presented first classification studies were presented in July
+2016~\cite{}. With the goal a paper by the end of 2016, Farbin is
+currently applying the energy regression techniques developed in
+LArTPC to this dataset. 
+
+Ideally, the very clean environment of the LArTPC and Gas TPC and this
+simple LCD dataset, can serve as a stepping stone for developing the
+classification, regression, and generation techniques described in
+this section to the ATLAS calorimeter and the pile-up ridden LHC
+environment. Exploring and implementing these techniques in ATLAS will
+be a part of Rogers' PhD thesis, building on Farbin's ATLAS software
+and DL experience and Heelan's extensive background with the
+calorimeter (e.g. she is the editor of the Tile performance paper) and
+test beam. The goal is to first tackle photon identification and then
+photon/electron calibration. Of critical importance will be handling
+of pile-up. If successful, the technique will be implemented in
+ATLAS's framework for further study and use by other
+collaborators. Extension of the technique to EM/hadronic cluster
+identification and calibration should be straightforward next
+step. Postdoc Griffiths, who contributes significantly to $\tau$
+identification, will investigate CNN applications to
+$\tau$s. Simultaneously these efforts will explore applying the
+generative DNN fast showering technique developed in the context of
+LCD, to ATLAS.
+
+HEP is confronted with two fundamental problems in the current
+generation of HEP experimental software: the inability to take
+advantage and adapt to the rapidly evolving processor landscape, and
+the difficulty in developing and maintaining increasingly complex
+software and computing systems by physicists. DL and DL software
+systems provide a paradigm-shifting solution to these problems. It may
+be possible to replace the millions lines of code, meticulously
+crafted by thousands of physicists, with large neural networks that
+are simply trained on raw simulated data. Not only are these networks
+much simpler and faster to compute than traditional HEP algorithms,
+they inherently make efficient use new processors. These systems can
+provide scalable implementations of existing HEP algorithms.
+
+\fivehead{Tracking}
+
+Pattern recognition rate in particle tracking scales quadratically
+with hits in the tracking detector. As a result, tracking in 200
+pile-up HL-LHC events is one of biggest challenges for the HL-LHC,
+where some tracking and vertex finding at 40 MHz bunch-crossing might
+be required for the trigger. While some are investigating dedicated
+hardware, such as GPUs, FPGAs, or associated memory, a group of ATLAS
+and CMS physicists, including Farbin, are hoping that by presenting
+the HL-LHC tracking problem as a Machine Learning challenge
+(TrackingML) with a prize, solutions arise that scales better with
+number of hits~\cite{}. One source of inspiration is DeepMind's
+AlphaGo~\cite{} artificial intelligence agent, which was able to
+assess moves by looking at the whole board with a DNN instead of
+performing a look-ahead tree search. This DNN was trained through
+human expert and self-play games.
+
+Preparing this challenge requires generating HL-LHC like events in an
+appropriate detector, providing baseline traditional tracking software
+for comparisons, and developing mechanisms to benchmark and assess the
+performance of submitted algorithms. The majority of the work so far
+has been carried out by Andreas Sulzberger (CERN), who is currently in
+charge of ATLAS reconstruction and formerly a tracking expert. He has
+developed a standalone simulation and tracking framework, known as
+ATLAS Common Tracking Software (ACTS). Farbin's contribution to the
+project so far has been data conversion to more ML friendly HDF5
+format. Farbin and undergrad Hilliard are assuming the responsibility
+of developing the automatic benchmarking mechanisms, likely using
+Docker containers on hardware Farbin will dedicate to the project.
+
+% alphago: Nature 529, 484–489 (28 January 2016) doi:10.1038/nature16961
+
+
