@@ -7,6 +7,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{bbding}
+\usepackage{multirow}
 %\usepackage{slashbox}
 \usepackage{subfigure}
 \usepackage{cite}
@@ -19,7 +20,6 @@
 %\input{physics_defs.tex}
 %\input{boxedeps.tex}
 %\input d0_style.tex
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -55,6 +55,7 @@
 \def\fourhead#1{\subsubsection{#1}}
 \def\fivehead#1{\paragraph*{#1}}
 \def\subsubsubsection#1{\paragraph*{#1}}
+\newcommand{\rowgroup}[1]{\hspace{-1em}#1}
 
 %%%%%%%%%%%%%%%%%%%%%% Bibliography  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\thebibliography#1{
@@ -124,7 +125,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PI Summary for Andrew White %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{./White/AW_Accomp.tex}
+%\input{./White/AW_Accomp.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PI Summary for Kaushik De %%%%%%%%%%%%%
@@ -152,23 +153,30 @@
 %%%%%%%%%%%%%%%%%%%%%  Atlas Experiment %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \twohead{The ATLAS Experiment}
-\input{ATLASIntro.tex}
+\input{atl_intro.tex}
 
 %%%% Sub-Subject %%%%%%%%%%
 \threehead{Higgs Physics (PI: Brandt, Hadavand, White)}
 %%%% Sub-Subject %%%%%%%%%%
-\fourhead{Charged Higgs (PI: Hadavand, Brandt)}
+\fourhead{Charged Higgs (PI: Brandt, Hadavand)}
 \input{Haleh/Charged-Higgs.tex}
 
 %%%% Sub-Subject %%%%%%%%%%
-\fourhead{Z+X  (PI: Hadavand)}
+\fourhead{Z+X Scan (PI: Hadavand)}
 \input{Haleh/ZplusX.tex}
 
 %%%% Sub-Subject %%%%%%%%%%
 \fourhead{Atlas Sub-Subject (PI: PersonOne, PersonTwo)}
 %\input{ATLASSubSubjectTwo.tex}
 
+\threehead{SUSY Physics (PI: De, Farbin)}
 
+\threehead{Tile HL-LHC Upgrade (PI: De, Farbin)}
+
+
+\fourhead{Tile Low Voltage Power Supply(LVPS) Upgrade  (PI: Brandt, Hadavand)}
+\label{sec:Tile-HL-LHC}
+\input{Haleh/Tile-HL-LHC.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%  ILC Experiment %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
