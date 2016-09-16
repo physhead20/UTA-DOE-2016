@@ -15,11 +15,11 @@ The measurements for this region will be performed by the end of 2016.
 
 Griffiths and Hadavand have led the charged Higgs search with Griffith being the analysis contact and Hadavand the charged Higgs convener.  Under their leadership UTA group has produced the final results including plots and statistical
 interpretation, estimation of the systematic uncertainties, including theoretical, writing the analysis code, production of common ntuples, and trigger studies ( with Jae Yu's student Last Feremenga).  
-By using simulated \ttbar data instead of $\tau$ embedding we were able to publish results with 3.2 \invfb of data and a conference note at 14.7\invfb of data at 13 TeV.  This luminosity increase increased the mass reach of the analysis from 250 GeV in Run 1 to 600 GeV in Run 2.
+By using simulated \ttbar data instead of $\tau$ embedding~\cite{embedding} we were able to publish results with 3.2 \invfb\ of data and a conference note at 14.7\invfb\ of data at 13 TeV~\cite{taunu,hptnu1}.  This luminosity increase increased the mass reach of the analysis from 250 GeV in Run 1 to 600 GeV in Run 2.
 The jet to tau background statistics for the Run 2 analysis were vastly improved over Run 1 by using Hadavand's suggestion of only using a missing ET trigger as opposed to a tau plus missing ET trigger.  The use of the tau in the trigger implied that a medium selection of taus had to be used in the fake factor method, 
 where in Run 2 we could use a Loose selection therefore greatly enhancing the statistics.
 
-As we can see from figure blah with the 2018 dataset of 100-150 Gev of data we are still only excluding large \tanb values so this analysis continues to be an important measurement as we accumulate more data.
+As we can see from figure~\ref{fig:tau} (right) with the 2018 dataset of 100-150 Gev of data we are still only excluding large \tanb\ values so this analysis continues to be an important measurement as we accumulate more data.
 We have plans to apply techniques to improve the analysis' sensitivity over it's early Run 2 predecessor.  The tasks aimed for these improvements are listed below:
 
 %% HH fix analysis cuts
@@ -45,14 +45,13 @@ We have plans to apply techniques to improve the analysis' sensitivity over it's
 \end{center}
 \end{figure}
 The tau polarization can be used to separate the W \too $\tau \nu$ background from the signal.  The intrinsic polarization of W$^+$ is -1 while that of $H^+$ is +1.  The tau polarization is defined as $P_{\tau}=\frac{\sigma_R - \sigma_L}{\sigma_R + \sigma_L}$.
-A plot of the charge asymmetry, defined as $\Upsilon=\frac{p_{T}^{track}}{p_T} - 1$, is shown for the signal and background in the $\tau$ \too $\rho \nu_{\tau}$ final in figure~\ref{fig:tau}. Other 1-prong decays will also have similar separation in the charge asymmetry. 
+A plot of the charge asymmetry, defined as $\Upsilon=\frac{p_{T}^{track}}{p_T} - 1$, is shown for the signal and background in the $\tau$ \too $\rho \nu_{\tau}$ final in figure~\ref{fig:tau}, left. Other 1-prong decays will also have similar separation in the charge asymmetry. 
 The 1-prong decays can be separated from the 3-prong decays in the final fitting machinery and added statistically together.  This variable will be used as additional variable to the fit in the 1-prong case.
 
 \paragraph{Use matrix element method to reduce true tau background ;  Hadavand, Akafzade}
 In addition to the tau polarization one can utilize the event kinematics by utilizing the matrix element method to distinguish the signal from the true tau background originating from \ttbar events.  
-
-By looking at the distribution $d(x)=\frac{P_S(x)}{P_S(x)-P_B(x)}$ where $P_S$ and $P_B$ correspond to the weights from the signal and background 
-hypothesis. I have performed initial tests with MadWeight for achieving this goal. This variable can then be added as one of the variables in the BDT. 
+This can be by using the classifier distribution $d(x)=\frac{P_S(x)}{P_S(x)-P_B(x)}$ where $P_S$ and $P_B$ correspond to the weights from the signal and background 
+hypothesis . Hadavand has performed initial tests with MadWeight for achieving this goal. This variable can then be added as one of the variables in the BDT. 
 
 \paragraph{Use boosted decision trees ;  Postdoc and Akafzade}
 As mentioned earlier for early Run 2 results the discriminating variable used in the fit was $m_T$. As an alternative we can incorporate several 
@@ -65,14 +64,15 @@ an estimate of the background in that region.  This is important since this is t
 As an alternative to the matrix method used for the Run 1 published paper one can use a control region with no signal and loosen the selection criteria to introduce more fake taus.  This can be done
 by requiring a zero bjet region and only requiring a loose tau selection.  The normalization of this background can then be derived within the fit to data.  This should reduce both the statistical and systematic uncertainty of the analysis.
 %In order to attain a control region with enough statistics when imposing this selection criteria one has to change the current trigger which already imposes a selection of a medium tau.  
-The use of the tau plus MET trigger has caused some of the main issues with statistics for the QCD background in Run 1. I proposed to use a MET trigger which actually had higher efficiency than the tau plus MET trigger.  
+The use of the tau plus MET trigger has caused some of the main issues with statistics for the QCD background in Run 1. Hadavand proposed to use a MET trigger which actually had higher efficiency than the tau plus MET trigger.  
 The use of this trigger increases the statistics for the background estimation.
 %Other control region which are void of signal can be used in a similar fashion by fitting the normalization within the data.
 
 \paragraph{Apply Deep learning techniques for selection; Brandt, Farbin, Hadavand, graduate and undergraduate students}
-The deep learning technique can be applied to this analysis in two ways.  One way would be to use it to distinguish \ttbar background from the signal by training on those samples.
+The deep learning technique can be applied to this analysis in two ways.  One way would be to use it to distinguish \ttbar\ background from the signal by training on those samples.
+A comparison of the BDT method described earlier for event selection will be done with respect to this technique.
 Another way to apply deep learning would be in the tau reconstruction in place of the BDT technique which is used now.  We plan to use Farbin's extensive experience in the field of deep learning 
-to help with us with this effort.
+to help with us with this effort. 
 
 
 %\paragraph{Port Statistics Tool to new Naming Convention} ( R2-1 - 2 months )
@@ -83,7 +83,7 @@ to help with us with this effort.
 The low statistics in the tail of the distribution has made the H$^+$ \too $\tau \nu$ channel difficult for setting limits.  In many cases we found that several systematic variations performed for pull determination would make the fits fail.  
 This has to do with the fact that the data has low stats and is spiky since similar statistics in smooth MC did not cause the same failures. 
 By making requirements on signal over background and the number of total background in a given
-bin and then testing with pull estimation I was able to optimize the best binning for both stability and sensitivity.  For performing projections to higher luminosities we also had to extrapolate the background to the higher masses
+bin and then testing with pull estimation, Hadavand was able to optimize the best binning for both stability and sensitivity.  For performing projections to higher luminosities we also had to extrapolate the background to the higher masses
 to determine a realistic scale of the background in this region. After performing the extrapolation we could re-optimize the binning for the given luminosity projection, a technique developed by Hadavand.
 
 %\paragraph{Perform Limit Calculations and Fit studies ;  Akafzade}% (R2-1, R3-1 - 1 months)
