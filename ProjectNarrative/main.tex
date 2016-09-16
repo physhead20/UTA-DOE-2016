@@ -119,9 +119,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%          Energy Frontier             %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\onehead{Research at the Energy Frontier}
+%\onehead{Research at the Energy Frontier}
 
-%input{EF_Intro.tex}
+\input{EF_Intro.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,56 +154,91 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%  Atlas Experiment %%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\twohead{The ATLAS Experiment}
+\onehead{The ATLAS Experiment}
 
 %%% Atlas Experiment Introduction %%%%
 \input{atl_intro.tex}
 
-%%%% Higgs Physics %%%%%%%%%%
-\threehead{Higgs Physics (PI: Brandt, Hadavand, White)}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               PHYSICS                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\underline{\textbf{\huge Physics at ATLAS}}
+\end{center}
+%============================
+%%%%%% Higgs Physics %%%%%%%%%%
+%===========================
+\twohead{Higgs Physics (PI: Brandt, Hadavand, White)}
 
 %%% Higgs Introduction %%%%
 \input{atl_higgs_intro.tex}
 
 %%%% Sub-Subject: Charged Higgs %%%%%%%%%%
-\fourhead{Charged Higgs (PI: Brandt, Hadavand)}
+\threehead{Charged Higgs (PI: Brandt, Hadavand)}
 \input{Haleh/Charged-Higgs.tex}
 
 %%%% Sub-Subject: Z+X Scan %%%%%%%%%%
-\fourhead{Z+X Scan (PI: Hadavand)}
+\threehead{Z+X Scan (PI: Hadavand)}
 \input{Haleh/ZplusX.tex}
 
 %%%% Sub-Subject: Higgs to invisible %%%%%%%%%%
-\fourhead{Higgs Decays to Invisible Particles (PI: White)}
+\threehead{Higgs Decays to Invisible Particles (PI: White)}
 \input{White/EF_Higgs_to_Invisible.tex}
 
 
-
-
-
+%============================
 %%%% SUSY Physics %%%%%%%%%%
+%============================
 \threehead{SUSY Physics (PI: De, Farbin)}
 
+%%% SUSY Introduction %%%
+\input{./Farbin/AF_SUSYIntro.tex}
 
-%
-% Physics
-%
-%
-% Service 
-%
-%
-% Computing
-%
-%
-% Upgrade
+%%% Squark and Gluino %%%%
+\fourhead{Squarks and Gluino (PI: Farbin)}
+%\input{./Farbin/AF_SquarkGluino.tex}
 
-%%%% HL-LHC Upgrade %%%%%%%%%%
-\threehead{Tile HL-LHC Upgrade (PI: De, White)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%               Service                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\underline{\textbf{\huge Service at ATLAS}}
+\end{center}
+
+%%% Intermediate Tile Calorimeter %%%
+\twohead{Intermediate Tile Calorimeter (PI: De, White)}
 \input{White/EF_Tile_ITC.tex}
 
+\twohead{Trigger (PI: )}
+\input{Farbin/AF_Trigger.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%             Computing                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\underline{\textbf{\huge Computing at ATLAS}}
+\end{center}
+
+%%% Computing Introduction %%%%
+\input{Farbin/AF_ComputingIntro.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%             Upgrade                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\underline{\textbf{\huge Upgrade at ATLAS}}
+\end{center}
+
+%%%% HL-LHC Upgrade %%%%%%%%%%
+\twohead{Tile HL-LHC Upgrade (PI: De, White)}
 
 %%%% Sub-Subject: LVPS Upgrade %%%%%%%%%%
-\fourhead{Tile Low Voltage Power Supply(LVPS) Upgrade  (PI: Brandt, Hadavand)}
+\twohead{Tile Low Voltage Power Supply(LVPS) Upgrade  (PI: Brandt, Hadavand)}
 \label{sec:Tile-HL-LHC}
 \input{Haleh/Tile-HL-LHC.tex}
 
