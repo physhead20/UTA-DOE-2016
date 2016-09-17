@@ -55,6 +55,11 @@
 \def\fourhead#1{\paragraph{#1}}
 \def\fivehead#1{\subparagraph{#1}}
 \def\sixhead#1{\subparagraph*{#1}}
+\def\centerhead#1{
+	\begin{center}
+	\Large\textbf{#1}
+	\end{center}}
+
 \newcommand{\rowgroup}[1]{\hspace{-1em}#1}
 
 %%%%%%%%%%%%%%%%%%%%%% Bibliography  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,16 +97,17 @@
 
 %%%% Abstract %%%%%
 \input{./abstract/abstract.tex}
+\newpage
 
 %%% Cover Page %%%
-\newpage
 \input{./CoverPage/cover_page.tex}
-
+\newpage
 
 %%% Cover Page Supplement %%%%
-\newpage
+\centerhead{Cover Page Supplement}
 \input{./CoverPageSupplement/cover_page_supplement.tex}
 \newpage
+
 %%% Start the page counting here %%%
 \pagestyle{plain}
 \setcounter{page}{1}
@@ -109,9 +115,9 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Common Introduction %%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centerhead{Introduction}
 \input{./GroupIntroduction/GroupIntro.tex}
-
 \newpage
 
 
@@ -119,35 +125,38 @@
 %%%%          Energy Frontier             %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \overhead{Research at the Energy Frontier}
-
 \input{EF_Intro.tex}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% PI Summary for Andrew White %%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{./White/AW_Accomp.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PI Summary for Kaushik De %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centerhead{PI Summary: Kaushik De}
 \input{./De/KD_Accomp.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% PI Summary for Andrew Brandt %%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{./Brandt/AB_Accomp.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PI Summary for Amir Farbin %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centerhead{PI Summary: Amir Farbin}
 \input{./Farbin/AF_Accomp.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PI Summary for Haleh Hadavand %%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centerhead{PI Summary: Haleh Hadavand}
 \input{./Haleh/HH_Accomp.tex}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PI Summary for Andrew White %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centerhead{PI Summary: Andrew P. White}
+\input{./White/AW_Accomp.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% PI Summary for Andrew Brandt %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\centerhead{PI Summary: Andrew Brandt}
+\input{./Brandt/AB_Accomp.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
