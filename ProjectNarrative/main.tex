@@ -27,11 +27,8 @@
 %\ShowDisplacementBoxes      % Turn on displacement boxes
 %%\nofiles
 %%\HideDisplacementBoxes      % Turn off displacement boxes
-\setcounter{secnumdepth}{3}
 
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%% MACRO DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -49,12 +46,15 @@
 \parindent=10mm
 \parsep=0pt
 
-\def\onehead#1{\part{#1}}
-\def\twohead#1{\section{#1}}
-\def\threehead#1{\subsection{#1}}
-\def\fourhead#1{\subsubsection{#1}}
-\def\fivehead#1{\paragraph*{#1}}
-\def\subsubsubsection#1{\paragraph*{#1}}
+\setcounter{secnumdepth}{3}
+\def\overhead#1{\part{#1}}
+%\def\onehead#1{\chapter{#1}}
+\def\onehead#1{\section{#1}}
+\def\twohead#1{\subsection{#1}}
+\def\threehead#1{\subsubsection{#1}}
+\def\fourhead#1{\paragraph{#1}}
+\def\fivehead#1{\subparagraph{#1}}
+\def\sixhead#1{\subparagraph*{#1}}
 \newcommand{\rowgroup}[1]{\hspace{-1em}#1}
 
 %%%%%%%%%%%%%%%%%%%%%% Bibliography  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,8 +109,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Common Introduction %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\onehead{UTA Group Introduction}
+
 \input{./GroupIntroduction/GroupIntro.tex}
 
 \newpage
@@ -119,7 +118,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%          Energy Frontier             %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\onehead{Research at the Energy Frontier}
+\overhead{Research at the Energy Frontier}
 
 \input{EF_Intro.tex}
 
@@ -272,7 +271,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%          Intensity Frontier             %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\onehead{Research at the Intensity Frontier}
+\overhead{Research at the Intensity Frontier}
 
 %%%%% Overview of IF Research %%%%%%%%%%%%%%%
 \input{./IntensityFrontier/IFIntro.tex}
@@ -328,7 +327,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%          Detector R&D Frontier             %%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\onehead{Research in Detector R$\&$ D}
+\overhead{Research in Detector R$\&$ D}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PI Summary for David Nygren %%%%%%%%%%%%%
