@@ -96,8 +96,8 @@
 \noindent
 
 %%%% Abstract %%%%%
-\input{./abstract/abstract.tex}
-\newpage
+%\input{./abstract/abstract.tex}
+%\newpage
 
 %%% Cover Page %%%
 \input{./CoverPage/cover_page.tex}
@@ -370,6 +370,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%% Biographical Sketches %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\overhead{Appendix: Biographical Sketch}
 
 %%% Andy White %%%
 \input{../CVs/AW_bio.tex}
@@ -399,6 +400,7 @@
 \includepdf[pages=-]{../CVs/Biosketch_BJPJ.pdf}
 
 %%%%%%%%%%%%%%%%%%%%%%% Current and Pending %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
 %%% Andrew Brandt %%%
 \includepdf[pages=-]{../CurrentAndPendingSupport/CNP-Brandt-DOE-092016.pdf}
@@ -457,6 +459,11 @@
 %############## Detector R&D Budget Justification ###############
 %###################################################################
 \input{../BudgetInfo/budget-justification-detector.tex}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%% Data Management Plan %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\includepdf[pages=-]{../DataPlan/IF_DataManagement.pdf}
 
 
 \end{document}
