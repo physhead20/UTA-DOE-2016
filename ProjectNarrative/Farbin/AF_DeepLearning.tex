@@ -1,4 +1,19 @@
 \label{sec:af_deeplearning}
+
+The world is in the midst of a renaissance in Machine Learning and
+Artificial Intelligence, known as Deep Learning, driven by the
+emergence of large data sets, powerful Graphical Processing Units
+(GPUs) processors, and new techniques to train billion-neutron
+multi-layer artificial neural networks. Systems trained on raw and
+sometimes unlabeled data, can now recognize objects, detect human
+emotion and intent, play video games, translate between languages,
+generate mathematical proofs, sometimes better than humans and most
+importantly with minimal engineering. Developed in University Machine
+Learning labs, DL has led Google, Facebook, and other industry-leading
+companies to rethink everything, building Artificial Intelligence
+teams, software, processors, and cloud services, and demonstrating
+impressive feats.
+
 Beyond better performance, new capabilities demonstrated by Deep
 Learning drive the unprecedented excitement across various fields and
 domains. Deep Neural Networks (DNNs), can learn features from raw
@@ -18,10 +33,21 @@ be found in Farbin's recent talks~\cite{}. His HEP Software Foundation
 HSF presentation~\cite{} details DL's impact on software and
 requirements. The ATLAS Machine Learning workshop presentation details
 the calorimetry and other ATLAS applications~\cite{}. And the Harvard
-Big Data Conference~\cite{} talk overviews DL across HEP. This section
-is organized into DL thrusts that sometimes span multiple experiments:
-Simple Classification, Matrix Element Acceleration, Imaging Detector
-Reconstruction, and Tracking.
+Big Data Conference~\cite{} talk overviews DL across HEP. Farbin's DL
+activity is organized into thrusts that sometimes span multiple
+experiments. Many of these efforts will conclude with planned papers
+in the upcoming months. Four thrusts of DL activity directly targeting
+the LHC will persist.  This section will only detail the two thursts
+that will most immediately effect ATLAS and will involve individuals
+funded by this grant: Simple Classification and Imaging Detector
+Reconstruction. Another thrusts is encapsulation of Matrix Elements in
+DNNs for Next to Leading Order (NLO) and Next to NLO (NNLO)
+computations and Matrix Element Method (MEM), a produce of
+collaborations with Tancredi Carli (CERN), ATLAS's next Deputy Physics
+Coordinator and Tobias Golling's group (U. Geneva). The final thrust
+is core contributions to the TrackingML challenge, aimed at soliciting
+solutions to HL-LHC tracking problems, primarily driven by Andreas
+Salzburger (CERN) and David Rousseau (LAL).
 
 In order to accelerate the progress of collaborators, Farbin has
 developed a Deep Learning Tutorial covering a variety of DNN tasks,
@@ -76,40 +102,40 @@ tagging. Farbin will also be aiding Hadavand and Brandt to apply the
 technique to tau identification and Charged Higgs searches, as
 described in section~\ref{}.
 
-\fivehead{Matrix Element Acceleration with Deep Learning}
+%% \fivehead{Matrix Element Acceleration with Deep Learning}
 
-The Universality Theorem~\cite{} states that a sufficiently large
-Neural Network can represent an arbitrary function of any input
-dimensions. The theorem implies that fast DNNs can potentially
-encapsulate prohibitively expensive computations, for example Next to
-Leading Order (NLO) and Next to NLO (NNLO) Matrix Elements, which are
-becoming increasingly important for the LHC, or the application of
-Matrix Element Method (MEM), which is in principle the most powerful
-search technique but is sparsely applied due to technical complexity
-and computational demands. The idea is to perform the computations
-once using significant computing resources, for example an HPC, while
-training a DNN to efficiently (in both memory and speed) and accurately
-reproduce the same computation for subsequent event generation,
-integration for cross-sections, or application of MEM.
+%% The Universality Theorem~\cite{} states that a sufficiently large
+%% Neural Network can represent an arbitrary function of any input
+%% dimensions. The theorem implies that fast DNNs can potentially
+%% encapsulate prohibitively expensive computations, for example Next to
+%% Leading Order (NLO) and Next to NLO (NNLO) Matrix Elements, which are
+%% becoming increasingly important for the LHC, or the application of
+%% Matrix Element Method (MEM), which is in principle the most powerful
+%% search technique but is sparsely applied due to technical complexity
+%% and computational demands. The idea is to perform the computations
+%% once using significant computing resources, for example an HPC, while
+%% training a DNN to efficiently (in both memory and speed) and accurately
+%% reproduce the same computation for subsequent event generation,
+%% integration for cross-sections, or application of MEM.
 
-Farbin has been pursuing both of these problems in collaboration with
-Tancredi Carli (CERN), ATLAS's next Deputy Physics Coordinator and
-Tobias Golling's group (U. Geneva). Carli has produced a one billion
-event sample of NLO $t\bar{t}$ in Sherpa which he has been studying on
-Farbin's GPU system due to memory requirements of his technique. He
-has been attempting to encapsulate event weights in a high dimensional
-(i.e. incoming and outgoing 4-vectors) adaptive binning histogram
-using the foam~\cite{} method. Simultaneously Farbin has developed a
-Matrix Element DNN (MEDNN) to achieve the same task. Since Golling's
-group, who initially relied on Farbin's GPU system, is also pursuing a
-similar tasks for Matrix Element Method based analysis, Farbin joins
-his group meetings and shares ideas and code. DNN training for such a
-regression task is essentially a high dimensional fit, which due to
-the non-linearity of NNs, is often biased unless a proper cost
-function is applied. This problem also plagues the Imaging Detector
-Energy Regression description below. For MEDNN, the state-of-the-art
-turns the regression (i.e. fitting) into a classification problem by
-binning the target with bin learned bin edges.
+%% Farbin has been pursuing both of these problems in collaboration with
+%% Tancredi Carli (CERN), ATLAS's next Deputy Physics Coordinator and
+%% Tobias Golling's group (U. Geneva). Carli has produced a one billion
+%% event sample of NLO $t\bar{t}$ in Sherpa which he has been studying on
+%% Farbin's GPU system due to memory requirements of his technique. He
+%% has been attempting to encapsulate event weights in a high dimensional
+%% (i.e. incoming and outgoing 4-vectors) adaptive binning histogram
+%% using the foam~\cite{} method. Simultaneously Farbin has developed a
+%% Matrix Element DNN (MEDNN) to achieve the same task. Since Golling's
+%% group, who initially relied on Farbin's GPU system, is also pursuing a
+%% similar tasks for Matrix Element Method based analysis, Farbin joins
+%% his group meetings and shares ideas and code. DNN training for such a
+%% regression task is essentially a high dimensional fit, which due to
+%% the non-linearity of NNs, is often biased unless a proper cost
+%% function is applied. This problem also plagues the Imaging Detector
+%% Energy Regression description below. For MEDNN, the state-of-the-art
+%% turns the regression (i.e. fitting) into a classification problem by
+%% binning the target with bin learned bin edges.
 
 \fivehead{Imaging Detector Reconstruction with Deep Learning}
 
@@ -345,36 +371,36 @@ described in section~\ref{}.
 %applying the generative DNN fast showering technique developed in the
 %context of LCD, to ATLAS.
 
-\fivehead{Tracking}
+%% \fivehead{Tracking}
 
-Pattern recognition rate in particle tracking scales quadratically
-with hits in the tracking detector. As a result, tracking in 200
-pile-up HL-LHC events is one of biggest challenges for the HL-LHC,
-where some tracking and vertex finding at 40 MHz bunch-crossing might
-be required for the trigger. While some are investigating dedicated
-hardware, such as GPUs, FPGAs, or associated memory, a group of ATLAS
-and CMS physicists, including Farbin, are hoping that by presenting
-the HL-LHC tracking problem as a Machine Learning challenge
-(TrackingML) with a prize, solutions arise that scales better with
-number of hits~\cite{}. One source of inspiration is DeepMind's
-AlphaGo~\cite{} artificial intelligence agent, which was able to
-assess positions in the game of Go by looking at the whole board with
-a DNN instead of performing a look-ahead tree search.
+%% Pattern recognition rate in particle tracking scales quadratically
+%% with hits in the tracking detector. As a result, tracking in 200
+%% pile-up HL-LHC events is one of biggest challenges for the HL-LHC,
+%% where some tracking and vertex finding at 40 MHz bunch-crossing might
+%% be required for the trigger. While some are investigating dedicated
+%% hardware, such as GPUs, FPGAs, or associated memory, a group of ATLAS
+%% and CMS physicists, including Farbin, are hoping that by presenting
+%% the HL-LHC tracking problem as a Machine Learning challenge
+%% (TrackingML) with a prize, solutions arise that scales better with
+%% number of hits~\cite{}. One source of inspiration is DeepMind's
+%% AlphaGo~\cite{} artificial intelligence agent, which was able to
+%% assess positions in the game of Go by looking at the whole board with
+%% a DNN instead of performing a look-ahead tree search.
 
-Preparing this challenge requires generating HL-LHC like events in an
-appropriate detector, providing baseline traditional tracking software
-for comparisons, and developing mechanisms to benchmark and assess the
-performance of submitted algorithms. The majority of the work so far
-has been carried out by Andreas Sulzberger (CERN), who is currently in
-charge of ATLAS reconstruction and formerly a tracking expert. He has
-developed a standalone and public simulation and tracking framework,
-known as ATLAS Common Tracking Software (ACTS). Farbin's contribution
-to the project so far has been data conversion to more ML friendly
-HDF5 format. Farbin and undergrad Hilliard are assuming the
-responsibility of developing the automatic benchmarking mechanisms,
-likely using Docker containers on hardware Farbin will dedicate to the
-project.
+%% Preparing this challenge requires generating HL-LHC like events in an
+%% appropriate detector, providing baseline traditional tracking software
+%% for comparisons, and developing mechanisms to benchmark and assess the
+%% performance of submitted algorithms. The majority of the work so far
+%% has been carried out by Andreas Sulzberger (CERN), who is currently in
+%% charge of ATLAS reconstruction and formerly a tracking expert. He has
+%% developed a standalone and public simulation and tracking framework,
+%% known as ATLAS Common Tracking Software (ACTS). Farbin's contribution
+%% to the project so far has been data conversion to more ML friendly
+%% HDF5 format. Farbin and undergrad Hilliard are assuming the
+%% responsibility of developing the automatic benchmarking mechanisms,
+%% likely using Docker containers on hardware Farbin will dedicate to the
+%% project.
 
-% alphago: Nature 529, 484–489 (28 January 2016) doi:10.1038/nature16961
+%% % alphago: Nature 529, 484–489 (28 January 2016) doi:10.1038/nature16961
 
 

@@ -49,64 +49,83 @@ roles similar to his convenership of the Physics Analysis Tools group.
 %signficant experience with HEP software via LArSoft (MicroBooNE,
 %LArIAT, DUNE reconstruction framework) will assist in this process.
 
-\fourhead{GPU Trigger Demonstrator}
-
-As R\&D for HL-LHC, Farbin and Hilliard will also initiate an effort
-to revisit the ATLAS GPU Trigger Demonstrator~\cite{}, which
-implemented a full tracking and calorimetry algorithm chain for CPU
-and GPU. In 2015 this study found that while the GPU algorithms ran up
-to two orders of magnitude faster than on the CPU, data conversions
-necessary for the GPU eliminated any cost benefits. Meanwhile the Deep
-Learning (DL) renaissance and rapid co-processor evolution have
-significantly shifted the future software and hardware landscape away
-from the trajectory of set by the Future Framework Requirements Group
-Report.
-
-HEP software is confronted with two fundamental problems: the
-inability to take advantage and adapt to the rapidly evolving
-processor landscape, and the difficulty in developing and maintaining
-increasingly complex software and computing systems by physicists. DL
-techniques and DL software systems provide two paradigm-shifting
-avenues of solutions to these problems. First, it may be possible to
-replace the millions lines of code, meticulously crafted by thousands
-of physicists, with Deep Neural Networks (DNNs) trained on raw
-simulated data. Not only are these NNs much simpler and faster than
-traditional HEP algorithms, they inherently make efficient use of new
-processors. Section~\ref{sec:af_deeplearning} describes Farbin's
-program of developing such DNNs. Second, the DL software, hardware,
-and service infrastructure that the Silicon Valley is rapidly
-developing is also capable to handle traditional HEP event processing
-and triggering workflows, potentially with significant improvement in
-speed and cost. It is imperative that HEP investigates the potential
-of these DL technologies, in addition to DL techniques, to address
-HL-LHC computing challenges. Regradless, considering that DL is
-already being boot-strapped into HEP software, close integration of DL
-with HEP frameworks will be a likely requirement of HL-LHC and
-therefore should be studied.
-
-After deploying the GPU Demonstrator on Farbin's GPU systems, Farbin
-and Hilliard will migrate it to TensorFlow (TF)~\cite{}, Google's open
+As a hobby project, Farbin and Hilliard will also attempt to
+revitilize the ATLAS GPU Trigger Demonstrator~\cite{}, which was not
+able to demonstrate cost-effective benefits of using GPUs in the
+trigger. As a test of the viability of the rapidly evolving Deep
+Learning infrastruture to manage traditional HEP workloads, they will
+migrate the GPU Demonstrator to TensorFlow (TF)~\cite{}, Google's open
 source distributed computation framework developed for Deep Learning
-applications.  In contrast to the schedulers in mutli-threaded HEP
-frameworks, TF utilizes data flow programming, representing
-computations as directed acyclic graphs that it optimizes and
-dispatches for processing across cores, co-processors (including
-Google's ultra fast and efficient Tensor Processing Units), and HPC
-nodes.  The system will be studied on Farbin's 48 core, 7 GPU, 10 Gb
-linked systems, with data pre-converted to tensors that flow through
-TF ops wrapping kernels of the existing GPU-Demonstrator
+applications. The system will be studied on Farbin's 48 core, 7 GPU,
+10 Gb linked systems, with data pre-converted to tensors that flow
+through TF ops wrapping kernels of the existing GPU-Demonstrator
 algorithms. It is noteworthy that Hilliard had obtained support from
 Fermilab (under supervision of Jim Kowalkowski) to perform a similar
 R\&D exercise with LArTPC event processing, with support from
 TensorFlow developers, during summer 2016, but instead took a Silicon
 Valley internship.
 
-Ideally, the results of this study will be documented by end of 2017
-in a report intended to help shape HL-LHC software and computing
-planning. While it is difficult to predict the path of this
-investigation, confronting HL-LHC computing challanges is one Farbin's
-primary drivers, and the project outline here is an investment in
-Farbin's long-term commitment to this area.
+%% implemented a full tracking and calorimetry algorithm chain for CPU
+%% and GPU.
+
+%%  will envolve   migrate it to TensorFlow (TF)~\cite{}
+
+%% As R\&D for HL-LHC, Farbin and Hilliard will also initiate an effort
+%% to revisit the ATLAS GPU Trigger Demonstrator~\cite{}, which
+%% implemented a full tracking and calorimetry algorithm chain for CPU
+%% and GPU. In 2015 this study found that while the GPU algorithms ran up
+%% to two orders of magnitude faster than on the CPU, data conversions
+%% necessary for the GPU eliminated any cost benefits. Meanwhile the Deep
+%% Learning (DL) renaissance and rapid co-processor evolution have
+%% significantly shifted the future software and hardware landscape away
+%% from the trajectory of set by the Future Framework Requirements Group
+%% Report.
+
+%% HEP software is confronted with two fundamental problems: the
+%% inability to take advantage and adapt to the rapidly evolving
+%% processor landscape, and the difficulty in developing and maintaining
+%% increasingly complex software and computing systems by physicists. DL
+%% techniques and DL software systems provide two paradigm-shifting
+%% avenues of solutions to these problems. First, it may be possible to
+%% replace the millions lines of code, meticulously crafted by thousands
+%% of physicists, with Deep Neural Networks (DNNs) trained on raw
+%% simulated data. Not only are these NNs much simpler and faster than
+%% traditional HEP algorithms, they inherently make efficient use of new
+%% processors. Section~\ref{sec:af_deeplearning} describes Farbin's
+%% program of developing such DNNs. Second, the DL software, hardware,
+%% and service infrastructure that the Silicon Valley is rapidly
+%% developing is also capable to handle traditional HEP event processing
+%% and triggering workflows, potentially with significant improvement in
+%% speed and cost. It is imperative that HEP investigates the potential
+%% of these DL technologies, in addition to DL techniques, to address
+%% HL-LHC computing challenges. Regradless, considering that DL is
+%% already being boot-strapped into HEP software, close integration of DL
+%% with HEP frameworks will be a likely requirement of HL-LHC and
+%% therefore should be studied.
+
+%% After deploying the GPU Demonstrator on Farbin's GPU systems, Farbin
+%% and Hilliard will migrate it to TensorFlow (TF)~\cite{}, Google's open
+%% source distributed computation framework developed for Deep Learning
+%% applications.  In contrast to the schedulers in mutli-threaded HEP
+%% frameworks, TF utilizes data flow programming, representing
+%% computations as directed acyclic graphs that it optimizes and
+%% dispatches for processing across cores, co-processors (including
+%% Google's ultra fast and efficient Tensor Processing Units), and HPC
+%% nodes.  The system will be studied on Farbin's 48 core, 7 GPU, 10 Gb
+%% linked systems, with data pre-converted to tensors that flow through
+%% TF ops wrapping kernels of the existing GPU-Demonstrator
+%% algorithms. It is noteworthy that Hilliard had obtained support from
+%% Fermilab (under supervision of Jim Kowalkowski) to perform a similar
+%% R\&D exercise with LArTPC event processing, with support from
+%% TensorFlow developers, during summer 2016, but instead took a Silicon
+%% Valley internship.
+
+%% Ideally, the results of this study will be documented by end of 2017
+%% in a report intended to help shape HL-LHC software and computing
+%% planning. While it is difficult to predict the path of this
+%% investigation, confronting HL-LHC computing challanges is one Farbin's
+%% primary drivers, and the project outline here is an investment in
+%% Farbin's long-term commitment to this area.
 
 %% Thanks to the efforts of Chris Jones (FNAL) and other, CMS's software
 %% framework (CMSSW) has gradually migrated to a multi-threading version
