@@ -5,18 +5,18 @@ Requirements Group Report~\cite{}, the ATLAS Phase I Software Upgrade
 will entail a massive migration to athenaMT, a multi-threaded
 evolution of ATLAS's current framework. This migration requires
 significant redesign and rewrite of existing software components and
-algorithms. An aggressive schedule delivers basic functionality by
-2016, begins select migration in 2017, and performs bulk migration in
-2018-19 in preparation for full integration in 2020 and start of data
-Run 3 data-taking in 2021. A cornerstone of this migration is the
-merger with the ATLAS trigger, where high pile-up and L1 rates
-necessitate use of offline algorithms. A key trigger component is a
-new incarnation of the Event View concept which enables partial event
-processing in regions of interest. Numerous technical and design
-issues must be addressed in both the offline and trigger for
-athenaMT's first release at the end of 2017 and subsequent algorithm
-migration, a formidable task especially in light of a significant lack
-of manpower and requisite expertise.
+algorithms. An aggressive planned schedule delivers basic
+functionality by 2016, begins select migration in 2017, and performs
+bulk migration in 2018-19 in preparation for full integration in 2020
+and start of data Run 3 data-taking in 2021. A cornerstone of this
+migration is the merger with the ATLAS trigger, where high pile-up and
+L1 rates necessitate use of offline algorithms. A key trigger
+component is a new incarnation of the Event View concept which enables
+partial event processing in regions of interest. Numerous technical
+and design issues must be addressed in both the offline and trigger
+for athenaMT's first release at the end of 2017 and subsequent
+algorithm migration, a formidable task especially in light of a
+significant lack of manpower and requisite expertise.
 
 %https://docs.google.com/spreadsheets/d/1vQLkyk5RYHA8-wsrc1eNQrVkMYMBdhkWqrEht4DyPb8/edit#gid=0
 \fourhead{Trigger athenaMT Migration}
@@ -32,18 +32,17 @@ enthusiastically welcomed Farbin's much needed commitment to this
 effort. 
 
 Farbin will commence initial work immediately during his current
-sabbatical, taking on migration of the e/gamma trigger chain with
-tracking, calorimetry, and hypothesis starting with TopoCluster
-calorimeter clustering algorithm and then continuing on through the
-Trigger Software Upgrade's extensive workplan~\cite{}. The in-depth
-experience gained here will allow Farbin to gradually shift from
-algorithm migration to design and implementation of core components
-relating to Event Views, Menu, Decision, Prescales, Monitoring, and so
-on.  We propose that a new UTA postdoc begin assuming Farbin's
-projects in mid-2017, dedicating 50\% of his/her effort and freeing
-Farbin for bigger contributions to this area, possibly through
-management and leadership roles similar to his convenership of the
-Physics Analysis Tools group.
+sabbatical, taking on migration of the e/gamma trigger chain starting
+with TopoCluster calorimeter clustering algorithm and then continuing
+on through the Trigger Software Upgrade's extensive
+workplan~\cite{}. The in-depth experience gained here will allow
+Farbin to gradually shift from algorithm migration to design and
+implementation of core trigger components relating to Event Views,
+Menu, Decision, Prescales, Monitoring, and so on.  We propose that a
+new UTA postdoc begin gradually assuming these efforts in mid-2017,
+dedicating 50\% of his/her effort and freeing Farbin for bigger
+contributions to this area, possibly through management and leadership
+roles similar to his convenership of the Physics Analysis Tools group.
 
 %Undergraduate
 %computer science student Grayson Hilliard, who has been gain
@@ -52,38 +51,62 @@ Physics Analysis Tools group.
 
 \fourhead{GPU Trigger Demonstrator}
 
-As R\&D for HL-LHC, Farbin and Hilliard will also initiate an effort to
-revisit the ATLAS GPU Trigger Demonstrator~\cite{}, which implemented
-an example of a full tracking and calorimetry algorithm chain for CPU
-and GPU.  In 2015 this study found that while the GPU algorithms ran
-up to two orders of magnitude faster, data conversions necessary for
-the GPU eliminated any cost benefits. Meanwhile the Deep Learning
-renaissance and rapid co-processor evolution have significantly
-shifted the future software and hardware landscape away from the
-trajectory of set by the Future Framework Requirements Group
-Report. It is imperative that HEP investigates the potential of the
-industry's Deep Learning infrastructure to address HL-LHC computing
-challenges. And considering that Deep Learning can improve and
-accelerate reconstruction algorithms, close integration of DL with HEP
-software will no doubt be a requirement of HL-LHC HEP software.
+As R\&D for HL-LHC, Farbin and Hilliard will also initiate an effort
+to revisit the ATLAS GPU Trigger Demonstrator~\cite{}, which
+implemented a full tracking and calorimetry algorithm chain for CPU
+and GPU. In 2015 this study found that while the GPU algorithms ran up
+to two orders of magnitude faster than on the CPU, data conversions
+necessary for the GPU eliminated any cost benefits. Meanwhile the Deep
+Learning (DL) renaissance and rapid co-processor evolution have
+significantly shifted the future software and hardware landscape away
+from the trajectory of set by the Future Framework Requirements Group
+Report.
+
+HEP software is confronted with two fundamental problems: the
+inability to take advantage and adapt to the rapidly evolving
+processor landscape, and the difficulty in developing and maintaining
+increasingly complex software and computing systems by physicists. DL
+techniques and DL software systems provide two paradigm-shifting
+avenues of solutions to these problems. First, it may be possible to
+replace the millions lines of code, meticulously crafted by thousands
+of physicists, with Deep Neural Networks (DNNs) trained on raw
+simulated data. Not only are these NNs much simpler and faster than
+traditional HEP algorithms, they inherently make efficient use of new
+processors. Section~\ref{sec:af_deeplearning} describes Farbin's
+program of developing such DNNs. Second, the DL software, hardware,
+and service infrastructure that the Silicon Valley is rapidly
+developing is also capable to handle traditional HEP event processing
+and triggering workflows, potentially with significant improvement in
+speed and cost. It is imperative that HEP investigates the potential
+of these DL technologies, in addition to DL techniques, to address
+HL-LHC computing challenges. Regradless, considering that DL is
+already being boot-strapped into HEP software, close integration of DL
+with HEP frameworks will be a likely requirement of HL-LHC and
+therefore should be studied.
 
 After deploying the GPU Demonstrator on Farbin's GPU systems, Farbin
-and Hilliard will migrate it to TensorFlow (TF), Google's open source
-distributed computation framework developed for Deep Learning
+and Hilliard will migrate it to TensorFlow (TF)~\cite{}, Google's open
+source distributed computation framework developed for Deep Learning
 applications.  In contrast to the schedulers in mutli-threaded HEP
 frameworks, TF utilizes data flow programming, representing
-computation as directed acyclic graphs that it optimizes and
+computations as directed acyclic graphs that it optimizes and
 dispatches for processing across cores, co-processors (including
 Google's ultra fast and efficient Tensor Processing Units), and HPC
 nodes.  The system will be studied on Farbin's 48 core, 7 GPU, 10 Gb
 linked systems, with data pre-converted to tensors that flow through
 TF ops wrapping kernels of the existing GPU-Demonstrator
-algorithms. The results will be documented in a report intended to
-help shape HL-LHC software and computing planning. It is noteworthy
-that Hilliard had obtained support from Fermilab (under supervision of
-Jim Kowalkowski) to perform a similar R\&D exercise with LArTPC event
-processing during summer 2016, but instead took a Silicon Valley
-internship.
+algorithms. It is noteworthy that Hilliard had obtained support from
+Fermilab (under supervision of Jim Kowalkowski) to perform a similar
+R\&D exercise with LArTPC event processing, with support from
+TensorFlow developers, during summer 2016, but instead took a Silicon
+Valley internship.
+
+Ideally, the results of this study will be documented by end of 2017
+in a report intended to help shape HL-LHC software and computing
+planning. While it is difficult to predict the path of this
+investigation, confronting HL-LHC computing challanges is one Farbin's
+primary drivers, and the project outline here is an investment in
+Farbin's long-term commitment to this area.
 
 %% Thanks to the efforts of Chris Jones (FNAL) and other, CMS's software
 %% framework (CMSSW) has gradually migrated to a multi-threading version
@@ -171,3 +194,5 @@ internship.
 %% Having “standard” components also would help to introduce concurrency many events on fly with concurrent algorithm invocation etc.
 %% support for thread safety (i.e. execute_r)
 
+
+% LocalWords:  NNs workflows TensorFlow
