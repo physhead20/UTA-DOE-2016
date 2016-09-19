@@ -36,48 +36,63 @@ the calorimetry and other ATLAS applications~\cite{}. And the Harvard
 Big Data Conference~\cite{} talk overviews DL across HEP. Farbin's DL
 activity is organized into thrusts that sometimes span multiple
 experiments. Many of these efforts will conclude with planned papers
-in the upcoming months. Four thrusts of DL activity directly targeting
-the LHC will persist.  This section will only detail the two thursts
-that will most immediately effect ATLAS and will involve individuals
-funded by this grant: Simple Classification and Imaging Detector
+in the upcoming months. 
+
+Four thrusts of DL activity directly targeting the LHC will persist,
+of which will be described in this section because they will most
+immediately effect ATLAS and will involve individuals funded by this
+grant: Simple Classification and Calorimeter
 Reconstruction. Another thrusts is encapsulation of Matrix Elements in
 DNNs for Next to Leading Order (NLO) and Next to NLO (NNLO)
-computations and Matrix Element Method (MEM), a produce of
+computations and Matrix Element Method (MEM), a product of
 collaborations with Tancredi Carli (CERN), ATLAS's next Deputy Physics
 Coordinator and Tobias Golling's group (U. Geneva). The final thrust
 is core contributions to the TrackingML challenge, aimed at soliciting
 solutions to HL-LHC tracking problems, primarily driven by Andreas
-Salzburger (CERN) and David Rousseau (LAL).
+Salzburger (CERN) and David Rousseau (LAL). 
 
-In order to accelerate the progress of collaborators, Farbin has
-developed a Deep Learning Tutorial covering a variety of DNN tasks,
-such as event or object classification with any dataset.  The tutorial
-introduces a thin framework (DLKit)~\cite{} developed by Farbin that
-simplifies running large-scale DL studies using Keras, a powerful
-python-based DL framework which supports both Theano and TensorFlow
-backends. Postdoc Heelan, who manages the ATLAS software tutorials
-and workbook, will introduce the DL tutorial at the October 3rd
-session, with subsequent iterations adding all of the additional tasks
-Farbin is currently performing in DLKit, such as Matrix Element
-Regression and 2D and 3D Imaging detector classification and Energy
-regression. Farbin, Brandt, Hadavand, Asaadi, and Jones have committed
-students to applying DNNs to various problems, and this DLKit and
-tutorials are integral to these projects.
+In order to accelerate the progress of collaborators, including local
+students of Brandt, Hadavand, Asaadi, and Jones and the broad ATLAS
+community, Farbin has developed a Deep Learning Tutorial covering a
+variety of DNN tasks. The tutorial introduces a thin framework
+(DLKit)~\cite{} developed by Farbin that simplifies running
+large-scale DL studies. This system was exercised on the GPUs of
+Oakridge's Titan HPC, a first for HEP, with help of Sergey Panitkin
+(BNL). Postdoc Heelan, who manages the ATLAS software tutorials and
+workbook, will introduce the DL tutorial at the October 3rd session,
+with submission to Titan via PANDA WMS a goal for a future iteration.
+It is also noteworthy that, since access to GPUs is often the biggest
+obstacle to DL, Farbin has granted access to the GPU system he as
+built with his undergrads to two dozen HEP scientists from 6 experiments
+(LArIAT, DUNE, MicroBooNE, NEXT, CMS, ATLAS).
 
-While the tutorial helps address one obstacle to broad adoption of DL,
-namely familiarity and full end-to-end working examples, access to
-GPUs, which give two orders of magnitude acceleration of DL training
-with respect to CPUs, remain the next biggest obstacle. For the past
-few years, Farbin has granted access to the GPU system he as built
-with his undergrads to XX HEP scientists from YY experiments (LArIAT,
-DUNE, MicroBooNE, NEXT, CMS, ATLAS). With the help of Sergey Panitkin
-(BNL), Farbin performed one of his early studies (turning regression
-problems into classification problems) on the Oakridge's Titan HPC via
-PANDA WMS, the first use of Titan's GPUs in HEP. A subsequent
-iteration of of the DLKit tutorial will include submission of DL
-Hyperparameter scans, an extremely GPU intensive task, to Oakridge's
-Titan computer and ideally any other HPC accessible via PANDA and with
-suitable software.
+% using Keras, a powerful
+%python-based DL framework which supports both Theano and TensorFlow
+%backends. 
+
+%% Postdoc Heelan, who manages the ATLAS software tutorials
+%% and workbook, will introduce the DL tutorial at the October 3rd
+%% session, with subsequent iterations adding all of the additional tasks
+%% Farbin is currently performing in DLKit, such as Matrix Element
+%% Regression and 2D and 3D Imaging detector classification and Energy
+%% regression. Farbin, Brandt, Hadavand, Asaadi, and Jones have committed
+%% students to applying DNNs to various problems, and this DLKit and
+%% tutorials are integral to these projects.
+
+%% While the tutorial helps address one obstacle to broad adoption of DL,
+%% namely familiarity and full end-to-end working examples, access to
+%% GPUs, which give two orders of magnitude acceleration of DL training
+%% with respect to CPUs, remain the next biggest obstacle. For the past
+%% few years, Farbin has granted access to the GPU system he as built
+%% with his undergrads to XX HEP scientists from YY experiments (LArIAT,
+%% DUNE, MicroBooNE, NEXT, CMS, ATLAS). With the help of Sergey Panitkin
+%% (BNL), Farbin performed one of his early studies (turning regression
+%% problems into classification problems) on the Oakridge's Titan HPC via
+%% PANDA WMS, the first use of Titan's GPUs in HEP. A subsequent
+%% iteration of of the DLKit tutorial will include submission of DL
+%% Hyperparameter scans, an extremely GPU intensive task, to Oakridge's
+%% Titan computer and ideally any other HPC accessible via PANDA and with
+%% suitable software.
 
 
 \fivehead{Simple Classification with Deep Learning}
@@ -137,7 +152,7 @@ described in section~\ref{}.
 %% turns the regression (i.e. fitting) into a classification problem by
 %% binning the target with bin learned bin edges.
 
-\fivehead{Imaging Detector Reconstruction with Deep Learning}
+\fivehead{Calorimeter Reconstruction with Deep Learning}
 
 Starting in 2014, Deep Convolution Neural Networks (CNNs) have
 exponentially improved performance on ImageNet, a one-million image
@@ -150,37 +165,71 @@ idea was in the Nova collaboration, where they were able to obtain
 40\% better electron efficiency for same background rate as their best
 techniques~\cite{}.
 
-\sixhead{LArTPC}
+%Despite a great deal of multi-experiment (e.g. ArgoNeuT, LArIAT,
+%MicroBooNE, DUNE, ...) effort, event reconstruction in LArTPC has
+%proven be challenging, with performance still far from expectation and
+%poor neutrino reconstruction.
 
-Despite a great deal of multi-experiment (e.g. ArgoNeuT, LArIAT,
-MicroBooNE, DUNE, ...) effort, event reconstruction in LArTPC has
-proven be challenging, with performance still far from expectation and
-poor neutrino reconstruction.  In the fall of 2015, Farbin
-demonstrated CNN-based particle identification in LArTPC with
-simulated data from the LArIAT Experiment ~\cite{}.  Farbin's
-Inception~\cite{} based CNN treated raw data from the TPC as images,
-and was able to achieve significantly better performance than
-traditional reconstruction in both particle and neutrino
-reconstruction~\cite{}. This effort has now evolved to a mature
-collaboration with computer scientists Pierre Baldi and Peter Sadowski
-at UCI, using an unprecedentedly large sample of 15 million events
-carefully generated by Shahsavarani and undergrad Hilliard on Farbin's
-machines. This dataset is public~\cite{}, is intended to facilitate
-collaborations, and is already being used independently by HEP and DL
-researchers. 
+In the fall of 2015, Farbin demonstrated two applications of CNNs to
+neutrino experiments, which can be extrapolated to calorimetry at the
+LHC. The first was in LArTPC, and has evolved to a collaboration with
+Pierre Baldi and Peter Sadowski at UCI to perform particle
+identification and energy reconstruction in LArIAT experiment.  Using
+an unprecedentedly large public sample of 15 million events produced
+at UTA, this effort has employed sophisticated networks and cost
+functions, and long hyperparameter scans and training times to achieve
+impressive classification performance and tackle tricky energy
+reconstruction issues. 
 
-Due to large training sets, sophisticated networks and cost functions,
-and long hyperparameter scans and training times, Farbin's efforts
-here are yielding better performance than others such as
-MicroBooNE~\cite{}. For example Resnet-based network trained for a
-week on O(100k) events, achieves 2\% fake rate at 80\% for electron
-versus neutral pion discrimination, a critical benchmark for
-separation of charged current from neutral current neutrino
-interactions. Current focus is in eliminating down-sampling and
-increasing resolution in order to press fake rates to 1\% and obtain
-better DNN-based energy reconstruction for electrons and muons. This
-effort will yield a paper in 2016, and will be followed up by Asaadi
-and included in Shahsavarani's thesis.
+The second was in the neutrinoless double beta decay ($0\nu\beta\beta$)
+experiment NEXT, which relies on high pressure xenon (HPXe) Gas TPC,
+read out by SiPMs to produce 3-D images. Using Farbin's simple
+technique and GPU systems, graduate student Josh Renner (Valencia) has
+demonstrated significant better topological based rejection of
+critical single electron backgrounds over traditional techniques. An
+innovative use of DNNs here is to help optimize detector design by
+comparing different detector granularities and relative contribution
+of physics processes to degrading performance. This activity is
+detailed in a paper (with Farbin as co-author along with the NEXT
+collaboration) that is nearly ready for submission.
+
+%%  Farbin's efforts
+%% here are yielding better performance than others such as
+%% MicroBooNE~\cite{}.
+
+%% project has overcome several subtle
+
+%% The first  particle
+%% identification in LArTPC with simulated data from the LArIAT
+%% Experiment ~\cite{}. 
+
+
+%%  Farbin's Inception~\cite{} based CNN treated raw
+%% data from the TPC as images, and was able to achieve significantly
+%% better performance than traditional reconstruction, which has prove to
+%% be very difficult, in both particle and neutrino
+%% reconstruction~\cite{}. This effort has now evolved to a mature
+%% collaboration with computer scientists Pierre Baldi and Peter Sadowski
+%% at UCI, using an unprecedentedly large sample of 15 million events
+%% carefully generated by Shahsavarani and undergrad Hilliard on Farbin's
+%% machines. 
+
+%% This dataset is public~\cite{}, is intended to facilitate
+%% collaborations, and is already being used independently by HEP and DL
+%% researchers.
+
+%% Due to large training sets, sophisticated networks and cost functions,
+%% and long hyperparameter scans and training times, Farbin's efforts
+%% here are yielding better performance than others such as
+%% MicroBooNE~\cite{}. For example Resnet-based network trained for a
+%% week on O(100k) events, achieves 2\% fake rate at 80\% for electron
+%% versus neutral pion discrimination, a critical benchmark for
+%% separation of charged current from neutral current neutrino
+%% interactions. Current focus is in eliminating down-sampling and
+%% increasing resolution in order to press fake rates to 1\% and obtain
+%% better DNN-based energy reconstruction for electrons and muons. This
+%% effort will yield a paper in 2016, and will be followed up by Asaadi
+%% and included in Shahsavarani's thesis.
 
 % While the ultimate goal is demonstrate
 %end-to-end DL-based Neutrino reconstruction, the first goal is to
@@ -236,20 +285,6 @@ and included in Shahsavarani's thesis.
 
 %[Noise suppression? 2D to 3D?]
 
-\sixhead{Gas TPC}
-
-Farbin was also able to show impressive performance of CNNs in the
-neutrinoless double beta decay($0\nu\beta\beta$) experiment NEXT,
-which relies on high pressure xenon (HPXe) Gas TPC, read out by SiPMs
-to produce 3-D images. Using Farbin's simple technique and GPU
-systems, graduate student Josh Renner (Valencia) has demonstrated
-significant better topological based rejection of critical single
-electron backgrounds over traditional techniques. An innovative use of
-DNNs here is to help optimize detector design by comparing different
-detector granularities and relative contribution of physics processes
-to degrading performance. This activity is detailed in a paper (with
-Farbin as co-author along with the NEXT collaboration) that is nearly
-ready for submission.
 
 %% NEXT relies on topological
 %% signatures to separate signal events (two electrons) from background
@@ -266,8 +301,6 @@ ready for submission.
 %% committing undergrad XXX and graduate student XXX, to upgrade the
 %% technique to 3D and attempt to identify the decay point and angle, in
 %% an effort to test Lorentz invariance [Ben, do I put this in?].
-
-\sixhead{Calorimeters}
 
 The ATLAS Electromagnetic and Hadronic calorimeters produce 3D images
 of variable granularity in $\eta$, $\phi$ versus depth (i.e. the LAr
