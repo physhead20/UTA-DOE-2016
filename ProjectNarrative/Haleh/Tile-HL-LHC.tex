@@ -5,7 +5,7 @@ Building on UTA's connections in the TileCal since its inception, Hadavand and B
 Our proposal was well-received, consequently, Hadavand is now the L3, or deliverable manager, of this project for the ATLAS detector while Brandt is the institute contact. The construction phase of this 6-year 
 1 million dollar project is expected to be covered by an NSF MREFC proposal in progress. 
 
-Starting in 2023 the LHC will be shutdown for 2.5 years in preparation for HL-LHC upgrade to achieve 5.0 $\times 10^{34}/cm^2s$. 
+Starting in 2023 the LHC will be shutdown for 2.5 years in preparation for HL-LHC upgrade to achieve 5.0 $\times 10^{34}/cm^2s^{-1}$. 
 Hadavand and Brandt have assumed the responsibility for the testing and production of half of the entire 2048 low voltage power supplies (LVPS) needed for HL-LHC running, 
 a project that will cost about 1 million dollars over the next few years, the bulk of which is anticipated to be provided by an NSF MREFC grant. 
 Hadavand is the deliverables manager or CAM for the low voltage 
@@ -28,30 +28,39 @@ After determining changes needed from components interfacing to the LVPS such as
 These LVPS will be assembled into boxes by NIU and sent to CERN for testing in the vertical slice test. From 2019-2022 we will be producing LVPS in batches testing and burning them in for quality control.  This is a huge undertaking and will require a detailed and well-documented 
 plan that a set of undergraduate students will follow for testing the LVPS.
 
-\begin{table}[htb]
-\begin{center}
-\begin{tabular}{       l  |l |l | l                } \\ 
-\rowgroup{\textbf{Task} }& \textbf{Personnel} &\textbf{Start Date} & \textbf{End Date}   \\ \hline\hline
-\rowgroup{\textbf{New Burn-in Station Design and Fabrication}}   & Hibbard, EA, EE&  01/30/17   &  12/15/17  \\ \hline  
-\rowgroup{\textbf{Prototype}}                                   &  - &01/29/18    & 08/30/19 \\ \hline
-Procurement of brick components for prototype V8.2 bricks   &  Hibbard, EA &01/29/18 & 05/11/18  \\ 
-Basic Check-out and burn-in (Prototype) & Hibbard, EA &  04/22/19   &  05/24/19 \\  
-Prototype Review   & EE, EA & 05/27/19   &  08/30/19   \\
-Integration and testing of vertical slice   &  Hibbard, EA &06/03/19   &  07/26/19  \\ \hline
-\rowgroup{\textbf{Finalize  V8.3 pre-production design} }  & EA, EE & 07/29/19  & 08/23/19 \\ \hline
-\rowgroup{\textbf{LVPS pre-production design review}}   &  EA, EE & 08/26/19   &  08/30/19 \\  \hline 
-\rowgroup{\textbf{Pre-production}}   & - & 09/2/19    & 12/30/20   \\ \hline 
-  Check-out and burn-in tests on pre-production bricks & EA, undergrads  &  07/06/20   &  09/25/20 \\ 
-  Ship bricks to CERN   & EA & 09/28/20 & 10/02/20  \\
-  Integration tests at CERN and final review   & EA & 10/05/20   &  12/31/20 \\ \hline
-\rowgroup\textbf{{Production}  } &  - & 01/04/21 &   04/08/22  \\ \hline
+%\begin{table}[htb]
+%\begin{center}
+%\begin{tabular}{       l  |l |l | l                } \\ 
+%\rowgroup{\textbf{Task} }& \textbf{Personnel} &\textbf{Start Date} & \textbf{End Date}   \\ \hline\hline
+%\rowgroup{\textbf{New Burn-in Station Design and Fabrication}}   & Hibbard, EA, EE&  01/30/17   &  12/15/17  \\ \hline  
+%\rowgroup{\textbf{Prototype}}                                   &  - &01/29/18    & 08/30/19 \\ \hline
+%Procurement of brick components for prototype V8.2 bricks   &  Hibbard, EA &01/29/18 & 05/11/18  \\ 
+%Basic Check-out and burn-in (Prototype) & Hibbard, EA &  04/22/19   &  05/24/19 \\  
+%Prototype Review   & EE, EA & 05/27/19   &  08/30/19   \\
+%Integration and testing of vertical slice   &  Hibbard, EA &06/03/19   &  07/26/19  \\ \hline
+%\rowgroup{\textbf{Finalize  V8.3 pre-production design} }  & EA, EE & 07/29/19  & 08/23/19 \\ \hline
+%\rowgroup{\textbf{LVPS pre-production design review}}   &  EA, EE & 08/26/19   &  08/30/19 \\  \hline 
+%\rowgroup{\textbf{Pre-production}}   & - & 09/2/19    & 12/30/20   \\ \hline 
+%  Check-out and burn-in tests on pre-production bricks & EA, undergrads  &  07/06/20   &  09/25/20 \\ 
+%  Ship bricks to CERN   & EA & 09/28/20 & 10/02/20  \\
+%  Integration tests at CERN and final review   & EA & 10/05/20   &  12/31/20 \\ \hline
+%\rowgroup\textbf{{Production}  } &  - & 01/04/21 &   04/08/22  \\ \hline
+%
+%  Production PCB Assembly   &  EE,EA & 04/12/21   &  06/04/21  \\ 
+%  Check-out and burn-in (16 to start and find any issues)  & undergrads   &   04/19/21   &  04/30/21 \\  
+%  Check-out and burn-in (64 to confirm production) & undergrads  &  05/03/21   &  05/28/21 \\  
+%  Check-out and burn-in (1000)   & undergrads  & 05/31/21   &  04/08/22  \\  \hline
+%\end{tabular}
+%\caption{ The HL-LHC Tile LVPS upgrade schedule.}
+%%\label{tab:lvps}
+%\end{center}
+%\end{table}
 
-  Production PCB Assembly   &  EE,EA & 04/12/21   &  06/04/21  \\ 
-  Check-out and burn-in (16 to start and find any issues)  & undergrads   &   04/19/21   &  04/30/21 \\  
-  Check-out and burn-in (64 to confirm production) & undergrads  &  05/03/21   &  05/28/21 \\  
-  Check-out and burn-in (1000)   & undergrads  & 05/31/21   &  04/08/22  \\  \hline
-\end{tabular}
-\caption{ The HL-LHC Tile LVPS upgrade schedule.}
-\label{tab:lvps}
-\end{center}
-\end{table}
+\paragraph{Milestones}
+\begin{itemize}[noitemsep,nolistsep]
+\item{ 01/30/17-12/15/17 - New Burn-in Station Design and Fabrication}
+\item{ 01/29/18-08/30/19 - Prototype }
+\item{ 07/29/19-08/23/19 - Finalize  V8.3 pre-production design}
+\item{ 08/26/19-08/30/19 - LVPS pre-production design review}
+\item{ 09/2/19-12/30/20  - Pre-production}
+\end{itemize}
