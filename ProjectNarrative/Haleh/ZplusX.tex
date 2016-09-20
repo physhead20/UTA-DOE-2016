@@ -85,7 +85,8 @@ The backgrounds include J$\psi$ ,$\Upsilon$, Z, \ttbar\ background, and Drell-Ya
 \subsubsection{Task List}
 A list of main tasks needed to perform this analysis are listed below:
 
-\paragraph{Determine Algorithm for Boosted/Collimated di-tau Pair Identification} %(April 2017)
+\begin{itemize}[noitemsep,nolistsep,leftmargin=*]
+\item[]{{\bf Determine Algorithm for Boosted/Collimated di-tau Pair Identification} %(April 2017)
 Since the proposal is a general search where an unknown particle can decay to a Z boson and another potentially unknown particle, some events will have highly boosted and/or highly collimated di-tau pairs that regular
 tau reconstruction does not treat.  There has been work on ATLAS in this front aimed for reconstructing the channel A \too Z(ll) h($\tau\tau$)~\cite{di-tau-thesis}.  In this case the \pt\ of the di-tau system is quite high of the order of 500 GeV.
 In other cases the \pt\ of the di-tau system can be small but they can be highly collimated.  This has been seen in the h \too a($\mu \mu$) a($\tau \tau$) analysis.  In fact the algorithm developed for A \too Z(ll) h($\tau\tau$) would not 
@@ -97,49 +98,48 @@ The variables suggested to be used in the BDT or further studied within a Deep N
 \item{The subjet energy fractions $f(sub)lead_{subjet}=\frac{\pt ^{subjet}}{\pt ^{Jet}}$}
 \item{leading track momentum fractions $f(sub)lead_{subjet}=\frac{\pt ^{leadTrack}}{\pt ^{subjet}}$}
 \item{the maximum track distance Rmax}
-\item{the number of tracks n(sub)leading track.}
 \end{itemize}
 Additionally, we propose an alternate method of di-tau reconstruction targeted at semi-leptonic decays.  Due to Griffiths' work on making tau reconstruction dual-use, an analyzer
 can now take a reconstructed tau candidate that has 2 or 4 associated tracks, check whether one of the tracks is associated to an identified electron or muon, remove this
 track from the tau candidate, recompute the standard hadronic tau identification variables, and finally recompute the tau identification discriminant.  Studies still need
 to be performed as some variables cannot be fully recomputed after full reconstruction due to the dependence of calorimeter cells or vertexing which is only available during 
-athena reconstruction.  We plan to either provide corrections for any variables and/or provide a re-tuned MVA discriminant using a Deep Neural Network.
+athena reconstruction.  We plan to either provide corrections for any variables and/or provide a re-tuned MVA discriminant using a Deep Neural Network.}
 
-\paragraph{Write General Analysis Suite for xAODs} %(April 2017)
+\item[]{{\bf Write General Analysis Suite for xAODs} %(April 2017)
 %The postdoc Hadavandwill design and develop an analysis suite for the Z scan analysis.  
 This analysis has leptons including taus in the final states so the analysis suite can be generalized but always adding a constraint of having a Z boson in the final state. 
  %The Z(dark)Z(dark) channel including four electrons will be left out of the analysis here due to the many channels already being explored.  This is to ensure
 %symmetry between the h \too aa and Z(dark)Z(dark) making it easily combined in one analysis.  
 Since this search is inclusive where any particle can decay to Z+X, the analysis suite must be very general. 
-However, on top of the general analysis suite one can build tools to make additional requirements on the specific states. For example if there is mass constraint that can be imposed such as the mass of the Higgs.
+However, on top of the general analysis suite one can build tools to make additional requirements on the specific states. For example if there is mass constraint that can be imposed such as the mass of the Higgs.}
 %For example for the muon scan we can require that the two particle masses are within some limit of each other ie $\cbar$m(a$_1$)-m(a$_2$)\cbar$< \epsilon$ where $\epsilon$ will be governed by the detector resolution 
 %of the different objects or just the natural width of the particle.  The resolution will matter for different pt objects or whether looking at the tau or muon final states.
 
-\paragraph{Determine Background Parameterization from Control Regions, $ll, l=\mu, e$ scan}
+\item[]{{\bf Determine Background Parameterization from Control Regions, $ll, l=\mu, e$ scan}
 Two control regions (CRs) are used in this analysis to constrain the SM backgrounds in the final fit to the data. The first region, CRj, is used to constrain the 
 low mass SM resonances and Drell-Yan dominated non-resonant background. The second region, CRb, is used to constrain the \ttbar\ non-resonant background.
 Both regions are defined by first requiring a tagged $ll$ candidate. CRj is further required to have
 at least one selected jet and not be b-tagged. CRb is required to have at least two selected jets that have been b-tagged.
-Any events which are in one of the SRs are excluded from the two CRs.
+Any events which are in one of the SRs are excluded from the two CRs.}
 
-\paragraph{Determine Background Parameterization from Control Regions, $\tau\tau$ scan ;  Postdoc, Graduate Student, Hadavand}
+\item[]{{\bf Determine Background Parameterization from Control Regions, $\tau\tau$ scan}
 The control region used to determine the parametrization of the jets faking tau objects is defined as having two same sign tau leptons and inverting one of the tau identification criteria.
 Simulation is used to predict the shape of the contribution from events with two true leptons and hadronically-decaying tau that are either correctly reconstructed or reconstructed
 from leptons or leptonically-decaying taus.  These two parameterizations of the two backgrounds are then used to fit to the data as a more sophisticated template method.  The sidebands of the Z boson
-can be used to validated this approach.
+can be used to validated this approach.}
 
-\paragraph{Parameterize Background} %(D - 3 months) 
+\item[]{{\bf Parameterize Background} %(D - 3 months) 
 As described in section~\ref{sec:zscanback} the backgrounds to the multiple BSM analysis  will be J/$\psi$, $\upsilon$, \ttbar\, Drell-Yan, and Z tails.  One can 
 parameterize these background from the control regions described above then fit for the normalization within the signal region similar to what is done in the
 $\tau\tau \mu \mu$ analysis on ATLAS~\cite{tautaumumu}.  The SM ZZ* is a non-peaking background which may be difficult to model. This background and the SM resonant backgrounds 
-can be parameterized with MC and used in the fits. Hadavand has extensive experience with parameterized fits from the BABAR experiment and can guide Hadavand's graduate student to model the various SM backgrounds.
+can be parameterized with MC and used in the fits. Hadavand has extensive experience with parameterized fits from the BABAR experiment and can guide Hadavand's graduate student to model the various SM backgrounds.}
 
-\paragraph{Perform two separate scans in Z final state} %(D - 4 months)
+\item[]{{\bf Perform separate scans in Z final state} %(D - 4 months)
 In the decay of Y \too Z + X the mass of X can be reconstructed as X(ee), X($\mu\mu$), and X($\tau\tau$).  
 The three Z scans look at the X(ee),X($\mu\mu$), and X($\tau\tau$) mass spectrum. For the X(ll), l=e,$\mu$ spectrum the Z will be reconstructed as Z($\tau\tau$).  For the X($\tau\tau$) spectrum the Z will be reconstructed in Z(ll), l=e,$\mu$.  
 %By adding the various Z final states to the same spectrum we increase the statistics which will make it easier for the bump-hunter to determine if there is a signal.
 The X(ee) and X($\mu\mu$) can be potentially combined if the resolution of the particles are similar enough.  The X($\tau\tau$) will not be combined with X(ll) l=e,mu since the resolution is quite different and the bump-hunter would not gain in looking for two overlapping bumps of vastly differing resolutions.
-The use of the bump-hunter will allow for a first statistical pass at the data to determine if there is an existence of signal in the samples.  
+The use of the bump-hunter will allow for a first statistical pass at the data to determine if there is an existence of signal in the samples.}
 
 
 %\paragraph{Determine other Discriminating Variables} (D - 4 months) 
@@ -147,15 +147,16 @@ The use of the bump-hunter will allow for a first statistical pass at the data t
 %since the decay is to two identical particles can use an additional constraint on the mass in that way.  In doing so one much be careful in comparing masses of two taus to two leptons since the tau resolution will be a bit factor in the matching.  
 %This is work that Hadavand's graduate student can perform.
 
-\paragraph{Develop and Optimize Bump-hunter to Scan Data} %(April '17)
+\item[]{{\bf Develop and Optimize Bump-hunter to Scan Data} %(April '17)
 Hadavand has previously worked on a bump-hunting technique that would be independent of the signal model used, called Signal Parameter Independent Fit (SPIF).  Using the parametrization described above for the background modeling, a fit is performed on the data and a window where signal is expected is removed.
 The background is then extrapolated within this window and the difference of the number of events in the window versus the fit extrapolation is determined.  A p-value is determined for the difference between the number of events in the window and the extrapolated background within the window.
 A scan is done using as input the step size and a range of window sizes.  Several scans are performed changing the window size and step size iteratively until the p-value no longer improves within a specified precision.
 Once all iterations are performed, the window(s) with the smallest p-value(s) is(are) reported.  
 %Using the bump-hunter can also work for blind analysis where only information about the significance of a  bump is presented but the total distribution can remain blind.
 %Doing a bump-hunter scan can also save time in determining limits since putting limits on the entire distribution in very fine binning will take lots of CPU power.  
-If the bump-hunter analysis reports no significant signal then a coarser binning can be used for the limit setting saving time and CPU power.
+If the bump-hunter analysis reports no significant signal then a coarser binning can be used for the limit setting saving time and CPU power.}
 
+\end{itemize}
 
 %\paragraph{Use tau handedness to Separate Z and Higgs decays} (now-Feb 2015)
 %When performing the Z mass scan and it is determined that the SM h \too ZZ* is a large background to the A \too Z h final state we can perform a helicity cut to remove the Z* decays leaving in the scan only the resonant 
