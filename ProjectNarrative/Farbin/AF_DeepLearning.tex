@@ -315,15 +315,15 @@ deposits calibrated to test beam and $Z$ decays. Any improvement, for
 example in photon identification or energy resolution, can
 dramatically effect searches and measurements, for example producing
 narrower Higgs peaks with less background. The fine lateral
-segmentation of ATLAS's calorimeter makes it suited for application of
-CNN for classification and energy regression. Indeed several factors
-give hope that significant improvements can be achieved with more
-sophisticated techniques. For example, energy reconstruction in the
-LAr Electromagnetic calorimeter currently does not use shower shape
-information and is not correcting for variations in the LAr
-calorimeter's characteristic accordion structure. Similarly the
-hadronic calibration does not use sampling information. Such effects
-would be naturally exploited by a CNN.
+segmentation of ATLAS's calorimeter makes it well suited for
+application of CNN for classification and energy regression. Indeed
+several factors give hope that significant improvements can be
+achieved with more sophisticated techniques. For example, energy
+reconstruction in the LAr Electromagnetic calorimeter currently does
+not use shower shape information and is not correcting for variations
+in the LAr calorimeter's characteristic accordion structure. Similarly
+the hadronic calibration does not use sampling information. Such
+effects would be naturally exploited by a CNN.
 
 While the techniques, tools, and experience Farbin developed for
 LArTPC and NEXT can be directly applied to the ATLAS calorimeter, the
@@ -393,14 +393,26 @@ Exploring and implementing these techniques in ATLAS will be a part of
 Rogers' PhD thesis, building on Farbin's ATLAS software and DL
 experience and Heelan's extensive background with the calorimeter
 (e.g. she is the editor of the Tile performance paper) and test
-beam. The goal is to first tackle photon identification and then
-photon/electron calibration. Of critical importance will be handling
-of pile-up. If successful, the technique will be implemented in
-ATLAS's framework for further study and use by other
-collaborators. Extension of the technique to EM/hadronic cluster
+beam. The new postdoc shared between Farbin and De will also contribute
+to this effort, which will be driven by Farbin and partially
+supervised by Heelan.  The goal is to first tackle photon
+identification and then photon/electron calibration. Of critical
+importance will be handling of pile-up. If successful, the technique
+will be implemented in ATLAS's framework for further study and use by
+other collaborators. Extension of the technique to EM/hadronic cluster
 identification and calibration will be the next natural step. In
 addition postdoc Griffiths, who contributes significantly to $\tau$
-identification, will investigate CNN applications to $\tau$s. %, as described in section~\ref{}.
+identification, will investigate CNN applications to $\tau$s.
+
+
+%, as described in section~\ref{}.
+
+{\bf Summary of Deep Learning Plans/Milestones:} {\em 2016:}
+Completion of LArTPC, NEXT, and LCD Calorimeter DL Papers. {\em 2017:}
+Development of DL for Photon ID and calibration with ATLAS. {\em
+2018:} Release of DL for e/gamma Energy reconstruction. {\em 2018-19:}
+DL for electromagentic/hadronic cluster identification and hadronic
+energy reconstruction.
 
 
 %Simultaneously these efforts will explore
