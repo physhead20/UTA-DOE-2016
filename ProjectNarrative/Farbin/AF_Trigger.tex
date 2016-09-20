@@ -1,7 +1,7 @@
 %https://cds.cern.ch/record/2196967/files/ATL-SOFT-PUB-2016-001.pdf
 \label{sec:af_trigger}
 Following the recommendations of the 2014 ATLAS Future Framework
-Requirements Group Report~\cite{}, the ATLAS Phase I Software Upgrade
+Requirements Group Report~\cite{ATL-SOFT-PUB-2016-001}, the ATLAS Phase I Software Upgrade
 will entail a massive migration to athenaMT, a multi-threaded
 evolution of ATLAS's current framework. This migration requires
 significant redesign and rewrite of existing software components and
@@ -35,7 +35,7 @@ Farbin will commence initial work immediately during his current
 sabbatical, taking on migration of the e/gamma trigger chain starting
 with TopoCluster calorimeter clustering algorithm and then continuing
 on through the Trigger Software Upgrade's extensive
-workplan~\cite{}. The in-depth experience gained here will allow
+workplan. The in-depth experience gained here will allow
 Farbin to gradually shift from algorithm migration to design and
 implementation of core trigger components relating to Event Views,
 Menu, Decision, Prescales, Monitoring, and so on.  We propose that a
@@ -50,12 +50,14 @@ roles similar to his convenership of the Physics Analysis Tools group.
 %LArIAT, DUNE reconstruction framework) will assist in this process.
 
 As a hobby project, Farbin and Hilliard will also attempt to
-revitilize the ATLAS GPU Trigger Demonstrator~\cite{}, which was not
-able to demonstrate cost-effective benefits of using GPUs in the
-trigger. As a test of the viability of the rapidly evolving Deep
-Learning infrastruture to manage traditional HEP workloads, they will
-migrate the GPU Demonstrator to TensorFlow (TF)~\cite{}, Google's open
-source distributed computation framework developed for Deep Learning
+revitilize the ATLAS GPU Trigger
+Demonstrator~\cite{TavaresDelgado:2104313}, which was not able to
+demonstrate cost-effective benefits of using GPUs in the trigger. As a
+test of the viability of the rapidly evolving Deep Learning
+infrastruture to manage traditional HEP workloads, they will migrate
+the GPU Demonstrator to TensorFlow
+(TF)~\cite{tensorflow2015-whitepaper}, Google's open source
+distributed computation framework developed for Deep Learning
 applications. The system will be studied on Farbin's 48 core, 7 GPU,
 10 Gb linked systems, with data pre-converted to tensors that flow
 through TF ops wrapping kernels of the existing GPU-Demonstrator

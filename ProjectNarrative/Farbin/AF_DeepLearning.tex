@@ -19,7 +19,7 @@ Learning drive the unprecedented excitement across various fields and
 domains. Deep Neural Networks (DNNs), can learn features from raw
 data, eliminating need for expensive hand coded feature engineering,
 e.g. Event Reconstruction. They can find these features in unlabeled
-data (for HEP example see~\cite{}), opening new tools for analyzing
+data (for HEP example see~\cite{Racah:2016gnm}), opening new tools for analyzing
 complex and poorly understood data. They can generate complex data
 starting with only examples, enabling simulation without a model and
 providing speed when there is a model. They can filter noise and
@@ -29,14 +29,17 @@ to solve algorithmically.
 Space constraints prohibit pedagogical discussion of Deep Learning and
 probing fine details of the activity described and planned out in this
 section. Surveys of DL activity in HEP and much of these details can
-be found in Farbin's recent talks~\cite{}. His HEP Software Foundation
-HSF presentation~\cite{} details DL's impact on software and
-requirements. The ATLAS Machine Learning workshop presentation details
-the calorimetry and other ATLAS applications~\cite{}. And the Harvard
-Big Data Conference~\cite{} talk overviews DL across HEP. Farbin's DL
+be found in Farbin's recent
+talks~\cite{DSAtLHC,WireCellWS,AFFermilabSeminar, HeavyFlavorDL,
+ConnectingDotsDL,ATLASMLDL, HSFDL, SimonsDL, HarvardDL}. His HEP
+Software Foundation HSF presentation~\cite{HSFDL} details DL's impact
+on software and requirements. The ATLAS Machine Learning workshop
+presentation details the calorimetry and other ATLAS
+applications~\cite{ATLASMLDL}. And the Harvard Big Data
+Conference~\cite{HarvardDL} talk overviews DL across HEP. Farbin's DL
 activity is organized into thrusts that sometimes span multiple
 experiments. Many of these efforts will conclude with planned papers
-in the upcoming months. 
+in the upcoming months.
 
 Four thrusts of DL activity directly targeting the LHC will persist,
 of which will be described in this section because they will most
@@ -55,7 +58,7 @@ In order to accelerate the progress of collaborators, including local
 students of Brandt, Hadavand, Asaadi, and Jones and the broad ATLAS
 community, Farbin has developed a Deep Learning Tutorial covering a
 variety of DNN tasks. The tutorial introduces a thin framework
-(DLKit)~\cite{} developed by Farbin that simplifies running
+(DLKit)~\cite{DLKit} developed by Farbin that simplifies running
 large-scale DL studies. This system was exercised on the GPUs of
 Oakridge's Titan HPC, a first for HEP, with help of Sergey Panitkin
 (BNL). Postdoc Heelan, who manages the ATLAS software tutorials and
@@ -104,18 +107,19 @@ this simple application of DNNs with help of Chris Rogan (Harvard) and
 Paul Jackson (Adelaide). They showed that 4-vector based DNNs
 out-performed a Jigsaw-based DNNs in correctly distinguishing between
 different SUSY-like decay topologies, yielding above 95\%
-accuracy~\cite{}. This work is in a step in an effort to build DNNs
-that generically classify events and enable unsupervised general
-searches for new phenomena. As described in section~\ref{}, Farbin and
-his collaborators are also applying DNNs to compressed-SUSY scenarios,
-building on the experience of the ICHEP 2016 Jig-saw result and
-following Rogan and Jackson's recent paper \cite{}. Signal and
-background classification tasks are the first and simplest and can be
-easily enhanced by replacing traditional classifiers with DNNs. Groups
-in ATLAS are applying this idea to tasks like b-jet or boost-object
-tagging. Farbin will also be aiding Hadavand and Brandt to apply the
-technique to tau identification and Charged Higgs searches, as
-described in section~\ref{}.
+accuracy~\cite{HarvardDL}. This work is in a step in an effort to
+build DNNs that generically classify events and enable unsupervised
+general searches for new phenomena. As described in section~\ref{sec:af_susyfuture},
+Farbin and his collaborators are also applying DNNs to compressed-SUSY
+scenarios, building on the experience of the ICHEP 2016 Jig-saw result
+and following Rogan and Jackson's recent
+paper \cite{Jackson:2016mfb}. Signal and background classification
+tasks are the first and simplest and can be easily enhanced by
+replacing traditional classifiers with DNNs. Groups in ATLAS are
+applying this idea to tasks like b-jet or boost-object tagging. Farbin
+will also be aiding Hadavand and Brandt to apply the technique to tau
+identification and Charged Higgs searches, as described in
+section~\ref{charged-Higgs}.
 
 %% \fivehead{Matrix Element Acceleration with Deep Learning}
 
@@ -156,14 +160,14 @@ described in section~\ref{}.
 
 Starting in 2014, Deep Convolution Neural Networks (CNNs) have
 exponentially improved performance on ImageNet, a one-million image
-classification challenge\cite{}, to now super-human
-performance\cite{}.  An obvious application of CNNs is classification
+classification challenge\cite{ILSVRC15}, to now super-human
+performance\cite{2015arXiv151203385H}.  An obvious application of CNNs is classification
 tasks, such as particle identification, in ``imaging'' detectors such
 as Time-Projection Chambers (TPCs), Cherenkov Imaging detectors, and
 high granularity Calorimeters. The first application in HEP of this
 idea was in the Nova collaboration, where they were able to obtain
 40\% better electron efficiency for same background rate as their best
-techniques~\cite{}.
+techniques~\cite{Aurisano:2016jvx}.
 
 %Despite a great deal of multi-experiment (e.g. ArgoNeuT, LArIAT,
 %MicroBooNE, DUNE, ...) effort, event reconstruction in LArTPC has
@@ -373,9 +377,9 @@ Maurizio Pierini (CERN) and Jean-Roch Vlimant (CalTech) to generate
 simpler public datasets where application of DNNs to calorimetry can
 be explored in collaboration with DL experts and without unnecessary
 complications. Starting with the high granularity LCD CLIC calorimeter
-concept~\cite, they have so far simulated 2 million photon and neutral
+concept~\cite{2012arXiv1202.5940L}, they have so far simulated 2 million photon and neutral
 pions and presented first classification studies in July
-2016~\cite{}. With the goal a paper by the end of 2016, Farbin is
+2016~\cite{LCDSimonsDL}. With the goal a paper by the end of 2016, Farbin is
 currently applying the energy regression techniques developed in
 LArTPC to this dataset.
 
@@ -396,8 +400,7 @@ ATLAS's framework for further study and use by other
 collaborators. Extension of the technique to EM/hadronic cluster
 identification and calibration will be the next natural step. In
 addition postdoc Griffiths, who contributes significantly to $\tau$
-identification, will investigate CNN applications to $\tau$s, as
-described in section~\ref{}.
+identification, will investigate CNN applications to $\tau$s. %, as described in section~\ref{}.
 
 
 %Simultaneously these efforts will explore

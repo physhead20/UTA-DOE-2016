@@ -7,7 +7,7 @@ efforts.  Due to a long history with the Analysis Software Group
 (ASG), SUSY software, and ATLAS software tutorials, the group is in
 many ways the best equipped and most experienced in ATLAS in easily
 navigating the required technical obstacles of manipulating data and
-performing analyses. RJR and the associated RestFrames~\cite{} toolkit
+performing analyses. RJR and the associated RestFrames~\cite{RestFrames} toolkit
 are also such an asset. A new tool is Deep Learning, an area where
 Farbin's breadth and depth of efforts is unmatched in HEP.
 
@@ -72,13 +72,13 @@ they continue to design and carry out SUSY searches. The two most important are
   models, as they searches for a single high $p_\mathrm{T}$ jet,
   presumed from initial state radiation (ISR), and missing transverse
   momentum. The RJR ISR technique, as applied for ICHEP2016 and
-  detailed in~\cite{}, provides the most powerful method for
-  generically searching for any CSS scenarios, and without dependence
-  on the SUSY decay. Farbin's group will collaborate with Rogan and
-  Jackson to develop such CSS general search in ATLAS. In addition,
-  using the samples in~\cite{}, Farbin is presently collaborating with
-  Rogan and Jackson to target CSS with Deep Learning techniques,
-  with a goal of a rapid non-ATLAS paper.
+  detailed in~\cite{Jackson:2016mfb}, provides the most powerful
+  method for generically searching for any CSS scenarios, and without
+  dependence on the SUSY decay. Farbin's group will collaborate with
+  Rogan and Jackson to develop such CSS general search in ATLAS. In
+  addition, using the samples in~\cite{Jackson:2016mfb}, Farbin is
+  presently collaborating with Rogan and Jackson to target CSS with
+  Deep Learning techniques, with a goal of a rapid non-ATLAS paper.
 
 %% \item \textbf{High multiplicity final states:} Models that include
 %%   sleptons in the decay chain are less likely to be excluded, often
@@ -117,10 +117,11 @@ leptonic SM $t\bar{t}$.  The RJR allows constructing views and
 associated observables for all such topologies, enabling
 discrimination by directly comparison of observables from different
 views, a handle used in the RJR-ISR CSS technique described
-above. Using a Parameterized Deep Learning Classifier~\cite{}, which
-builds a neutral network optimal for any mass in the decay tree,
-Farbin was able to correctly identify a few signal topologies over
-95\% of the time~\cite{}. The vision here is a signature-based search
+above. Using a Parameterized Deep Learning
+Classifier~\cite{Baldi:2016fzo}, which builds a neutral network
+optimal for any mass in the decay tree, Farbin was able to correctly
+identify a few signal topologies over 95\% of the
+time~\cite{HarvardDL}. The vision here is a signature-based search
 in-line with SUSY WGs plans, where events are sorted into
 topologies. Farbin's group in collaboration with Rogan and Jackson
 will fully explore the $bb ll$ + MET final state and lead SUSY WGs
@@ -133,24 +134,24 @@ multivariate tool to improve background rejection. Farbin is already
 pursing this direction with the CSS search described above.  Farbin
 will also assist in upgrading existing multi-variate based searches,
 for example the stop search performed by De described in
-section~\ref{}, to the potentially more powerful DNNs. It is also
-rather straightforward to evaluate the potential of DNNs to improve
-other non-MVA based searches, for example those planned by Hadavand
-and Brandt in section~\ref{}. While DNNs based on traditional
-high-level observables like masses and angles (a.k.a. features) may
-provide modest improvements, DNNs can also be used to identify
-additional handles by using 4-vectors as input. Such studies typically
-find that 4-vectors outperform traditional features, suggesting
-presence of additional unexplored handles. The problem is that most
-searches rely on some orthogonal observable, otherwise unused in the
-MVA, to build sidebands for background estimation. A 4-vector based
-DNN's output will likely be highly correlated with any such
-observable, prohibiting designating unbiased sideband regions. While
-there are avenues to tackle this problem, direct application of DNNs
-in searches is not necessary to reaping their benefits. Instead,
-4-vector based DNNs can usually also indirectly help by identifying
-new features (i.e. observables) than can be added to the traditional
-analysis.
+section~\ref{sec:kd_susy_smita}, to the potentially more powerful
+DNNs. It is also rather straightforward to evaluate the potential of
+DNNs to improve other non-MVA based searches, for example those
+planned by Hadavand and Brandt in section~\ref{charged-Higgs}. While
+DNNs based on traditional high-level observables like masses and
+angles (a.k.a. features) may provide modest improvements, DNNs can
+also be used to identify additional handles by using 4-vectors as
+input. Such studies typically find that 4-vectors outperform
+traditional features, suggesting presence of additional unexplored
+handles. The problem is that most searches rely on some orthogonal
+observable, otherwise unused in the MVA, to build sidebands for
+background estimation. A 4-vector based DNN's output will likely be
+highly correlated with any such observable, prohibiting designating
+unbiased sideband regions. While there are avenues to tackle this
+problem, direct application of DNNs in searches is not necessary to
+reaping their benefits. Instead, 4-vector based DNNs can usually also
+indirectly help by identifying new features (i.e. observables) than
+can be added to the traditional analysis.
 
 % For
 %example DNNs were able to identify additional color-flow related
