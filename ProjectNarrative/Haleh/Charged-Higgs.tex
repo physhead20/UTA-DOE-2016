@@ -46,52 +46,55 @@ The group has plans to apply several techniques to improve the analysis sensitiv
 \label{fig:tau}
 \end{center}
 \end{figure}
-\paragraph{Include tau-lep Channel}
-By the end of 2016 the tau-lep channel (hadronic tau and leptonic top decays) will be added to the analysis.  This analysis will rely heavily on infrastructure used for the  tau hadronic final state developed by UTA 
-for histogram production, systematic uncertainties, and limit setting. Therefore UTA will be an integral part of the addition of this final state.
 
-\paragraph{Use tau polarization to reduce true tau background}
+\begin{itemize}[noitemsep,nolistsep,leftmargin=*]
+\item[]{{\bf Include tau-lep Channel}
+By the end of 2016 the tau-lep channel (hadronic tau and leptonic top decays) will be added to the analysis.  This analysis will rely heavily on infrastructure used for the  tau hadronic final state developed by UTA 
+for histogram production, systematic uncertainties, and limit setting. Therefore UTA will be an integral part of the addition of this final state.}
+
+\item[]{{\bf Use tau polarization to reduce true tau background}
 The tau polarization can be used to separate the W \too $\tau \nu$ background from the signal.  The intrinsic polarization of W$^+$ is -1 while that of $H^+$ is +1.  The tau polarization is defined as $P_{\tau}=\frac{\sigma_R - \sigma_L}{\sigma_R + \sigma_L}$.
 A plot of the charge asymmetry, defined as $\Upsilon=\frac{p_{T}^{track}}{p_T} - 1$, is shown for the signal and background in the $\tau$ \too $\rho \nu_{\tau}$ final in figure~\ref{fig:tau}, right. Other 1-prong decays will also have similar separation in the charge asymmetry. 
-The 1-prong decays can be separated from the 3-prong decays in the final fitting machinery and added statistically together.  This variable will be used as additional variable to the fit in the 1-prong case.
+The 1-prong decays can be separated from the 3-prong decays in the final fitting machinery and added statistically together.  This variable will be used as additional variable to the fit in the 1-prong case.}
 
-\paragraph{Use matrix element method to reduce true tau background}
+\item[]{{\bf Use matrix element method to reduce true tau background}
 In addition to the tau polarization one can utilize the event kinematics by utilizing the matrix element method to distinguish the signal from the true tau background originating from \ttbar\ events.  
 This can be done by using the classifier distribution $d(x)=\frac{P_S(x)}{P_S(x)-P_B(x)}$ where $P_S$ and $P_B$ correspond to the weights from the signal and background 
-hypothesis . Hadavand has performed initial tests with MadWeight for achieving this goal. This variable can then be added as one of the variables in the boosted decision trees (BDT). 
+hypothesis . Hadavand has performed initial tests with MadWeight for achieving this goal. This variable can then be added as one of the variables in the boosted decision trees (BDT). }
 
-\paragraph{Use boosted decision trees}
+\item[]{{\bf Use boosted decision trees}
 As mentioned earlier for early Run 2 results the discriminating variable used in the fit was $m_T$. As an alternative several 
 variables are incorporated into a BDT which is used as the discriminating variable in the fit.  Some variables that have been investigated in some preliminary studies
-are $m_T$, leading b jet $p_T$ , $\tau p_T$, MET, $\Delta \eta(\tau-$leading jet), $\Delta \phi(top-$sub-leading jet).
+are $m_T$, leading b jet $p_T$ , $\tau p_T$, MET, $\Delta \eta(\tau-$leading jet), $\Delta \phi(top-$sub-leading jet).}
 
-\paragraph{Determine jet \too $\tau$ Background from Control Region}  %( R2-1, R3-1 - 3 months ) 
+\item[]{{\bf Determine jet \too $\tau$ Background from Control Region}  %( R2-1, R3-1 - 3 months ) 
 For Run 1 the systematics for the $\tau$ \too jet background were one the largest in the analysis.  Due to low statistics at the high mass a fit above 200 GeV was necessary to get 
 an estimate of the background in that region.  This is important since this is the dominant background in the high mass region and without a background model the limit machinery would fail.
 As an alternative to the matrix method used for the Run 1 published paper one can use a control region with no signal and loosen the selection criteria to introduce more fake taus.  This can be done
-by requiring a zero b-jet region and only requiring a loose tau selection.  The normalization of this background can then be derived within the fit to data.  This should reduce both the statistical and systematic uncertainty of the analysis.
+by requiring a zero b-jet region and only requiring a loose tau selection.  The normalization of this background can then be derived within the fit to data.  This should reduce both the statistical and systematic uncertainty of the analysis.}
 %In order to attain a control region with enough statistics when imposing this selection criteria one has to change the current trigger which already imposes a selection of a medium tau.  
 %The use of the tau plus MET trigger has caused some of the main issues with statistics for the QCD background in Run 1. 
 %Hadavand proposed to use a MET trigger which actually had higher efficiency than the tau plus MET trigger.  
 %The use of this trigger increases the statistics for the background estimation.
 %Other control region which are void of signal can be used in a similar fashion by fitting the normalization within the data.
 
-\paragraph{Apply Deep learning techniques for selection}
+\item[]{{\bf Apply Deep learning techniques for selection}
 The deep learning technique can be applied to this analysis in two ways.  One way would be to use it to distinguish \ttbar\ background from the signal by training on those samples.
 A comparison of the BDT method described earlier for event selection will be done with respect to this technique.
-Another way to apply deep learning would be in the tau reconstruction in place of the BDT technique which is used now.  This work will be done utilizing Farbin's extensive experience in the field of deep learning.
+Another way to apply deep learning would be in the tau reconstruction in place of the BDT technique which is used now.  This work will be done utilizing Farbin's extensive experience in the field of deep learning.}
 
 
 %\paragraph{Port Statistics Tool to new Naming Convention} ( R2-1 - 2 months )
 %The statistics tools written for this analysis by myself and the UTA group have to be changed to accommodate the naming convention imposed by the new xAOD data format.  This will effect the systematic naming only.  It seems 
 %like a trivial task but with around 70 nuisance parameters it can be quite tedious to implement.  Mr. Feremenga would benefit from doing this work so as to familiarize himself with the statistics framework of the analysis.
 
-\paragraph{Optimize Binning for Limits} %( R2-1 - 2 months )
+\item[]{{\bf Optimize Binning for Limits} %( R2-1 - 2 months )
 The low statistics in the tail of the mT distribution has made the H$^+$ \too $\tau \nu$ channel difficult for setting limits.  In many cases several systematic variations performed for pull determination would make the fits fail.  
 This has to do with the fact that the data has low stats and is not smooth as opposed to MC samples which did have a smooth shape in the tail and could be fit successfully.
 By making requirements on signal over background and the number of total background in a given
 bin and then testing with pull estimation, Hadavand was able to optimize the best binning for both stability and sensitivity.  For performing projections to higher luminosities the background is extrapolated to higher masses
-to determine a realistic scale of the background in this region. After performing the extrapolation the binning is re-optimized for the given luminosity projection, a technique developed by Hadavand.
+to determine a realistic scale of the background in this region. After performing the extrapolation the binning is re-optimized for the given luminosity projection, a technique developed by Hadavand.}
+\end{itemize}
 \paragraph{Milestones}
 \begin{itemize}[noitemsep,nolistsep]
 \item{FY16 - Publish results for charged Higgs on 2016 dataset including the tau-lepton channel.}
