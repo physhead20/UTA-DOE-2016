@@ -1,21 +1,30 @@
-\documentclass[11pt]{article}
+\pdfoutput=1
+\RequirePackage{ifpdf}
+\documentclass[11pt,english]{article}
 \usepackage{graphicx}
 \usepackage{epsfig}
-\usepackage{epstopdf}
 \usepackage{multirow}
 \usepackage{color}
 \usepackage{enumitem}
 \usepackage{hyperref}
-\usepackage{bbding}
-\usepackage{multirow}
+%\usepackage{multirow}
 %\usepackage{slashbox}
 \usepackage{subfigure}
-\usepackage{cite}
+%\usepackage{textcomp}
+\usepackage{babel}
 %\usepackage{AMSsymb}
-\usepackage{charter}
+%\usepackage{charter}
 \usepackage[final]{pdfpages}
 \usepackage{amssymb}
-\usepackage{url}
+%\usepackage{url}
+%\usepackage[latin9]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{cite}
+
+%
+%\usepackage[T1]{fontenc}
+%\usepackage[latin9]{inputenc}
+
 %%% Need input files here %%%
 %\input{epsf}
 %\input{physics_defs.tex}
@@ -76,14 +85,19 @@
 %%   \sfcode`\.=1000\relax}
 %% \let\endthebibliography=\endlist
 
+\usepackage[
+  backend=bibtex8,
+  style=ieee
+]{biblatex}
 
+\bibliography{biblio}
 %% %\usepackage[
 %% %  backend=bibtex8,
 %% %  style=ieee
 %% %]{biblatex}
 %% %\bibliography{biblio}
 
-\bibliographystyle{unsrt}
+%\bibliographystyle{unsrt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%% Main Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -380,11 +394,10 @@
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\printbibliography[heading=none,maxnames=99]
 
-\bibliography{biblio} {}
+%\bibliography{biblio} {}
 %\bibliographystyle{plain}
-
-
 %%%%%%%%%%%%%%%%%%%%%%% Biographical Sketches %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
@@ -468,7 +481,7 @@
 \includepdf[pages=-]{../BudgetInfo/HEP-BudgetForm_EF_2017_mainDocument.pdf}
 \includepdf[pages=-]{../BudgetInfo/HEP-BudgetForm_EF_2018_mainDocument.pdf}
 \includepdf[pages=-]{../BudgetInfo/HEP-BudgetForm_EF_2019_mainDocument.pdf}
-\input{../BudgetInfo/budget-justification-ATLAS.tex}
+\input{../BudgetInfo/budget-justification-ef.tex}
 
 \newpage
 %######################################################################
