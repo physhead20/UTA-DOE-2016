@@ -85,12 +85,12 @@
 %%   \sfcode`\.=1000\relax}
 %% \let\endthebibliography=\endlist
 
-\usepackage[
-  backend=bibtex8,
-  style=ieee
-]{biblatex}
+%\usepackage[
+%  backend=bibtex8,
+%5  style=ieee
+%]{biblatex}
 
-\bibliography{biblio}
+%\bibliography{biblio}
 %% %\usepackage[
 %% %  backend=bibtex8,
 %% %  style=ieee
@@ -393,11 +393,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-%%%%%%%%%%%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\printbibliography[heading=none,maxnames=99]
-
-%\bibliography{biblio} {}
-%\bibliographystyle{plain}
 %%%%%%%%%%%%%%%%%%%%%%% Biographical Sketches %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
@@ -464,6 +459,12 @@
 
 
 
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%% Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\printbibliography[heading=none,maxnames=99]
+
+\bibliography{biblio} {}
+\bibliographystyle{plain}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%% Facilities %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{./Facilities/Facilities.tex}
